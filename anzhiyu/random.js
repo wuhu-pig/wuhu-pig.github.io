@@ -1,3 +1,3 @@
-var posts=["2024/08/28/hello-world/"];function toRandomPost(){
+var posts=["2024/08/28/CC 抢购脚本/","2024/08/28/Docker部署+宝塔SSL教程/","2024/08/28/E5相关/","2024/08/28/ESXI安装群晖/","2024/08/28/ESXI用ssh修改ip/","2024/08/28/R探长/","2024/08/28/TG的API获取教程/","2024/08/28/Typech博客搭建教程/","2024/08/28/VPS库存监控安装/","2024/08/28/hello-world/","2024/08/28/vps群晖备份教程/","2024/08/28/修改vps的ssh端口/","2021/07/22/哪吒监控面板搭建/","2024/08/28/基于TG搭建无限容量网盘/","2024/08/28/宝塔nginx反代支持websocket/","2024/08/28/宝塔搭建typecho博客教程/","2024/08/28/宝塔搭建typecho教程/","2020/09/14/宝塔面板安装教程/","2024/08/28/网站cname接入CloudFlare的超级详细教程/","2024/08/28/阿里云轻量应用服务器DD系统/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
