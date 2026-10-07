@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, xinintop</rights>
   <subtitle>VPS / 建站 / 折腾记录</subtitle>
   <title>Xin 的博客</title>
-  <updated>2026-10-07T09:55:54.132Z</updated>
+  <updated>2026-10-07T10:27:47.846Z</updated>
   <entry>
     <author>
       <name>xinintop</name>
@@ -20,13 +20,13 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/CC%20%E6%8A%A2%E8%B4%AD%E8%84%9A%E6%9C%AC/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/CC%20%E6%8A%A2%E8%B4%AD%E8%84%9A%E6%9C%AC/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<h2 id="抢购脚本"><a href="#抢购脚本" class="headerlink" title="抢购脚本"></a>抢购脚本</h2><p><strong>普通用户，如果要直接使用这个脚本，请先看下面的使用说明</strong></p>
 <p>1<br>2<br>]]>
     </summary>
     <title>CC 抢购脚本</title>
-    <updated>2026-10-07T09:55:54.132Z</updated>
+    <updated>2026-10-07T10:27:47.846Z</updated>
   </entry>
   <entry>
     <author>
@@ -37,14 +37,14 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/Docker%E9%83%A8%E7%BD%B2+%E5%AE%9D%E5%A1%94SSL%E6%95%99%E7%A8%8B/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/Docker%E9%83%A8%E7%BD%B2+%E5%AE%9D%E5%A1%94SSL%E6%95%99%E7%A8%8B/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p><strong>如果对你有帮助，麻烦给我点个赞激励一下，大家一起努力！！！</strong></p>
 </bloc]]>
     </summary>
     <title>Docker部署+宝塔SSL教程</title>
-    <updated>2026-10-07T09:55:54.882Z</updated>
+    <updated>2026-10-07T10:27:47.848Z</updated>
   </entry>
   <entry>
     <author>
@@ -55,46 +55,13 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/E5%E7%9B%B8%E5%85%B3/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/E5%E7%9B%B8%E5%85%B3/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<h3 id="申请相关"><a href="#申请相关" class="headerlink" title="申请相关"></a>申请相关</h3><p>注册入口</p>
 <p><a href="https://developer.microsoft.com/zh-cn/mic]]>
     </summary>
     <title>E5相关</title>
-    <updated>2026-10-07T09:55:55.647Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xinintop</name>
-    </author>
-    <content>
-      <![CDATA[<p>ESXI版本：7.03f<br>群晖版本：3615xs</p><h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a><strong>创建虚拟机</strong></h2><blockquote><p>选择创建类型</p></blockquote><p>创建新虚拟机</p><blockquote><p>选择名称与客户端</p></blockquote><p>操作系统系列选择：linux<br>系统版本选择：其他5x或更高版本linux64位<br><img src="https://easy.xinin.top/i/2023/02/20/jwahxh.png" alt="请输入图片描述"></p><blockquote><p>选择储存</p></blockquote><p>选择想要安装的存储</p><blockquote><p>自定义设置</p></blockquote><p><strong>cpu与内存按需分配</strong><br>我这里选择4核心4G内存<br><strong>删除多余选项</strong><br>0.删除硬盘1<br>1.删除SCSI控制器<br>2.删除USB控制器（这个按需）<br>3.删除CD&#x2F;DVD驱动器<br>4.删除硬盘1<br><img src="https://easy.xinin.top/i/2023/02/20/jwfobw.png" alt="请输入图片描述"><br><strong>点击下一页—&gt;点击完成</strong></p><h2 id="设置虚拟机"><a href="#设置虚拟机" class="headerlink" title="设置虚拟机"></a><strong>设置虚拟机</strong></h2><blockquote><p>虚拟机选项找到新建的虚拟机</p></blockquote><blockquote><p>点击编辑</p></blockquote><blockquote><p>点击现有硬盘–&gt;点击上载—&gt;选择vmdk文件（nas系统的引导盘）</p></blockquote><blockquote><p>选中上传的vmdk文件</p></blockquote><p><img src="https://easy.xinin.top/i/2023/02/20/jwip9t.png" alt="请输入图片描述"></p><blockquote><p>点击现有硬盘–&gt;选择你直通的硬盘（这块硬盘也就是你nas上的存储硬盘）</p></blockquote><p><img src="https://easy.xinin.top/i/2023/02/20/jwul4b.png" alt="请输入图片描述"></p><blockquote><p>网卡适配器–&gt;适配器类型，选择E1000e</p></blockquote><blockquote><p>点击虚拟机选项—&gt;引导选项，取消是否为虚拟机启用uefi</p></blockquote><blockquote><p>点击保存</p></blockquote>]]>
-    </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/ESXI%E5%AE%89%E8%A3%85%E7%BE%A4%E6%99%96/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/ESXI%E5%AE%89%E8%A3%85%E7%BE%A4%E6%99%96/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>ESXI版本：7.03f<br>群晖版本：3615xs</p>
-<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a><strong>创建虚拟机</strong></h2><blockquo]]>
-    </summary>
-    <title>ESXI安装群晖</title>
-    <updated>2026-10-07T09:55:56.412Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xinintop</name>
-    </author>
-    <content>
-      <![CDATA[<p><strong>[原作者地址][<a href="https://github.com/semicons/java_oci_manage/blob/main/md/install.md]">https://github.com/semicons/java_oci_manage&#x2F;blob&#x2F;main&#x2F;md&#x2F;install.md]</a></strong></p><p><strong>更新环境</strong></p><p>1<br>2<br>3  </p><p>apt update<br>apt install openjdk-11-jdk<br>apt update -y &amp;&amp; apt install -y curl wget sudo  </p><p><strong>安装R探长</strong></p><p>1  </p><p>cd &#x2F;home &amp;&amp; mkdir rbot &amp;&amp; cd rbot wget -O gz_client_bot.tar.gz <a href="https://github.com/semicons/java/_oci/_manage/releases/latest/download/gz/_client/_bot.tar.gz">https://github.com/semicons/java\_oci\_manage/releases/latest/download/gz\_client\_bot.tar.gz</a> &amp;&amp; tar -zxvf gz_client_bot.tar.gz –exclude&#x3D;client_config &amp;&amp; tar -zxvf gz_client_bot.tar.gz –skip-old-files client_config &amp;&amp; chmod +x sh_client_bot.sh  </p><p><strong>下载配置client_config模板</strong></p><p>1  </p><p><a href="https://github.com/kejilion/sh/blob/main/client/_config">https://github.com/kejilion/sh/blob/main/client\_config</a>  </p><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47  </p><p>#在oci&#x3D;begin和oci&#x3D;end之间放入你的API配置信息 支持多个配置文件 机器人切换profile可更换操作配置<br>oci&#x3D;begin  </p><p>[DEFAULT]<br>user&#x3D;ocid1.user.oc1..aaaaaaaae4nfnqhxzvzblay22eb2fpi5bxqxr4vxm3i3srwxwx4ukmvrgbga<br>fingerprint&#x3D;fc:d1:3d:2b:0a:e5:fc:bb:bd:00:be:b8:64:c0:53:fa<br>tenancy&#x3D;ocid1.tenancy.oc1..aaaaaaaa3jiefeqjmtufveupny6466pjtv7vdazyrtjpq5vmgkow22med6mq<br>region&#x3D;us-sanjose-1<br>key_file&#x3D;&#x2F;home&#x2F;rbot&#x2F;key.pem  </p><p>oci&#x3D;end  </p><p>#用户信息 从 <a href="https://t.me/radiance/_helper/_bot">https://t.me/radiance\_helper\_bot</a> 配置(bot可使用&#x2F;raninfo命令随机生成)<br>#必传<br>username&#x3D;2727150fd0734c14afd618eceb101f0d<br>#必传<br>password&#x3D;f462386ad9064871804fd3213f94ca28  </p><p>#cloudflare 功能参数 非必传<br>#非必传 cloudflare邮箱<br>cf_email&#x3D;<br>#非必传 cloudflare key 在我的个人资料-&gt;API令牌处-&gt;API密钥-&gt;Global API Key获取<br>cf_account_key&#x3D;  </p><p>#非必填 本机ip和端口号 (进阶玩家选项 可填写域名) 不写将自动获取本机ip 并使用默认端口号9527 (小白用户建议不填) 如填写 格式为:<a href="https://xxx.xx:9527/">https://xxx.xx:9527</a><br>local_address&#x3D;<br>#非必填 url名称(默认为address 可在bot上修改)<br>local_url_name&#x3D;  </p><p>#非必填 启动模式 填写local为启动本地无公网IP模式(只要能联网即可) 不填或填其他 则启动端口模式<br>model&#x3D;  </p><p>#在azure&#x3D;begin和azure&#x3D;end之间放入你的azure的API配置信息 支持多个配置文件 机器人切换profile可更换操作配置 上传配置支持使用原格式({“appId”:”xxx”,”password”:”xxx”…})上传<br>azure&#x3D;begin  </p><p>[az001]<br>appId&#x3D;551xxxx7-xxxx-xxxx-xxxx-b9xxxx60cc65<br>password&#x3D;T618Q<del>.LIy_xxxxx</del>jm~xxxxxx<br>tenant&#x3D;xxxx3713-xxxx-4cb5-xxxx-3001060xxxxx  </p><p>azure&#x3D;end  </p><p><strong>到甲骨文云下载API证书并获取API信息</strong></p><p><a href="https://cloud.oracle.com/">https://cloud.oracle.com/</a></p><p><strong>key存放路径</strong></p><p>key_file&#x3D;&#x2F;home&#x2F;rbot&#x2F;key.pem</p><p><strong>关注R探长频道和机器人</strong></p><p>R探长频道：<a href="https://t.me/agentONE_R">https://t.me/agentONE_R</a></p><p>R探长机器人：<a href="https://t.me/radiance_helper_bot">https://t.me/radiance_helper_bot</a></p><p><strong>和机器人对话获取随机用户名和密码</strong></p><p>&#x2F;raninfo</p><p><strong>启动或重启</strong></p><p>bash sh_client_bot.sh</p><p><strong>查看日志(ctrl + c退出日志)</strong></p><p>tail -f log_r_client.log</p><p><strong>终止程序</strong></p><p>ps -ef | grep r_client.jar | grep -v grep | awk ‘{print $2}’ | xargs kill -9</p><p><strong>卸载程序</strong></p><p>rm -rf gz_client_bot.tar.gz client_config r_client.jar sh_client_bot.sh log_r_client.log debug-.log</p><p>如也不需要JDK也可卸载：apt-get remove openjdk*</p><p>1<br>2<br>3<br>4<br>5<br>6  </p><p>[DEFAULT]<br>user&#x3D;ocid1.user.oc1..aaaaaaaae4nfnqhxzvzblay22eb2fpi5bxqxr4vxm3i3srwxwx4ukmvrgbga<br>fingerprint&#x3D;fc:d1:3d:2b:0a:e5:fc:bb:bd:00:be:b8:64:c0:53:fa<br>tenancy&#x3D;ocid1.tenancy.oc1..aaaaaaaa3jiefeqjmtufveupny6466pjtv7vdazyrtjpq5vmgkow22med6mq<br>region&#x3D;us-sanjose-1<br>key_file&#x3D;<path to your private keyfile> # TODO</p>]]>
-    </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/R%E6%8E%A2%E9%95%BF/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/R%E6%8E%A2%E9%95%BF/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p><strong>[原作者地址][<a href="https://github.com/semicons/java_oci_manage/blob/main/md/install.md]">https://github.com/semicons/java_oci_manag]]>
-    </summary>
-    <title>R探长</title>
-    <updated>2026-10-07T09:55:57.987Z</updated>
+    <updated>2026-10-07T10:27:47.849Z</updated>
   </entry>
   <entry>
     <author>
@@ -105,7 +72,7 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/ESXI%E7%94%A8ssh%E4%BF%AE%E6%94%B9ip/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/ESXI%E7%94%A8ssh%E4%BF%AE%E6%94%B9ip/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<blockquote>
 <p>开启ssh</p>
@@ -113,39 +80,40 @@
 <p>进入ESXI的WEB管理界面，进入主机&gt;操作&gt;服务菜单，单击启用安全SHELL(SSH)<br><img src="https://easy.xinin.top/i/2023/02/]]>
     </summary>
     <title>ESXI用ssh修改ip</title>
-    <updated>2026-10-07T09:55:57.184Z</updated>
+    <updated>2026-10-07T10:27:47.852Z</updated>
   </entry>
   <entry>
     <author>
       <name>xinintop</name>
     </author>
     <content>
-      <![CDATA[<p>浏览器打开<a href="https://my.telegram.org/%EF%BC%8C%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E6%97%B6%E7%9A%84%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%8C%E7%99%BB%E9%99%86%E6%88%91%E4%BB%AC%E7%9A%84telegram%E8%B4%A6%E5%8F%B7">https://my.telegram.org/，输入账号注册时的手机号码，登陆我们的telegram账号</a></p><p><img src="https://easy.xinin.top/i/2023/11/06/fcq57t-2.png" alt="Snipaste_11-06_9-28"></p><p>点击next之后，我们的已经登陆的tg账号会收到验证码，输入验证码进行登陆</p><p><img src="https://easy.xinin.top/i/2023/11/06/fdam8y-2.png" alt="Snipaste_11-06_9-28_0"></p><p>点击申请API</p><p><img src="https://easy.xinin.top/i/2023/11/06/fefoft-2.png" alt="Snipaste_11-06_9-31"></p><p>填写<strong>App title 和</strong> <strong>Short name</strong></p><blockquote><p>这里需要多更换几次，多试几次</p></blockquote><p>最后会获得<strong>api_id</strong>和 <strong>api_hash</strong></p><p><img src="https://easy.xinin.top/i/2023/11/06/ffnu8t-2.png" alt="Snipaste_11-05_12-23"></p>]]>
+      <![CDATA[<p>ESXI版本：7.03f<br>群晖版本：3615xs</p><h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a><strong>创建虚拟机</strong></h2><blockquote><p>选择创建类型</p></blockquote><p>创建新虚拟机</p><blockquote><p>选择名称与客户端</p></blockquote><p>操作系统系列选择：linux<br>系统版本选择：其他5x或更高版本linux64位<br><img src="https://easy.xinin.top/i/2023/02/20/jwahxh.png" alt="请输入图片描述"></p><blockquote><p>选择储存</p></blockquote><p>选择想要安装的存储</p><blockquote><p>自定义设置</p></blockquote><p><strong>cpu与内存按需分配</strong><br>我这里选择4核心4G内存<br><strong>删除多余选项</strong><br>0.删除硬盘1<br>1.删除SCSI控制器<br>2.删除USB控制器（这个按需）<br>3.删除CD&#x2F;DVD驱动器<br>4.删除硬盘1<br><img src="https://easy.xinin.top/i/2023/02/20/jwfobw.png" alt="请输入图片描述"><br><strong>点击下一页—&gt;点击完成</strong></p><h2 id="设置虚拟机"><a href="#设置虚拟机" class="headerlink" title="设置虚拟机"></a><strong>设置虚拟机</strong></h2><blockquote><p>虚拟机选项找到新建的虚拟机</p></blockquote><blockquote><p>点击编辑</p></blockquote><blockquote><p>点击现有硬盘–&gt;点击上载—&gt;选择vmdk文件（nas系统的引导盘）</p></blockquote><blockquote><p>选中上传的vmdk文件</p></blockquote><p><img src="https://easy.xinin.top/i/2023/02/20/jwip9t.png" alt="请输入图片描述"></p><blockquote><p>点击现有硬盘–&gt;选择你直通的硬盘（这块硬盘也就是你nas上的存储硬盘）</p></blockquote><p><img src="https://easy.xinin.top/i/2023/02/20/jwul4b.png" alt="请输入图片描述"></p><blockquote><p>网卡适配器–&gt;适配器类型，选择E1000e</p></blockquote><blockquote><p>点击虚拟机选项—&gt;引导选项，取消是否为虚拟机启用uefi</p></blockquote><blockquote><p>点击保存</p></blockquote>]]>
     </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/TG%E7%9A%84API%E8%8E%B7%E5%8F%96%E6%95%99%E7%A8%8B/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/TG%E7%9A%84API%E8%8E%B7%E5%8F%96%E6%95%99%E7%A8%8B/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <id>https://wuhu-pig.github.io/2024/08/28/ESXI%E5%AE%89%E8%A3%85%E7%BE%A4%E6%99%96/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/ESXI%E5%AE%89%E8%A3%85%E7%BE%A4%E6%99%96/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
-      <![CDATA[<p>浏览器打开<a href="https://my.telegram.org/%EF%BC%8C%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E6%97%B6%E7%9A%84%E6%89%8B%E6%9C%BA]]>
+      <![CDATA[<p>ESXI版本：7.03f<br>群晖版本：3615xs</p>
+<h2 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a><strong>创建虚拟机</strong></h2><blockquo]]>
     </summary>
-    <title>TG的API获取教程</title>
-    <updated>2026-10-07T09:55:59.014Z</updated>
+    <title>ESXI安装群晖</title>
+    <updated>2026-10-07T10:27:47.851Z</updated>
   </entry>
   <entry>
     <author>
       <name>xinintop</name>
     </author>
     <content>
-      <![CDATA[<p>博客搭建的教程一般分为两种：<br>1.直接使用命令行进行搭建<br>2.使用宝塔面板的图形化界面搭建</p>]]>
+      <![CDATA[<p><strong>[原作者地址][<a href="https://github.com/semicons/java_oci_manage/blob/main/md/install.md]">https://github.com/semicons/java_oci_manage&#x2F;blob&#x2F;main&#x2F;md&#x2F;install.md]</a></strong></p><p><strong>更新环境</strong></p><p>1<br>2<br>3  </p><p>apt update<br>apt install openjdk-11-jdk<br>apt update -y &amp;&amp; apt install -y curl wget sudo  </p><p><strong>安装R探长</strong></p><p>1  </p><p>cd &#x2F;home &amp;&amp; mkdir rbot &amp;&amp; cd rbot wget -O gz_client_bot.tar.gz <a href="https://github.com/semicons/java/_oci/_manage/releases/latest/download/gz/_client/_bot.tar.gz">https://github.com/semicons/java\_oci\_manage/releases/latest/download/gz\_client\_bot.tar.gz</a> &amp;&amp; tar -zxvf gz_client_bot.tar.gz –exclude&#x3D;client_config &amp;&amp; tar -zxvf gz_client_bot.tar.gz –skip-old-files client_config &amp;&amp; chmod +x sh_client_bot.sh  </p><p><strong>下载配置client_config模板</strong></p><p>1  </p><p><a href="https://github.com/kejilion/sh/blob/main/client/_config">https://github.com/kejilion/sh/blob/main/client\_config</a>  </p><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47  </p><p>#在oci&#x3D;begin和oci&#x3D;end之间放入你的API配置信息 支持多个配置文件 机器人切换profile可更换操作配置<br>oci&#x3D;begin  </p><p>[DEFAULT]<br>user&#x3D;ocid1.user.oc1..aaaaaaaae4nfnqhxzvzblay22eb2fpi5bxqxr4vxm3i3srwxwx4ukmvrgbga<br>fingerprint&#x3D;fc:d1:3d:2b:0a:e5:fc:bb:bd:00:be:b8:64:c0:53:fa<br>tenancy&#x3D;ocid1.tenancy.oc1..aaaaaaaa3jiefeqjmtufveupny6466pjtv7vdazyrtjpq5vmgkow22med6mq<br>region&#x3D;us-sanjose-1<br>key_file&#x3D;&#x2F;home&#x2F;rbot&#x2F;key.pem  </p><p>oci&#x3D;end  </p><p>#用户信息 从 <a href="https://t.me/radiance/_helper/_bot">https://t.me/radiance\_helper\_bot</a> 配置(bot可使用&#x2F;raninfo命令随机生成)<br>#必传<br>username&#x3D;2727150fd0734c14afd618eceb101f0d<br>#必传<br>password&#x3D;f462386ad9064871804fd3213f94ca28  </p><p>#cloudflare 功能参数 非必传<br>#非必传 cloudflare邮箱<br>cf_email&#x3D;<br>#非必传 cloudflare key 在我的个人资料-&gt;API令牌处-&gt;API密钥-&gt;Global API Key获取<br>cf_account_key&#x3D;  </p><p>#非必填 本机ip和端口号 (进阶玩家选项 可填写域名) 不写将自动获取本机ip 并使用默认端口号9527 (小白用户建议不填) 如填写 格式为:<a href="https://xxx.xx:9527/">https://xxx.xx:9527</a><br>local_address&#x3D;<br>#非必填 url名称(默认为address 可在bot上修改)<br>local_url_name&#x3D;  </p><p>#非必填 启动模式 填写local为启动本地无公网IP模式(只要能联网即可) 不填或填其他 则启动端口模式<br>model&#x3D;  </p><p>#在azure&#x3D;begin和azure&#x3D;end之间放入你的azure的API配置信息 支持多个配置文件 机器人切换profile可更换操作配置 上传配置支持使用原格式({“appId”:”xxx”,”password”:”xxx”…})上传<br>azure&#x3D;begin  </p><p>[az001]<br>appId&#x3D;551xxxx7-xxxx-xxxx-xxxx-b9xxxx60cc65<br>password&#x3D;T618Q<del>.LIy_xxxxx</del>jm~xxxxxx<br>tenant&#x3D;xxxx3713-xxxx-4cb5-xxxx-3001060xxxxx  </p><p>azure&#x3D;end  </p><p><strong>到甲骨文云下载API证书并获取API信息</strong></p><p><a href="https://cloud.oracle.com/">https://cloud.oracle.com/</a></p><p><strong>key存放路径</strong></p><p>key_file&#x3D;&#x2F;home&#x2F;rbot&#x2F;key.pem</p><p><strong>关注R探长频道和机器人</strong></p><p>R探长频道：<a href="https://t.me/agentONE_R">https://t.me/agentONE_R</a></p><p>R探长机器人：<a href="https://t.me/radiance_helper_bot">https://t.me/radiance_helper_bot</a></p><p><strong>和机器人对话获取随机用户名和密码</strong></p><p>&#x2F;raninfo</p><p><strong>启动或重启</strong></p><p>bash sh_client_bot.sh</p><p><strong>查看日志(ctrl + c退出日志)</strong></p><p>tail -f log_r_client.log</p><p><strong>终止程序</strong></p><p>ps -ef | grep r_client.jar | grep -v grep | awk ‘{print $2}’ | xargs kill -9</p><p><strong>卸载程序</strong></p><p>rm -rf gz_client_bot.tar.gz client_config r_client.jar sh_client_bot.sh log_r_client.log debug-.log</p><p>如也不需要JDK也可卸载：apt-get remove openjdk*</p><p>1<br>2<br>3<br>4<br>5<br>6  </p><p>[DEFAULT]<br>user&#x3D;ocid1.user.oc1..aaaaaaaae4nfnqhxzvzblay22eb2fpi5bxqxr4vxm3i3srwxwx4ukmvrgbga<br>fingerprint&#x3D;fc:d1:3d:2b:0a:e5:fc:bb:bd:00:be:b8:64:c0:53:fa<br>tenancy&#x3D;ocid1.tenancy.oc1..aaaaaaaa3jiefeqjmtufveupny6466pjtv7vdazyrtjpq5vmgkow22med6mq<br>region&#x3D;us-sanjose-1<br>key_file&#x3D;<path to your private keyfile> # TODO</p>]]>
     </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/Typech%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/Typech%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <id>https://wuhu-pig.github.io/2024/08/28/R%E6%8E%A2%E9%95%BF/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/R%E6%8E%A2%E9%95%BF/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
-      <![CDATA[<p>博客搭建的教程一般分为两种：<br>1.直接使用命令行进行搭建<br>2.使用宝塔面板的图形化界面搭建</p>]]>
+      <![CDATA[<p><strong>[原作者地址][<a href="https://github.com/semicons/java_oci_manage/blob/main/md/install.md]">https://github.com/semicons/java_oci_manag]]>
     </summary>
-    <title>Typech博客搭建教程</title>
-    <updated>2026-10-07T09:55:59.891Z</updated>
+    <title>R探长</title>
+    <updated>2026-10-07T10:27:47.853Z</updated>
   </entry>
   <entry>
     <author>
@@ -156,13 +124,29 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/VPS%E5%BA%93%E5%AD%98%E7%9B%91%E6%8E%A7%E5%AE%89%E8%A3%85/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/VPS%E5%BA%93%E5%AD%98%E7%9B%91%E6%8E%A7%E5%AE%89%E8%A3%85/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<p>VPS主机商为了可以吸引更多的客户，都会推出一些廉价的VPS主机促销产品，但是这类产品套餐有一定的时限，或者是断货后再补货，如果不及时关注官网则可能错过优惠产品。这篇文章是来分享一下监控各大VPS主机商的库存，同时可以做到上货后微信和TG通知。</p>
 <p>VPS-Inv]]>
     </summary>
     <title>VPS库存监控安装</title>
-    <updated>2026-10-07T09:56:00.670Z</updated>
+    <updated>2026-10-07T10:27:47.857Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xinintop</name>
+    </author>
+    <content>
+      <![CDATA[<p>浏览器打开<a href="https://my.telegram.org/%EF%BC%8C%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E6%97%B6%E7%9A%84%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%8C%E7%99%BB%E9%99%86%E6%88%91%E4%BB%AC%E7%9A%84telegram%E8%B4%A6%E5%8F%B7">https://my.telegram.org/，输入账号注册时的手机号码，登陆我们的telegram账号</a></p><p><img src="https://easy.xinin.top/i/2023/11/06/fcq57t-2.png" alt="Snipaste_11-06_9-28"></p><p>点击next之后，我们的已经登陆的tg账号会收到验证码，输入验证码进行登陆</p><p><img src="https://easy.xinin.top/i/2023/11/06/fdam8y-2.png" alt="Snipaste_11-06_9-28_0"></p><p>点击申请API</p><p><img src="https://easy.xinin.top/i/2023/11/06/fefoft-2.png" alt="Snipaste_11-06_9-31"></p><p>填写<strong>App title 和</strong> <strong>Short name</strong></p><blockquote><p>这里需要多更换几次，多试几次</p></blockquote><p>最后会获得<strong>api_id</strong>和 <strong>api_hash</strong></p><p><img src="https://easy.xinin.top/i/2023/11/06/ffnu8t-2.png" alt="Snipaste_11-05_12-23"></p>]]>
+    </content>
+    <id>https://wuhu-pig.github.io/2024/08/28/TG%E7%9A%84API%E8%8E%B7%E5%8F%96%E6%95%99%E7%A8%8B/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/TG%E7%9A%84API%E8%8E%B7%E5%8F%96%E6%95%99%E7%A8%8B/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
+    <summary>
+      <![CDATA[<p>浏览器打开<a href="https://my.telegram.org/%EF%BC%8C%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E6%97%B6%E7%9A%84%E6%89%8B%E6%9C%BA]]>
+    </summary>
+    <title>TG的API获取教程</title>
+    <updated>2026-10-07T10:27:47.855Z</updated>
   </entry>
   <entry>
     <author>
@@ -173,13 +157,13 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/vps%E7%BE%A4%E6%99%96%E5%A4%87%E4%BB%BD%E6%95%99%E7%A8%8B/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/vps%E7%BE%A4%E6%99%96%E5%A4%87%E4%BB%BD%E6%95%99%E7%A8%8B/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>vps一台<br>黑群晖一台</p>
 <h2 id="群晖操作"><a href="#群晖操作" class="header]]>
     </summary>
     <title>vps群晖备份教程</title>
-    <updated>2026-10-07T09:56:02.409Z</updated>
+    <updated>2026-10-07T10:27:47.860Z</updated>
   </entry>
   <entry>
     <author>
@@ -190,86 +174,29 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/hello-world/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/hello-world/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>John Doe2024-08-282024-08-28</p>
 <]]>
     </summary>
     <title>hello-world</title>
-    <updated>2026-10-07T09:56:01.635Z</updated>
+    <updated>2026-10-07T10:27:47.858Z</updated>
   </entry>
   <entry>
     <author>
       <name>xinintop</name>
     </author>
     <content>
-      <![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1923683">宝塔 nginx 反向代理追加websocket支持-腾讯云开发者社区-腾讯云 (tencent.com)</a></p><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11  </p><p>location &#x2F; {<br>      proxy_pass <a href="http://127.0.0.1:8182/">http://127.0.0.1:8182</a>;<br>      proxy_set_header X-Real-IP $remote_addr;<br>      proxy_set_header Host $host;<br>      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;<br>      proxy_http_version 1.1;<br>      proxy_set_header Upgrade $http_upgrade;<br>      proxy_set_header Connection “upgrade”;<br>      rewrite &#x2F;wss&#x2F;(.*) &#x2F;$1 break;<br>      proxy_redirect off;<br>    }</p>]]>
+      <![CDATA[<p>博客搭建的教程一般分为两种：<br>1.直接使用命令行进行搭建<br>2.使用宝塔面板的图形化界面搭建</p>]]>
     </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94nginx%E5%8F%8D%E4%BB%A3%E6%94%AF%E6%8C%81websocket/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94nginx%E5%8F%8D%E4%BB%A3%E6%94%AF%E6%8C%81websocket/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <id>https://wuhu-pig.github.io/2024/08/28/Typech%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/Typech%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
-      <![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1923683">宝塔 nginx 反向代理追加websocket支持-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
-<p>1<br>2<br>]]>
+      <![CDATA[<p>博客搭建的教程一般分为两种：<br>1.直接使用命令行进行搭建<br>2.使用宝塔面板的图形化界面搭建</p>]]>
     </summary>
-    <title>宝塔nginx反代支持websocket</title>
-    <updated>2026-10-07T09:56:06.231Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xinintop</name>
-    </author>
-    <content>
-      <![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote><p>一个vps</p></blockquote><p>vps通过连接工具连接上，为后续工作做准备</p><blockquote><p>一个域名</p></blockquote><p>将域名解析到freenom备用</p><h2 id="安装宝塔面板"><a href="#安装宝塔面板" class="headerlink" title="安装宝塔面板"></a>安装宝塔面板</h2><p>由于国内版的宝塔面板存在许多问题，这里选择国际版宝塔面板aapanel(宝塔海外版)。<br>连接上vps后安装宝塔面板，按照版本选择对应代码</p><blockquote><p>centos</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh &amp;&amp; bash install.sh forum</span><br></pre></td></tr></table></figure><blockquote><p>Ubuntu&#x2F;Deepin</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; sudo bash install.sh forum</span><br></pre></td></tr></table></figure><blockquote><p>Debian</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; bash install.sh forum</span><br></pre></td></tr></table></figure><p><img src="https://easy.xinin.top/i/2023/02/20/hafq4m.png" alt="Snipaste_2023-01-27_09-04-23.png"></p><h2 id="开始博客搭建"><a href="#开始博客搭建" class="headerlink" title="开始博客搭建"></a>开始博客搭建</h2><blockquote><p>进入宝塔面板</p></blockquote><p>安装必要的组件和依赖，按照宝塔面板推荐的安装即可，等待安装完毕</p>]]>
-    </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94%E6%90%AD%E5%BB%BAtypecho%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94%E6%90%AD%E5%BB%BAtypecho%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
-<p>一个vps</p>
-</blockquote>
-<p>vps通过连接工具连接上，为后续工作做准备<]]>
-    </summary>
-    <title>宝塔搭建typecho博客教程</title>
-    <updated>2026-10-07T09:56:07.790Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xinintop</name>
-    </author>
-    <content>
-      <![CDATA[<ol><li><p>运行以下命令，打开&#x2F;etc&#x2F;ssh&#x2F;sshd_config文件。</p><p>1  </p><p>sudo vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config  </p></li><li><p>按i进入编辑模式，将注释放开，修改为自己需要的端口号。</p><p><img src="https://easy.xinin.top/i/2023/11/25/febd8n-2.png"></p></li><li><p>按Esc退出编辑，然后输入<code>:wq</code>后按Enter键，保存并退出文件。</p></li><li><p>运行以下命令，重启SSH服务。</p><p>1  </p><p>sudo service sshd restart  </p><p>重启后，即可重新使用<code>root</code>用户及密码远程连接服务器。如果您没有设置或者忘记服务器的密</p></li></ol>]]>
-    </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/%E4%BF%AE%E6%94%B9vps%E7%9A%84ssh%E7%AB%AF%E5%8F%A3/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/%E4%BF%AE%E6%94%B9vps%E7%9A%84ssh%E7%AB%AF%E5%8F%A3/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<ol>
-<li><p>运行以下命令，打开&#x2F;etc&#x2F;ssh&#x2F;sshd_config文件。</p>
-<p>1  </p>
-<p>sudo vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config  </p>
-</li>
-<li><]]>
-    </summary>
-    <title>修改vps的ssh端口</title>
-    <updated>2026-10-07T09:56:03.223Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>xinintop</name>
-    </author>
-    <content>
-      <![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a><strong>写在前面</strong></h3><p>从 2021 年 11 月开始，CloudFlare 已禁用 Partner 使用的 zone_setAPI 以避免滥用（因为此 API 访问不需要验证域名所有权），通过 Partner 实现 CNAME 访问的方式几乎结束，只有 Plesk 空间离开了。 Cloudflare 插件订阅的 ServerShield 工作正常。几个月过去了，官方并没有给出未来合作伙伴如何接入新域名的任何解释。</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a><strong>准备工作</strong></h3><ol><li><p>一个cloudflare账号</p></li><li><p>一个腾讯账号</p></li><li><p>一台部署网站的vps</p></li><li><p>两个域名，一个用于接入CF加速，一个是你想要加速的网站</p><blockquote><p>接入CF加速的网站命名为<code>cf.com</code></p></blockquote><blockquote><p>你想要加速的网站命名为<code>tx.com</code></p></blockquote></li></ol><h3 id="将cf-com接入Cloudflare"><a href="#将cf-com接入Cloudflare" class="headerlink" title="将cf.com接入Cloudflare"></a><strong>将<code>cf.com</code>接入Cloudflare</strong></h3><ol><li>点击网站页面的添加站点图标</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/xyj8ok-2.png" alt="image-20231128205334030"></p><ol start="2"><li>填写域名，在选择计划中选取免费套餐，点击继续</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/y214sn-2.png" alt="image-20231128205923023"></p><ol start="3"><li>添加cdn解析</li></ol><p>这里添加或者先接入cf解析都行，二级域名随便设置，我这里演示用的<code>cdn.cf.com</code></p><p><img src="https://easy.xinin.top/i/2023/11/28/yrt021-2.png" alt="image-20231128210253304"></p><ol start="4"><li>将Cloudflare 名称服务器填入<code>cf.com</code>的名称服务器（nameserver）处，每一家不尽相同，这里不演示了</li></ol><h3 id="开通CloudFlare-for-SaaS"><a href="#开通CloudFlare-for-SaaS" class="headerlink" title="开通CloudFlare for SaaS"></a><strong>开通CloudFlare for SaaS</strong></h3><p>建议注册个PayPal，用邮箱就行，不会产生扣费。我已经亲测了。</p><ol><li>打开网站配置页面，并且找到 SSL&#x2F;TLS 下的自定义主机名。启用 CloudFlare for SaaS。</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/yukyr4-2.png" alt="image-20231128210719681"></p><p><img src="https://easy.xinin.top/i/2023/11/28/yv4ew8-2.png" alt="点击启用CloudFlare for SaaS"></p><h3 id="设置回退源及自定义主机域"><a href="#设置回退源及自定义主机域" class="headerlink" title="设置回退源及自定义主机域"></a><strong>设置回退源及自定义主机域</strong></h3><ol><li>设置回退源</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/yx5ofn-2.png" alt="image-20231128211153114"></p><ol start="2"><li><p>添加自定义主机名</p><p>点击添加定义主机名，在自定义主机名处填入你要加速的网站，我这里应该是<code>tx.com</code></p><p><img src="https://easy.xinin.top/i/2023/11/28/z0409a-2.png" alt="image-20231128211649934"></p></li><li><p><img src="https://easy.xinin.top/i/2023/11/28/z1aoys-2.png" alt="image-20231128211847751"></p></li><li><p>验证自定义主机名</p><p>根据你上面获取的txt名称和txt值填写，应该有两条</p></li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/z3elza-2.png" alt="Snipaste_11-28_21-21"></p>]]>
-    </content>
-    <id>https://wuhu-pig.github.io/2024/08/28/%E7%BD%91%E7%AB%99cname%E6%8E%A5%E5%85%A5CloudFlare%E7%9A%84%E8%B6%85%E7%BA%A7%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</id>
-    <link href="https://wuhu-pig.github.io/2024/08/28/%E7%BD%91%E7%AB%99cname%E6%8E%A5%E5%85%A5CloudFlare%E7%9A%84%E8%B6%85%E7%BA%A7%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a><strong>写在前面</strong></h3><p>从 2021 年 11 月开始，CloudFlare 已禁用 Partner 使用的 zo]]>
-    </summary>
-    <title>网站cname接入CloudFlare的超级详细教程</title>
-    <updated>2026-10-07T09:56:10.215Z</updated>
+    <title>Typech博客搭建教程</title>
+    <updated>2026-10-07T10:27:47.856Z</updated>
   </entry>
   <entry>
     <author>
@@ -280,14 +207,35 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/%E5%9F%BA%E4%BA%8ETG%E6%90%AD%E5%BB%BA%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%BD%91%E7%9B%98/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/%E5%9F%BA%E4%BA%8ETG%E6%90%AD%E5%BB%BA%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F%E7%BD%91%E7%9B%98/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<p>Telegram里面用户是可以无限上传文件的，但是我们在国内无法直接访问telegram，所以有大佬开发了个项目，可以通过机器人获取telegram里的文件直链，只需要一台vps即可，但是需要注意可能存在封号的风险！</p>
 <blockquote>
 <p><a href=]]>
     </summary>
     <title>基于TG搭建无限容量网盘</title>
-    <updated>2026-10-07T09:56:04.214Z</updated>
+    <updated>2026-10-07T10:27:47.865Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xinintop</name>
+    </author>
+    <content>
+      <![CDATA[<ol><li><p>运行以下命令，打开&#x2F;etc&#x2F;ssh&#x2F;sshd_config文件。</p><p>1  </p><p>sudo vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config  </p></li><li><p>按i进入编辑模式，将注释放开，修改为自己需要的端口号。</p><p><img src="https://easy.xinin.top/i/2023/11/25/febd8n-2.png"></p></li><li><p>按Esc退出编辑，然后输入<code>:wq</code>后按Enter键，保存并退出文件。</p></li><li><p>运行以下命令，重启SSH服务。</p><p>1  </p><p>sudo service sshd restart  </p><p>重启后，即可重新使用<code>root</code>用户及密码远程连接服务器。如果您没有设置或者忘记服务器的密</p></li></ol>]]>
+    </content>
+    <id>https://wuhu-pig.github.io/2024/08/28/%E4%BF%AE%E6%94%B9vps%E7%9A%84ssh%E7%AB%AF%E5%8F%A3/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/%E4%BF%AE%E6%94%B9vps%E7%9A%84ssh%E7%AB%AF%E5%8F%A3/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
+    <summary>
+      <![CDATA[<ol>
+<li><p>运行以下命令，打开&#x2F;etc&#x2F;ssh&#x2F;sshd_config文件。</p>
+<p>1  </p>
+<p>sudo vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config  </p>
+</li>
+<li><]]>
+    </summary>
+    <title>修改vps的ssh端口</title>
+    <updated>2026-10-07T10:27:47.862Z</updated>
   </entry>
   <entry>
     <author>
@@ -298,12 +246,64 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94%E6%90%AD%E5%BB%BAtypecho%E6%95%99%E7%A8%8B/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94%E6%90%AD%E5%BB%BAtypecho%E6%95%99%E7%A8%8B/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要是记录一下宝塔搭建typecho博客的简单教程，方便自己重新部署博客和博客的迁移。宝塔搭建相对于来说很简单，只需要会输入简单的命令就可以]]>
     </summary>
     <title>宝塔搭建typecho教程</title>
-    <updated>2026-10-07T09:56:08.848Z</updated>
+    <updated>2026-10-07T10:27:47.869Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xinintop</name>
+    </author>
+    <content>
+      <![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote><p>一个vps</p></blockquote><p>vps通过连接工具连接上，为后续工作做准备</p><blockquote><p>一个域名</p></blockquote><p>将域名解析到freenom备用</p><h2 id="安装宝塔面板"><a href="#安装宝塔面板" class="headerlink" title="安装宝塔面板"></a>安装宝塔面板</h2><p>由于国内版的宝塔面板存在许多问题，这里选择国际版宝塔面板aapanel(宝塔海外版)。<br>连接上vps后安装宝塔面板，按照版本选择对应代码</p><blockquote><p>centos</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh &amp;&amp; bash install.sh forum</span><br></pre></td></tr></table></figure><blockquote><p>Ubuntu&#x2F;Deepin</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; sudo bash install.sh forum</span><br></pre></td></tr></table></figure><blockquote><p>Debian</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; bash install.sh forum</span><br></pre></td></tr></table></figure><p><img src="https://easy.xinin.top/i/2023/02/20/hafq4m.png" alt="Snipaste_2023-01-27_09-04-23.png"></p><h2 id="开始博客搭建"><a href="#开始博客搭建" class="headerlink" title="开始博客搭建"></a>开始博客搭建</h2><blockquote><p>进入宝塔面板</p></blockquote><p>安装必要的组件和依赖，按照宝塔面板推荐的安装即可，等待安装完毕</p>]]>
+    </content>
+    <id>https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94%E6%90%AD%E5%BB%BAtypecho%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94%E6%90%AD%E5%BB%BAtypecho%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
+<p>一个vps</p>
+</blockquote>
+<p>vps通过连接工具连接上，为后续工作做准备<]]>
+    </summary>
+    <title>宝塔搭建typecho博客教程</title>
+    <updated>2026-10-07T10:27:47.867Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xinintop</name>
+    </author>
+    <content>
+      <![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a><strong>写在前面</strong></h3><p>从 2021 年 11 月开始，CloudFlare 已禁用 Partner 使用的 zone_setAPI 以避免滥用（因为此 API 访问不需要验证域名所有权），通过 Partner 实现 CNAME 访问的方式几乎结束，只有 Plesk 空间离开了。 Cloudflare 插件订阅的 ServerShield 工作正常。几个月过去了，官方并没有给出未来合作伙伴如何接入新域名的任何解释。</p><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a><strong>准备工作</strong></h3><ol><li><p>一个cloudflare账号</p></li><li><p>一个腾讯账号</p></li><li><p>一台部署网站的vps</p></li><li><p>两个域名，一个用于接入CF加速，一个是你想要加速的网站</p><blockquote><p>接入CF加速的网站命名为<code>cf.com</code></p></blockquote><blockquote><p>你想要加速的网站命名为<code>tx.com</code></p></blockquote></li></ol><h3 id="将cf-com接入Cloudflare"><a href="#将cf-com接入Cloudflare" class="headerlink" title="将cf.com接入Cloudflare"></a><strong>将<code>cf.com</code>接入Cloudflare</strong></h3><ol><li>点击网站页面的添加站点图标</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/xyj8ok-2.png" alt="image-20231128205334030"></p><ol start="2"><li>填写域名，在选择计划中选取免费套餐，点击继续</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/y214sn-2.png" alt="image-20231128205923023"></p><ol start="3"><li>添加cdn解析</li></ol><p>这里添加或者先接入cf解析都行，二级域名随便设置，我这里演示用的<code>cdn.cf.com</code></p><p><img src="https://easy.xinin.top/i/2023/11/28/yrt021-2.png" alt="image-20231128210253304"></p><ol start="4"><li>将Cloudflare 名称服务器填入<code>cf.com</code>的名称服务器（nameserver）处，每一家不尽相同，这里不演示了</li></ol><h3 id="开通CloudFlare-for-SaaS"><a href="#开通CloudFlare-for-SaaS" class="headerlink" title="开通CloudFlare for SaaS"></a><strong>开通CloudFlare for SaaS</strong></h3><p>建议注册个PayPal，用邮箱就行，不会产生扣费。我已经亲测了。</p><ol><li>打开网站配置页面，并且找到 SSL&#x2F;TLS 下的自定义主机名。启用 CloudFlare for SaaS。</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/yukyr4-2.png" alt="image-20231128210719681"></p><p><img src="https://easy.xinin.top/i/2023/11/28/yv4ew8-2.png" alt="点击启用CloudFlare for SaaS"></p><h3 id="设置回退源及自定义主机域"><a href="#设置回退源及自定义主机域" class="headerlink" title="设置回退源及自定义主机域"></a><strong>设置回退源及自定义主机域</strong></h3><ol><li>设置回退源</li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/yx5ofn-2.png" alt="image-20231128211153114"></p><ol start="2"><li><p>添加自定义主机名</p><p>点击添加定义主机名，在自定义主机名处填入你要加速的网站，我这里应该是<code>tx.com</code></p><p><img src="https://easy.xinin.top/i/2023/11/28/z0409a-2.png" alt="image-20231128211649934"></p></li><li><p><img src="https://easy.xinin.top/i/2023/11/28/z1aoys-2.png" alt="image-20231128211847751"></p></li><li><p>验证自定义主机名</p><p>根据你上面获取的txt名称和txt值填写，应该有两条</p></li></ol><p><img src="https://easy.xinin.top/i/2023/11/28/z3elza-2.png" alt="Snipaste_11-28_21-21"></p>]]>
+    </content>
+    <id>https://wuhu-pig.github.io/2024/08/28/%E7%BD%91%E7%AB%99cname%E6%8E%A5%E5%85%A5CloudFlare%E7%9A%84%E8%B6%85%E7%BA%A7%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/%E7%BD%91%E7%AB%99cname%E6%8E%A5%E5%85%A5CloudFlare%E7%9A%84%E8%B6%85%E7%BA%A7%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a><strong>写在前面</strong></h3><p>从 2021 年 11 月开始，CloudFlare 已禁用 Partner 使用的 zo]]>
+    </summary>
+    <title>网站cname接入CloudFlare的超级详细教程</title>
+    <updated>2026-10-07T10:27:47.872Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>xinintop</name>
+    </author>
+    <content>
+      <![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1923683">宝塔 nginx 反向代理追加websocket支持-腾讯云开发者社区-腾讯云 (tencent.com)</a></p><p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11  </p><p>location &#x2F; {<br>      proxy_pass <a href="http://127.0.0.1:8182/">http://127.0.0.1:8182</a>;<br>      proxy_set_header X-Real-IP $remote_addr;<br>      proxy_set_header Host $host;<br>      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;<br>      proxy_http_version 1.1;<br>      proxy_set_header Upgrade $http_upgrade;<br>      proxy_set_header Connection “upgrade”;<br>      rewrite &#x2F;wss&#x2F;(.*) &#x2F;$1 break;<br>      proxy_redirect off;<br>    }</p>]]>
+    </content>
+    <id>https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94nginx%E5%8F%8D%E4%BB%A3%E6%94%AF%E6%8C%81websocket/</id>
+    <link href="https://wuhu-pig.github.io/2024/08/28/%E5%AE%9D%E5%A1%94nginx%E5%8F%8D%E4%BB%A3%E6%94%AF%E6%8C%81websocket/"/>
+    <published>2024-08-28T04:00:30.000Z</published>
+    <summary>
+      <![CDATA[<p><a href="https://cloud.tencent.com/developer/article/1923683">宝塔 nginx 反向代理追加websocket支持-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+<p>1<br>2<br>]]>
+    </summary>
+    <title>宝塔nginx反代支持websocket</title>
+    <updated>2026-10-07T10:27:47.866Z</updated>
   </entry>
   <entry>
     <author>
@@ -314,13 +314,13 @@
     </content>
     <id>https://wuhu-pig.github.io/2024/08/28/%E9%98%BF%E9%87%8C%E4%BA%91%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8DD%E7%B3%BB%E7%BB%9F/</id>
     <link href="https://wuhu-pig.github.io/2024/08/28/%E9%98%BF%E9%87%8C%E4%BA%91%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8DD%E7%B3%BB%E7%BB%9F/"/>
-    <published>2024-08-27T16:00:00.000Z</published>
+    <published>2024-08-28T04:00:30.000Z</published>
     <summary>
       <![CDATA[<p>@ <strong>注意重装有风险，可能导致无法开机，谨慎操作！</strong></p>
 <h3 id="一键安装Linux系统脚本"><a href="#一键安装Linux系统脚本" class="headerlink" title="一键安装Linux系统脚本"></]]>
     </summary>
     <title>阿里云轻量应用服务器DD系统</title>
-    <updated>2026-10-07T09:56:11.277Z</updated>
+    <updated>2026-10-07T10:27:47.873Z</updated>
   </entry>
   <entry>
     <author>
@@ -331,13 +331,13 @@
     </content>
     <id>https://wuhu-pig.github.io/2021/07/22/%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA/</id>
     <link href="https://wuhu-pig.github.io/2021/07/22/%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA/"/>
-    <published>2021-07-21T16:00:00.000Z</published>
+    <published>2021-07-22T04:00:30.000Z</published>
     <summary>
       <![CDATA[<p><a href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">云服务器</a></p>
 <h1 id="哪吒监控面板搭建"><a href="#哪吒监控面板搭建" class="headerlink" title="]]>
     </summary>
     <title>哪吒监控面板搭建</title>
-    <updated>2026-10-07T09:55:52.964Z</updated>
+    <updated>2026-10-07T10:27:47.863Z</updated>
   </entry>
   <entry>
     <author>
@@ -348,12 +348,12 @@
     </content>
     <id>https://wuhu-pig.github.io/2020/09/14/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</id>
     <link href="https://wuhu-pig.github.io/2020/09/14/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <published>2020-09-13T16:00:00.000Z</published>
+    <published>2020-09-14T04:00:30.000Z</published>
     <summary>
       <![CDATA[<p><a href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">云服务器</a></p>
 <h1 id="宝塔面板安装教程"><a href="#宝塔面板安装教程" class="headerlink" title="]]>
     </summary>
     <title>宝塔面板安装教程</title>
-    <updated>2026-10-07T09:55:52.093Z</updated>
+    <updated>2026-10-07T10:27:47.870Z</updated>
   </entry>
 </feed>
