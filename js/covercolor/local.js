@@ -5,9 +5,7 @@ const extractLocalColor = (source) => new Promise((resolve, reject) => {
   image.crossOrigin = "anonymous";
   image.addEventListener("load", () => {
     try {
-      const color = window.ColorThief?.getColorSync(image);
-      if (!color) throw new Error("Color Thief is unavailable");
-      resolve(rgbToHex(color.array(), 0.8));
+      resolve(rgbToHex(new ColorThief().getColor(image), 0.8));
     } catch (error) {
       reject(error);
     }

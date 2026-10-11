@@ -144,7 +144,8 @@ const percent = () => {
     ? Math.round((scrollPos / totalScrollableHeight) * 100)
     : 0;
   const navToTop = document.querySelector("#nav-totop");
-  const percentDisplay = document.querySelector("#nav-totop #percent");
+  const rsToTop = document.querySelector(".rs_show .top i");
+  const percentDisplay = document.querySelector("#percent");
   const endTarget =
     document.getElementById("post-comment") || document.getElementById("footer");
   const isNearEnd = endTarget
@@ -152,9 +153,12 @@ const percent = () => {
     : false;
 
   navToTop?.classList.toggle("long", isNearEnd || scrolledPercent > 90);
+  rsToTop?.classList.toggle("show", isNearEnd || scrolledPercent > 90);
   if (percentDisplay) percentDisplay.textContent =
     isNearEnd || scrolledPercent > 90
-      ? Solitude.config.lang.backtop
+      ? navToTop
+        ? Solitude.config.lang.backtop
+        : ""
       : scrolledPercent;
 
   document
@@ -284,8 +288,10 @@ const initHomeCenter = () => {
     image.onload = () => {
       if (!container.isConnected) return;
       try {
-        const dominantColor = window.ColorThief?.getColorSync(image);
-        const rgb = dominantColor ? dominantColor.array() : getAverageColor(image);
+        const rgb =
+          typeof ColorThief === "function"
+            ? new ColorThief().getColor(image)
+            : getAverageColor(image);
         if (!rgb) return;
         const color = rgbToThemeHex(rgb);
         cacheColor(src, color);
@@ -465,7 +471,7 @@ const initObserver = () => {
         if (Solitude.config.comment?.commentBarrage && commentBarrageElement) {
           commentBarrageElement.style.bottom = entry.isIntersecting
             ? "-200px"
-            : "";
+            : "0px";
         }
       });
     });
@@ -603,10 +609,9 @@ const actions = {
       const $rmText = document.querySelector("#menu-music-toggle span");
       const $rmIcon = document.querySelector("#menu-music-toggle i");
       if ($rmText) {
-        const label = this.musicPlaying
+        $rmText.textContent = this.musicPlaying
           ? Solitude.config.right_menu.music.stop
           : Solitude.config.right_menu.music.start;
-        Solitude.rightMenu.setLabel($rmText, label);
       }
       if ($rmIcon) {
         $rmIcon.className = `solitude fas ${this.musicPlaying ? "fa-pause" : "fa-play"}`;
@@ -861,7 +866,7 @@ const actions = {
   initbbtalk() {
     const bberTalkElement = document.querySelector("#bber-talk");
     if (bberTalkElement) {
-      const swiper = new Swiper("#bbtalk", {
+      new Swiper(".swiper-container", {
         direction: "vertical",
         loop: true,
         autoplay: {
@@ -869,7 +874,6 @@ const actions = {
           pauseOnMouseEnter: true,
         },
       });
-      lifecycle.add(() => swiper.destroy());
     }
   },
   addPhotoFigcaption() {
@@ -1113,7 +1117,20 @@ const actions = {
     };
     Solitude.addEventListenerPjax(switchBtn, "click", handleSwitchBtn);
   },
-
+  homeTypeit() {
+    if (typeof home_subtitle === "undefined") return;
+    const ty = new TypeIt(".banners-title-small", {
+      speed: 200,
+      waitUntilVisible: true,
+      loop: true,
+      lifeLike: true,
+    });
+    home_subtitle.forEach((item) => {
+      ty.type(item).pause(500).delete(item);
+    });
+    ty.go();
+    lifecycle.add(() => ty.destroy?.());
+  },
 };
 
 Object.assign(Solitude, actions);
@@ -1403,44 +1420,6 @@ const forPostFn = () => {
   scrollFnToDo();
 };
 
-const initPostCoverTilt = () => {
-  const cover = document.querySelector(".post-cover-aside");
-  const canTilt = window.matchMedia(
-    "(hover: hover) and (pointer: fine)"
-  ).matches;
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-  if (!cover || !canTilt || reduceMotion) return;
-
-  const updateTilt = (event) => {
-    const rect = cover.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width;
-    const y = (event.clientY - rect.top) / rect.height;
-    const rotateX = (0.5 - y) * 10;
-    const rotateY = (x - 0.5) * 10;
-
-    cover.style.setProperty("--post-cover-glow-x", `${(x * 100).toFixed(2)}%`);
-    cover.style.setProperty("--post-cover-glow-y", `${(y * 100).toFixed(2)}%`);
-    cover.style.setProperty("--post-cover-rotate-x", `${rotateX.toFixed(2)}deg`);
-    cover.style.setProperty("--post-cover-rotate-y", `${rotateY.toFixed(2)}deg`);
-    cover.style.setProperty("--post-cover-img-x", `${(-rotateY).toFixed(2)}px`);
-    cover.style.setProperty("--post-cover-img-y", `${rotateX.toFixed(2)}px`);
-  };
-
-  const resetTilt = () => {
-    cover.style.setProperty("--post-cover-rotate-x", "0deg");
-    cover.style.setProperty("--post-cover-rotate-y", "0deg");
-    cover.style.setProperty("--post-cover-img-x", "0px");
-    cover.style.setProperty("--post-cover-img-y", "0px");
-  };
-
-  lifecycle.listen(cover, "pointerenter", updateTilt);
-  lifecycle.listen(cover, "pointermove", updateTilt);
-  lifecycle.listen(cover, "pointerleave", resetTilt);
-  lifecycle.listen(cover, "pointercancel", resetTilt);
-};
-
 const initAboutCardGlow = () => {
   const aboutPage = document.getElementById("about-page");
   const canHover = window.matchMedia(
@@ -1513,7 +1492,6 @@ Solitude.refresh = async () => {
   randomlink && Solitude.randomLinksList?.();
   Solitude.config.friend_links.async && Solitude.friendLinks?.init();
   if (is_post) {
-    initPostCoverTilt();
     if (ai_text && ai) {
       ai.init();
       lifecycle.add(() => ai.cancel());
@@ -1524,7 +1502,7 @@ Solitude.refresh = async () => {
   if (is_home) {
     showTodayCard();
     initHomeCenter();
-    Solitude.initbbtalk();
+    Solitude.homeTypeit();
   }
   typeof updatePostsBasedOnComments === "function" &&
     updatePostsBasedOnComments();

@@ -138,35 +138,23 @@
         if (!window.fancyboxRun) {
           Fancybox.bind("[data-fancybox]", {
             Hash: false,
-            Carousel: {
-              transition: "slide",
-              Thumbs: { showOnStart: false },
-              Zoomable: { Panzoom: { maxScale: 4 } },
-              Toolbar: {
-                display: {
-                  left: ["counter"],
-                  middle: [],
-                  right: ["thumbs", "close"],
-                },
-              },
-              breakpoints: {
-                "(min-width: 768px)": {
-                  Toolbar: {
-                    display: {
-                      left: ["counter"],
-                      middle: [
-                        "zoomIn",
-                        "zoomOut",
-                        "toggle1to1",
-                        "rotateCCW",
-                        "rotateCW",
-                        "flipX",
-                        "flipY",
-                      ],
-                      right: ["autoplay", "thumbs", "close"],
-                    },
-                  },
-                },
+            animated: true,
+            Thumbs: { showOnStart: false },
+            Images: { Panzoom: { maxScale: 4 } },
+            Carousel: { transition: "slide" },
+            Toolbar: {
+              display: {
+                left: ["infobar"],
+                middle: [
+                  "zoomIn",
+                  "zoomOut",
+                  "toggle1to1",
+                  "rotateCCW",
+                  "rotateCW",
+                  "flipX",
+                  "flipY",
+                ],
+                right: ["slideshow", "thumbs", "close"],
               },
             },
           });
@@ -225,18 +213,6 @@
             "'": "&#039;",
           }[m])
       ),
-    owoBig: (owoSelector) => {
-      const execute = () => {
-        if (typeof window.Solitude.owoBig === 'function' && window.Solitude.owoBig !== utilsFn.owoBig) {
-          window.Solitude.owoBig(owoSelector);
-        }
-      };
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', execute);
-      } else {
-        setTimeout(execute, 100);
-      }
-    },
   };
   Object.assign(window.Solitude, utilsFn);
 })();

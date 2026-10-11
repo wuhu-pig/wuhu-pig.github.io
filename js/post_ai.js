@@ -1,17 +1,18 @@
 import { Solitude } from "./core/api.js";
 
 class AIPostRenderer {
+  static ANIMATION_DELAY_MS = 30;
   static AI_EXPLANATION_SELECTOR = ".ai-explanation";
   static AI_TAG_SELECTOR = ".ai-tag";
 
   constructor() {
-    this.initialize = this.initialize.bind(this);
+    this.startTextAnimation = this.startTextAnimation.bind(this);
     this.animationFrame = null;
   }
 
   init() {
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", this.initialize, { once: true });
+      document.addEventListener("DOMContentLoaded", this.initialize.bind(this));
     } else {
       this.initialize();
     }
@@ -47,7 +48,6 @@ class AIPostRenderer {
 
   renderAIContent() {
     this.prepareAnimation();
-    this.charSequence = this.parseContent(this.aiContent);
     this.animationFrame = requestAnimationFrame(() =>
       this.startTextAnimation(0)
     );
@@ -57,53 +57,41 @@ class AIPostRenderer {
     this.isAnimating = true;
     this.tagElement.classList.add("loadingAI");
     this.explanationElement.textContent = "";
-    this.currentBoldElement = null;
-  }
-
-  parseContent(content) {
-    const sequence = [];
-    const segmenter = new Intl.Segmenter(undefined, { granularity: "grapheme" });
-    for (const [index, part] of content.split(/(\*\*[^*]+\*\*)/u).entries()) {
-      const bold = index % 2 === 1;
-      const text = bold ? part.slice(2, -2) : part;
-      for (const { segment: char } of segmenter.segment(text)) {
-        sequence.push({ char, bold });
-      }
-    }
-    return sequence;
   }
 
   startTextAnimation(index) {
-    if (index >= this.charSequence.length) {
+    if (index >= this.aiContent.length) {
       this.completeAnimation();
       return;
     }
 
-    this.appendCharacter(this.charSequence[index]);
+    this.appendCharacter(this.aiContent[index]);
     this.animationFrame = requestAnimationFrame(() =>
       this.startTextAnimation(index + 1)
     );
   }
 
-  appendCharacter({ char, bold }) {
+  appendCharacter(char) {
+    if (!this.fragment) this.fragment = document.createDocumentFragment();
+
     const charElement = document.createElement("span");
     charElement.className = "char";
     charElement.textContent = char;
-    if (bold) {
-      if (!this.currentBoldElement) {
-        this.currentBoldElement = document.createElement("strong");
-        this.explanationElement.appendChild(this.currentBoldElement);
-      }
-      this.currentBoldElement.appendChild(charElement);
-    } else {
-      this.currentBoldElement = null;
-      this.explanationElement.appendChild(charElement);
+    this.fragment.appendChild(charElement);
+
+    if (this.fragment.childNodes.length % 1 === 0) {
+      this.explanationElement.appendChild(this.fragment);
+      this.fragment = null;
     }
   }
 
   completeAnimation() {
+    if (this.fragment) {
+      this.explanationElement.appendChild(this.fragment);
+      this.fragment = null;
+    }
+
     cancelAnimationFrame(this.animationFrame);
-    this.animationFrame = null;
     this.isAnimating = false;
     this.tagElement.classList.remove("loadingAI");
 
@@ -116,19 +104,26 @@ class AIPostRenderer {
   cancel() {
     cancelAnimationFrame(this.animationFrame);
     this.animationFrame = null;
-    this.charSequence = [];
-    this.currentBoldElement = null;
-    document.removeEventListener("DOMContentLoaded", this.initialize);
+    this.fragment = null;
     this.isAnimating = false;
     this.tagElement?.classList.remove("loadingAI");
   }
 
   get aiContent() {
-    const content = Solitude.page?.ai_text;
-    return typeof content === "string" ? content : "";
+    return Solitude.page?.ai_text || "";
   }
 }
 
-// The page refresh lifecycle owns initialization and cancellation.
-export const ai = new AIPostRenderer();
+const aiPostRenderer = (() => {
+  let instance;
+  return () => {
+    if (!instance) {
+      instance = new AIPostRenderer();
+      instance.init();
+    }
+    return instance;
+  };
+})();
+
+export const ai = aiPostRenderer();
 export default ai;

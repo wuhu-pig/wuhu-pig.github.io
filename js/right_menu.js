@@ -86,25 +86,12 @@ const rm = {
     copyImage(imgUrl = this.domsrc) {
         window.open(imgUrl);
     },
-    setLabel(element, label) {
-        if (!element || !label) return;
-        element.textContent = label;
-        element.setAttribute("title", label);
-        element.setAttribute("heotip", label);
-        const menuItem = element.closest(".rightMenu-item");
-        if (menuItem) {
-            menuItem.setAttribute("title", label);
-            menuItem.setAttribute("heotip", label);
-        }
-    },
     mode(darkmode) {
-        const label = darkmode ? Solitude.config.right_menu.mode.light : Solitude.config.right_menu.mode.dark;
-        this.setLabel(document.querySelector(".menu-darkmode-text"), label);
+        document.querySelector(".menu-darkmode-text").textContent = darkmode ? Solitude.config.right_menu.mode.light : Solitude.config.right_menu.mode.dark;
         this.hideRightMenu();
     },
     barrage(enable) {
-        const label = enable ? Solitude.config.right_menu.barrage.open : Solitude.config.right_menu.barrage.close;
-        this.setLabel(document.querySelector(".menu-commentBarrage-text"), label);
+        document.querySelector(".menu-commentBarrage-text").textContent = enable ? Solitude.config.right_menu.barrage.open : Solitude.config.right_menu.barrage.close;
         this.hideRightMenu();
     },
 };

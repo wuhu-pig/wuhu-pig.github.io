@@ -72,6 +72,7 @@ export const applyThemeColor = (value) => {
   root.style.setProperty("--efu-main-op", `${adjusted}23`);
   root.style.setProperty("--efu-main-op-deep", `${adjusted}dd`);
   root.style.setProperty("--efu-main-none", `${adjusted}00`);
+  document.getElementById("coverdiv")?.classList.add("loaded");
   Solitude.initThemeColor?.();
 };
 
