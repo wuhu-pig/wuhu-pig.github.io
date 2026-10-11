@@ -9,7 +9,13 @@
   /* color */
   --dk-brand: #00a0e9;
   --dk-brand-strong: #0080c4;
-  --dk-link: #0072b8;
+  /* 文字用的深蓝：--dk-brand-strong 在白底只有 4.30:1，正文链接/加粗要求 4.5:1，
+   * 而主题里这些位置都读 --efu-main/--efu-theme，所以单独准备一个达标值喂给它。
+   * 白底 5.86 / 卡片底 5.56 / 天空横幅 4.50，三处都过。 */
+  --dk-brand-ink: #0069a8;
+  /* 落在主色填充上的文字该用什么色（两个主题极性相反） */
+  --dk-on-theme: #ffffff;
+  --dk-link: var(--dk-brand-ink);
   --dk-link-hover: #00527a;
   --dk-ink: #0b3557;
   --dk-ink-muted: #4a6e8a;
@@ -38,21 +44,23 @@
   --dk-t-slow: 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
 
   /* 喂给主题自己的变量 */
-  --efu-theme: var(--dk-brand-strong);
+  --efu-theme: var(--dk-brand-ink);
   --efu-theme-op: rgba(0, 160, 233, 0.12);
-  --efu-main: var(--dk-brand-strong);
+  --efu-main: var(--dk-brand-ink);
   --efu-font: var(--dk-font);
   --global-bg: var(--dk-canvas);
   --efu-background: var(--dk-canvas);
   --efu-card-bg: var(--dk-surface);
   --efu-fontcolor: var(--dk-ink);
-  --efu-hovertext: var(--dk-brand-strong);
+  --efu-hovertext: var(--dk-brand-ink);
   --efu-rss: var(--dk-r-md);
 }
 
 [data-theme="dark"] {
   --dk-brand: #38bdf8;
   --dk-brand-strong: #2e7fb8;
+  /* 暗色的主色填充是浅天蓝，压上去的文字必须是深墨 */
+  --dk-on-theme: #0b3557;
   --dk-link: #5bc8ff;
   --dk-link-hover: #7fd4ff;
   --dk-ink: #d9edfb;
@@ -74,7 +82,8 @@
   --efu-card-bg: var(--dk-surface);
   --efu-secondbg-bg: #0c2540;
   --efu-fontcolor: var(--dk-ink);
-  --efu-hovertext: var(--dk-brand-strong);
+  /* 悬停文字色：暗色下 --dk-brand-strong(#2e7fb8) 在卡片底只有 3.50:1，改用亮蓝 */
+  --efu-hovertext: var(--dk-link);
   --efu-shadow-nav: 0 5px 24px -6px rgba(0, 0, 0, 0.6);
 }
 
@@ -274,27 +283,49 @@ body#body::before {
 #post #post-info {
   position: relative;
   overflow: hidden;
+  /* 让 ::before 的负 z-index 只压在本卡背景上，不会漏到页面背后 */
+  isolation: isolate;
   padding-bottom: 48px;
   border: 1px solid var(--dk-line);
   border-bottom: none;
   border-radius: var(--dk-r-lg) var(--dk-r-lg) 0 0;
-  background:
-    radial-gradient(closest-side at 16% 32%, var(--dk-cloud) 55%, transparent) 0 0 / 170px 62px no-repeat,
-    radial-gradient(closest-side at 83% 20%, var(--dk-cloud) 55%, transparent) 0 0 / 150px 56px no-repeat,
-    linear-gradient(180deg, #bfe8fb, #e7f6ff 65%, transparent);
+  background: linear-gradient(180deg, #bfe8fb, #e7f6ff 65%, transparent);
 }
 
 [data-theme="dark"] #post #post-info {
+  background: linear-gradient(180deg, #12456f, #0e3455 70%, transparent);
+}
+
+/* 云单独一层，才能整体平移；z-index:-1 + 上面的 isolation 保证云在标题文字之下、天空之上 */
+#post #post-info::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -30% 40% -30%;
+  pointer-events: none;
   background:
     radial-gradient(closest-side at 16% 32%, var(--dk-cloud) 55%, transparent) 0 0 / 170px 62px no-repeat,
     radial-gradient(closest-side at 83% 20%, var(--dk-cloud) 55%, transparent) 0 0 / 150px 56px no-repeat,
-    linear-gradient(180deg, #12456f, #0e3455 70%, transparent);
+    radial-gradient(closest-side at 46% 78%, var(--dk-cloud) 55%, transparent) 0 0 / 124px 46px no-repeat;
 }
 
 #post #post-info .post-title,
 #post #post-info #post-meta,
 #post #post-info #post-meta a {
   color: var(--dk-ink);
+}
+
+/* "原创"徽章：主题写成白字 + rgba(255,255,255,.2) 半透明白底，压在浅天空上只有约 1.2:1。
+ * 换成红鼻子底 + 白字（4.80:1）。选择器抄主题的原始写法，特异性相同才压得住，
+ * 皮肤层注入在 head 末尾，同分时后来者胜。 */
+.post #post-info #post-firstinfo .meta-firstline .post-meta-original {
+  background: var(--dk-alert);
+  color: #fff;
+}
+
+.post #post-info #post-firstinfo .meta-firstline .post-meta-original:hover {
+  background: #fff;
+  color: var(--dk-alert);
 }
 
 /* 四次元口袋 */
@@ -375,44 +406,294 @@ body#body::before {
   transform: none;
 }
 
-/* ============ 13. 归档页缩略图：换掉主题自带的 SOLITUDE 占位图 ============ */
-/* 只在图片是占位图时生效，将来文章配了真封面自动恢复 */
-.archive-page-thumb:has(> img[src$="/img/default.avif"]) > img {
-  opacity: 0;
-}
-
-.archive-page-thumb:has(> img[src$="/img/default.avif"]) {
-  background:
+/* ============ 13. 占位封面：归档页卡 + 404 推荐位，换掉主题占位图 ============ */
+/* 只在封面是主题占位图时生效，将来文章配了真封面自动恢复 */
+:root {
+  --dk-cover-motif:
     radial-gradient(60% 42% at 50% 100%, #fff 96%, transparent 100%),
-    linear-gradient(180deg, transparent 0 57.5%, var(--dk-alert) 57.5% 59.5%, transparent 59.5%) 50% 0 / 52% 100% no-repeat,
-    radial-gradient(closest-side at 22% 24%, var(--dk-cloud) 55%, transparent) 0 0 / 46px 18px no-repeat,
-    radial-gradient(closest-side at 76% 16%, var(--dk-cloud) 55%, transparent) 0 0 / 40px 16px no-repeat,
+    radial-gradient(62% 45% at 50% 100%, var(--dk-alert) 96%, transparent 100%),
+    radial-gradient(closest-side at 22% 24%, var(--dk-cloud) 55%, transparent) 0 0 / 30% 22% no-repeat,
+    radial-gradient(closest-side at 76% 16%, var(--dk-cloud) 55%, transparent) 0 0 / 26% 20% no-repeat,
     linear-gradient(160deg, #bfe8fb, #e7f6ff);
 }
 
-[data-theme="dark"] .archive-page-thumb:has(> img[src$="/img/default.avif"]) {
-  background:
+[data-theme="dark"] {
+  --dk-cover-motif:
     radial-gradient(60% 42% at 50% 100%, rgba(255, 255, 255, 0.92) 96%, transparent 100%),
-    linear-gradient(180deg, transparent 0 57.5%, var(--dk-alert) 57.5% 59.5%, transparent 59.5%) 50% 0 / 52% 100% no-repeat,
-    radial-gradient(closest-side at 22% 24%, var(--dk-cloud) 55%, transparent) 0 0 / 46px 18px no-repeat,
-    radial-gradient(closest-side at 76% 16%, var(--dk-cloud) 55%, transparent) 0 0 / 40px 16px no-repeat,
+    radial-gradient(62% 45% at 50% 100%, var(--dk-alert) 96%, transparent 100%),
+    radial-gradient(closest-side at 22% 24%, var(--dk-cloud) 55%, transparent) 0 0 / 30% 22% no-repeat,
+    radial-gradient(closest-side at 76% 16%, var(--dk-cloud) 55%, transparent) 0 0 / 26% 20% no-repeat,
     linear-gradient(160deg, #12456f, #0e3455);
 }
 
-/* ============ 14. 断点与降级 ============ */
+/* 无封面的文章有两种状态：懒加载未触发时是 data-lazy-src="/"，
+ * 触发后加载失败被主题换成 /img/default.avif。两种都要命中，
+ * 否则在慢网络/后台标签页里会露出一块没有底色的空位。 */
+.archive-page-thumb:has(> img:is([src$="/img/default.avif"], [data-lazy-src="/"])) > img,
+.aside-list-item .thumbnail:has(> img:is([src$="/img/default.avif"], [data-lazy-src="/"])) > img {
+  opacity: 0;
+}
+
+.archive-page-thumb:has(> img:is([src$="/img/default.avif"], [data-lazy-src="/"])),
+.aside-list-item .thumbnail:has(> img:is([src$="/img/default.avif"], [data-lazy-src="/"])) {
+  /* 404 页主题用 #body-wrap.error .aside-list .thumbnail 写死了卡片底色，特异性更高，只能压它 */
+  background: var(--dk-cover-motif) !important;
+}
+
+/* ============ 14. 404 页：天空里的任意门 ============ */
+#error-wrap .error-content {
+  overflow: hidden;
+  border: 1px solid var(--dk-line);
+  border-radius: var(--dk-r-lg);
+  box-shadow: var(--dk-e2);
+}
+
+#error-wrap .error-img {
+  position: relative;
+  background:
+    radial-gradient(closest-side at 20% 22%, var(--dk-cloud) 55%, transparent) 0 0 / 26% 18% no-repeat,
+    radial-gradient(closest-side at 78% 14%, var(--dk-cloud) 55%, transparent) 0 0 / 22% 16% no-repeat,
+    linear-gradient(160deg, #bfe8fb, #e7f6ff) !important;
+}
+
+[data-theme="dark"] #error-wrap .error-img {
+  background:
+    radial-gradient(closest-side at 20% 22%, var(--dk-cloud) 55%, transparent) 0 0 / 26% 18% no-repeat,
+    radial-gradient(closest-side at 78% 14%, var(--dk-cloud) 55%, transparent) 0 0 / 22% 16% no-repeat,
+    linear-gradient(160deg, #12456f, #0e3455) !important;
+}
+
+/* 门身 */
+#error-wrap .error-img::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  width: 42%;
+  height: 68%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #ffd7e6, #f7a8c4);
+  border: 3px solid #d9719a;
+  border-radius: 46% 46% 8px 8px / 30% 30% 8px 8px;
+  box-shadow: inset 0 -12px 0 rgba(217, 113, 154, 0.3);
+}
+
+/* 门把手 */
+#error-wrap .error-img::after {
+  content: "";
+  position: absolute;
+  right: 32%;
+  bottom: 38%;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #d9719a;
+  border-radius: 50%;
+  background: var(--dk-highlight);
+}
+
+#error-wrap .error_title {
+  color: var(--dk-link);
+}
+
+#error-wrap .error_subtitle {
+  color: var(--dk-ink-muted);
+}
+
+/* ============ 15. 主题变量归队：把 solitude 残留的灰色默认值映射到 dk 调色板 ============ */
+/* 一次映射胜过逐组件覆写：侧栏/搜索框/标签页/引用块/代码块/加载页全都跟着变 */
+:root {
+  --efu-card-border: var(--dk-line);
+  --efu-secondtext: var(--dk-ink-muted);
+  --efu-gray: var(--dk-ink-muted);
+  --efu-logo-color: linear-gradient(215deg, #00a0e9 0%, #ffd200 100%);
+  --sidebar-bg: var(--dk-canvas);
+  --text-bg-hover: var(--dk-canvas);
+  --reward-pop: var(--dk-canvas);
+  --light-grey: var(--dk-line);
+  --search-bg: var(--dk-canvas);
+  --search-input-color: var(--dk-ink);
+  --search-result-title: var(--dk-ink);
+  --tab-border-color: var(--dk-line);
+  --tab-botton-bg: var(--dk-canvas);
+  --tab-botton-color: var(--dk-ink);
+  --tab-button-hover-bg: rgba(0, 160, 233, 0.14);
+  --tab-button-active-bg: var(--dk-surface);
+  --text-highlight-color: var(--dk-ink);
+  --blockquote-color: var(--dk-ink-muted);
+  --toc-link-color: var(--dk-ink-muted);
+  --btn-hover-color: var(--dk-brand-strong);
+  --preloader-bg: var(--dk-brand);
+  --preloader-color: #fff;
+  --hlscrollbar-bg: var(--dk-brand-strong);
+  --efu-card-btn-bg: var(--dk-canvas);
+  --efu-secondbg: #eaf4fc;
+  --efu-secondbg-bg: #eaf4fc;
+  --efu-post-blockquote-bg: #f4fafe;
+  --efu-post-tabs-bg: #eaf4fc;
+  --efu-hl-bg: #f4fafe;
+  --efu-hltools-bg: #dceffb;
+  --efu-scrollbar: rgba(0, 128, 196, 0.35);
+  --efu-orange: #f5a623;
+  --efu-blue: var(--dk-brand);
+  --efu-red: var(--dk-alert);
+  /* 悬停 logo 时露出的房子图标原本用 #1b1c20，暗色下等于隐形 */
+  --efu-nav-hover-text: var(--dk-ink);
+  --efu-ahoverbg: rgba(0, 160, 233, 0.1);
+  --efu-gray-op: rgba(0, 160, 233, 0.12);
+  --hr-border: var(--dk-line);
+  --hr-before-color: var(--dk-brand-strong);
+}
+
+[data-theme="dark"] {
+  --efu-card-btn-bg: #12395e;
+  --efu-secondbg: #0c2540;
+  --efu-secondbg-bg: #0c2540;
+  --efu-post-blockquote-bg: #0c2540;
+  --efu-post-tabs-bg: #0a2036;
+  --efu-hl-bg: #0c2540;
+  --efu-hltools-bg: #12456f;
+  --efu-scrollbar: rgba(120, 175, 220, 0.4);
+  --efu-orange: var(--dk-highlight);
+  --efu-yellow: var(--dk-highlight);
+  --efu-blue: var(--dk-brand);
+  --efu-red: var(--dk-alert);
+  --efu-pink: #f7a8c4;
+  --efu-maskbgdeep: rgba(6, 22, 38, 0.92);
+  --btn-hover-color: var(--dk-brand);
+  /* 主题的按钮是 --btn-bg:var(--efu-main) + --btn-color:#fff，暗色下主色是浅天蓝，白字只有 2.14:1 */
+  --btn-color: var(--dk-on-theme);
+  --preloader-bg: #0c2540;
+  --efu-nav-hover-text: var(--dk-ink);
+  --efu-ahoverbg: #12395e;
+  --efu-gray-op: rgba(120, 175, 220, 0.14);
+  --hr-before-color: var(--dk-brand);
+}
+
+/* 分页"当前页"药丸：主题用 --efu-nav-hover-text 文字 + --efu-theme 底色，
+ * 但这个变量同时给导航 logo 用（需要与页面背景对比），两种用途的正负极性相反：
+ * 亮色下 深墨字/#0069a8 只有 2.16:1，暗色下 浅白字/#38bdf8 只有 1.78:1。
+ * 所以 logo 那侧继续走 --efu-nav-hover-text，这里按主色底单独给一组对比度达标的字色。
+ * 选择器抄主题原样（含 :not），特异性相同才压得过它；皮肤层在 head 末尾，同分后者胜。 */
+#pagination:not(.pagination-post) .page-number.current,
+#pagination:not(.pagination-post) .page-number.current:hover,
+.archive-page-section-pagination .archive-page-number.is-current,
+.archive-page-section-pagination .archive-page-number.is-current:hover,
+.search-dialog #search-pagination .pagination-button.select {
+  color: var(--dk-on-theme); /* 白/深墨，两个主题各自 5.86 与 5.91 */
+}
+
+/* ============ 16. 动效：只用 transform/opacity，reduced-motion 全关 ============ */
+
+/* 卡片入场错峰：一屏内同时出现的卡片依次冒出来，而不是一坨同时跳 */
+.dk-reveal:nth-child(2) { animation-delay: 70ms; }
+.dk-reveal:nth-child(3) { animation-delay: 140ms; }
+.dk-reveal:nth-child(4) { animation-delay: 210ms; }
+.dk-reveal:nth-child(5) { animation-delay: 280ms; }
+.dk-reveal:nth-child(n + 6) { animation-delay: 350ms; }
+
+/* 看板娘从天而降（一次性的，插入 DOM 时播完就停） */
+@keyframes dk-drop {
+  0% { opacity: 0; transform: translate(64px, -150px) rotate(-14deg) scale(.55); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: none; }
+}
+
+#dk-mascot {
+  animation: dk-drop 640ms cubic-bezier(.2, .9, .3, 1.25) both;
+}
+
+/* 铃铛：悬停或说话时当钟摆晃一下 */
+#dk-mascot .dk-bell {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+}
+
+@keyframes dk-swing {
+  0%, 100% { transform: rotate(0); }
+  18% { transform: rotate(15deg); }
+  42% { transform: rotate(-11deg); }
+  66% { transform: rotate(6deg); }
+  85% { transform: rotate(-3deg); }
+}
+
+#dk-mascot:hover .dk-bell,
+#dk-mascot.talking .dk-bell {
+  animation: dk-swing 900ms ease-in-out;
+}
+
+/* 任意门：偶尔自己晃一下，像在被人推 */
+@keyframes dk-knock {
+  0%, 70%, 100% { transform: translateX(-50%) rotate(0); }
+  78% { transform: translateX(-50%) rotate(-4deg); }
+  86% { transform: translateX(-50%) rotate(3deg); }
+  93% { transform: translateX(-50%) rotate(-1.5deg); }
+}
+
+#error-wrap .error-img::before {
+  transform-origin: 50% 100%;
+  animation: dk-knock 4.2s ease-in-out infinite;
+}
+
+/* 横幅的云缓慢左右飘，alternate 来回所以没有循环接缝 */
+@keyframes dk-drift {
+  from { transform: translateX(-3%); }
+  to { transform: translateX(3%); }
+}
+
+#post #post-info::before {
+  animation: dk-drift 20s ease-in-out infinite alternate;
+}
+
+/* 随机一篇的骰子：悬停转一圈 */
+@keyframes dk-dice {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+#randomPost_button .solitude {
+  transition: transform var(--dk-t-base);
+}
+
+#randomPost_button:hover .solitude {
+  animation: dk-dice 720ms cubic-bezier(.3, .7, .3, 1);
+}
+
+/* 导航胶囊按下有回弹 */
+#menus .menus_item .site-page,
+.nav-button .site-page {
+  transition: background-color var(--dk-t-fast), color var(--dk-t-fast), transform var(--dk-t-fast);
+}
+
+#menus .menus_item .site-page:active,
+.nav-button .site-page:active {
+  transform: scale(.9);
+}
+
+/* ============ 17. 断点与降级 ============ */
 @media (max-width: 900px) {
   #dk-mascot { display: none; }
   .recent-post-item .recent-post-info { padding-right: 40px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  #dk-mascot,
   #dk-mascot svg,
   #dk-mascot .dk-eye,
-  .dk-reveal { animation: none !important; }
+  #dk-mascot .dk-bell,
+  #dk-mascot:hover .dk-bell,
+  #dk-mascot.talking .dk-bell,
+  .dk-reveal,
+  #post #post-info::before,
+  #error-wrap .error-img::before,
+  #randomPost_button:hover .solitude {
+    animation: none !important;
+  }
   * { transition-duration: 1ms !important; }
 }
 
-/* 中等宽度下侧栏被挤成一条窄缝，收掉让正文占满 */
-@media (min-width: 900px) and (max-width: 1280px) {
+/* 窄屏下主题本来就把侧栏收成 width:0（不是 display:none）。我给卡片加的 position/padding/边框
+ * 让它有了 min-content 宽度、再也收不成 0，于是变成一条 99~142px 的窄缝，390 宽下直接把文档撑出 99px 横向溢出。
+ * 所以 1280 以下一律真正隐藏，这也正是主题在窄屏的显示意图。 */
+@media (max-width: 1280px) {
   #aside-content { display: none; }
 }

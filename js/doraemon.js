@@ -78,10 +78,12 @@
     "</g>",
     // 项圈
     '<rect x="14" y="99" width="92" height="9" rx="4.5" fill="#e60012" stroke="#a80010" stroke-width="1"/>',
-    // 铃铛
+    // 铃铛（单独成组，CSS 可以拿它当钟摆晃）
+    '<g class="dk-bell">',
     '<circle cx="60" cy="110" r="11" fill="#ffd200" stroke="#c9a200" stroke-width="1.4"/>',
     '<path d="M50 107 H70" stroke="#c9a200" stroke-width="1.4"/>',
     '<circle cx="60" cy="113" r="2.6" fill="#c9a200"/>',
+    "</g>",
     "</svg>"
   ].join("");
 

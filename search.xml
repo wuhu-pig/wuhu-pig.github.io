@@ -129,29 +129,29 @@ while True:
 
 打开 F12，转到网络部分
 
-![image-jmnc](https://easy.xinin.top/i/2023/11/24/fb2ith-2.png)
+![image-jmnc](/i/2023/11/24/fb2ith-2.png)
 
 点击 Deploy Server。由于已经卖光了肯定是不能下单的。我们可以看到一个叫做vps的请求：
 
-![image-ajoz](https://easy.xinin.top/i/2023/11/24/fbhxl1-2.png)
+![image-ajoz](/i/2023/11/24/fbhxl1-2.png)
 
 复制这个 token。然后，在 vps 请求上右键，复制请求为 bash
 
-![image-mypk](https://easy.xinin.top/i/2023/11/24/fbnayh-2.png)
+![image-mypk](/i/2023/11/24/fbnayh-2.png)
 
 转到 [Convert curl commands to code (curlconverter.com)](https://curlconverter.com/)
 
 粘贴到上面，然后复制下面的 header 以及 cookie 两个变量
 
-![image-abmi](https://easy.xinin.top/i/2023/11/24/fbyly0-2.png)
+![image-abmi](/i/2023/11/24/fbyly0-2.png)
 
 补全脚本里这三个变量
 
-![image-vjxa](https://easy.xinin.top/i/2023/11/24/fc0n90-2.png)
+![image-vjxa](/i/2023/11/24/fc0n90-2.png)
 
 然后 `python3 ` 运行即可，正常输出应该是 out of stock
 
-![image-qgac](https://easy.xinin.top/i/2023/11/24/fc3ajq-2.png)</content>
+![image-qgac](/i/2023/11/24/fc3ajq-2.png)</content>
   </entry>
   <entry>
     <title>Docker部署+宝塔SSL教程</title>
@@ -166,13 +166,13 @@ Docker部署服务很方便也很实用，对我有很大用处。但是对于�
 
 &gt; 注意：无需数据库、PHP版本选择静态
 
-![Snipaste_2023-05-16_21-20-47](https://easy.xinin.top/i/2023/05/16/z2il20-2.png)
+![Snipaste_2023-05-16_21-20-47](/i/2023/05/16/z2il20-2.png)
 
 # 申请SSL
 
 &gt; 在Site name列中点击你创建的域名，接着点击SSL选项
 
-![Snipaste_2023-05-14_21-17-21](https://easy.xinin.top/i/2023/05/14/z0m56m-2.png)
+![Snipaste_2023-05-14_21-17-21](/i/2023/05/14/z0m56m-2.png)
 
 &gt; 申请到域名后，点击右上角_Force HTTPS_，配置SSL成功
 
@@ -205,13 +205,29 @@ location / {
  proxy\_set\_header X-Forwarded-Proto https; 
 } 
 
-![Snipaste_2023-05-16_21-23-56](https://easy.xinin.top/i/2023/05/16/z4nubi-2.png)
+![Snipaste_2023-05-16_21-23-56](/i/2023/05/16/z4nubi-2.png)
 
 &gt; 参考：
 &gt; 
 &gt; [【好玩儿的Docker项目】随时随地访问你的VPS！Sshwifty——一款专为Web设计的SSH和Telnet连接器 (laoda.de)](https://blog.laoda.de/archives/docker-compose-install-sshwifty)
 &gt; 
 &gt; [手把手教你Docker部署项目用宝塔开启SSL（详细教程） - Hello World (www.xiaoxin.ga)](https://www.xiaoxin.ga/index.php/archives/691/)</content>
+  </entry>
+  <entry>
+    <title>ESXI用ssh修改ip</title>
+    <url>/2024/08/28/ESXI用ssh修改ip/</url>
+    <content>&gt; 开启ssh
+
+进入ESXI的WEB管理界面，进入主机&gt;操作&gt;服务菜单，单击启用安全SHELL(SSH) 
+![请输入图片描述](/i/2023/02/20/jxioht.png)
+
+&gt; 通过ssh连接主机
+
+&gt; 输入命令
+
+```
+dcui
+```</content>
   </entry>
   <entry>
     <title>E5相关</title>
@@ -333,6 +349,449 @@ docker start ms365
 开启：docker update –restart=always ms365
 
 关闭：docker update –restart=no ms365</content>
+  </entry>
+  <entry>
+    <title>TG的API获取教程</title>
+    <url>/2024/08/28/TG的API获取教程/</url>
+    <content>浏览器打开[https://my.telegram.org/，输入账号注册时的手机号码，登陆我们的telegram账号](https://my.telegram.org/%EF%BC%8C%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E6%97%B6%E7%9A%84%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%8C%E7%99%BB%E9%99%86%E6%88%91%E4%BB%AC%E7%9A%84telegram%E8%B4%A6%E5%8F%B7)
+
+![Snipaste_11-06_9-28](/i/2023/11/06/fcq57t-2.png)
+
+点击next之后，我们的已经登陆的tg账号会收到验证码，输入验证码进行登陆
+
+![Snipaste_11-06_9-28_0](/i/2023/11/06/fdam8y-2.png)
+
+点击申请API
+
+![Snipaste_11-06_9-31](/i/2023/11/06/fefoft-2.png)
+
+填写**App title 和** **Short name**
+
+&gt; 这里需要多更换几次，多试几次
+
+最后会获得**api\_id**和 **api\_hash**
+
+![Snipaste_11-05_12-23](/i/2023/11/06/ffnu8t-2.png)</content>
+  </entry>
+  <entry>
+    <title>ESXI安装群晖</title>
+    <url>/2024/08/28/ESXI安装群晖/</url>
+    <content>ESXI版本：7.03f 
+群晖版本：3615xs
+
+## **创建虚拟机**
+
+&gt; 选择创建类型
+
+创建新虚拟机
+
+&gt; 选择名称与客户端
+
+操作系统系列选择：linux 
+系统版本选择：其他5x或更高版本linux64位 
+![请输入图片描述](/i/2023/02/20/jwahxh.png)
+
+&gt; 选择储存
+
+选择想要安装的存储
+
+&gt; 自定义设置
+
+**cpu与内存按需分配** 
+我这里选择4核心4G内存 
+**删除多余选项** 
+0.删除硬盘1 
+1.删除SCSI控制器 
+2.删除USB控制器（这个按需） 
+3.删除CD/DVD驱动器 
+4.删除硬盘1 
+![请输入图片描述](/i/2023/02/20/jwfobw.png) 
+**点击下一页—&gt;点击完成**
+
+## **设置虚拟机**
+
+&gt; 虚拟机选项找到新建的虚拟机
+
+&gt; 点击编辑
+
+&gt; 点击现有硬盘–&gt;点击上载—&gt;选择vmdk文件（nas系统的引导盘）
+
+&gt; 选中上传的vmdk文件
+
+![请输入图片描述](/i/2023/02/20/jwip9t.png)
+
+&gt; 点击现有硬盘–&gt;选择你直通的硬盘（这块硬盘也就是你nas上的存储硬盘）
+
+![请输入图片描述](/i/2023/02/20/jwul4b.png)
+
+&gt; 网卡适配器–&gt;适配器类型，选择E1000e
+
+&gt; 点击虚拟机选项—&gt;引导选项，取消是否为虚拟机启用uefi
+
+&gt; 点击保存</content>
+  </entry>
+  <entry>
+    <title>hello-world</title>
+    <url>/2024/08/28/hello-world/</url>
+    <content># Hello World
+
+John Doe2024-08-282024-08-28
+
+Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+## Quick Start
+
+### Create a new post
+
+1 
+
+$ hexo new "My New Post" 
+
+More info: [Writing](https://hexo.io/docs/writing.html)
+
+### Run server
+
+1 
+
+$ hexo server 
+
+More info: [Server](https://hexo.io/docs/server.html)
+
+### Generate static files
+
+1 
+
+$ hexo generate 
+
+More info: [Generating](https://hexo.io/docs/generating.html)
+
+### Deploy to remote sites
+
+1 
+
+$ hexo deploy 
+
+More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)</content>
+  </entry>
+  <entry>
+    <title>vps群晖备份教程</title>
+    <url>/2024/08/28/vps群晖备份教程/</url>
+    <content>## 准备工作
+
+vps一台 
+黑群晖一台
+
+## 群晖操作
+
+&gt; 安装套件
+
+群晖套件中心搜索Active Backup for Business 
+![图1](/i/2023/02/20/in9tyj.png)
+
+&gt; 激活套件
+
+我们到【控制面板】 – 【信息中心】 找到【产品序列号】并记下来 
+![图2](/i/2023/02/20/inbpcu.png) 
+浏览器输入如下地址，显示如下信息即可进行下一步：（IP地址替换为NAS的地址，登陆用户名和登陆密码就是你登陆群晖的时候所使用的） 
+**群晖默认https端口为5001而不是443**
+
+```
+https://IP地址:5001/webapi/auth.cgi?api=SYNO.API.Auth&amp;method=Login&amp;version=1&amp;account=登陆用户名&amp;passwd=登陆密码
+```
+
+浏览器输入如下地址，显示如下信息即可进行下一步：（IP地址替换为NAS的地址，序列号就是刚才信息中心的产品序列号）
+
+```
+https://IP地址:5001/webapi/entry.cgi?api=SYNO.ActiveBackup.Activation&amp;method=set&amp;version=1&amp;activated=true&amp;serial_number="序列号"
+```
+
+成功会在网址进入后显示ture 
+![图3](/i/2023/02/20/inlj0l.png)
+
+## 群晖套件使用
+
+进入套件，选择文件服务器 
+![图4](/i/2023/02/20/inmtuj.png) 
+接着添加服务器，选择rsync服务器 
+![图5](/i/2023/02/20/inonkr.png) 
+接着输入你的vps连接信息，选择你备份的文件和备份周期 
+![图6](/i/2023/02/20/inq4j9.png) 
+按照自己的需要选中合适的备份方式，我这里选中增量备份 
+选中自己想要备份的vps文件路径 
+![Snipaste_2023-01-27_13-33-22.png](/usr/uploads/2023/01/3781147106.png) 
+设置备份任务基本信息，按需设置 
+![Snipaste_2023-01-27_13-42-24.png](/usr/uploads/2023/01/1089057400.png)</content>
+  </entry>
+  <entry>
+    <title>Typech博客搭建教程</title>
+    <url>/2024/08/28/Typech博客搭建教程/</url>
+    <content>博客搭建的教程一般分为两种： 
+1.直接使用命令行进行搭建 
+2.使用宝塔面板的图形化界面搭建</content>
+  </entry>
+  <entry>
+    <title>修改vps的ssh端口</title>
+    <url>/2024/08/28/修改vps的ssh端口/</url>
+    <content>1. 运行以下命令，打开/etc/ssh/sshd\_config文件。
+ 
+ 1 
+ 
+ sudo vim /etc/ssh/sshd\_config 
+ 
+2. 按i进入编辑模式，将注释放开，修改为自己需要的端口号。
+ 
+ ![](/i/2023/11/25/febd8n-2.png)
+ 
+3. 按Esc退出编辑，然后输入`:wq`后按Enter键，保存并退出文件。
+ 
+4. 运行以下命令，重启SSH服务。
+ 
+ 1 
+ 
+ sudo service sshd restart 
+ 
+ 重启后，即可重新使用`root`用户及密码远程连接服务器。如果您没有设置或者忘记服务器的密</content>
+  </entry>
+  <entry>
+    <title>宝塔nginx反代支持websocket</title>
+    <url>/2024/08/28/宝塔nginx反代支持websocket/</url>
+    <content>[宝塔 nginx 反向代理追加websocket支持-腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1923683)
+
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+
+location / { 
+ proxy\_pass http://127.0.0.1:8182; 
+ proxy\_set\_header X-Real-IP $remote\_addr; 
+ proxy\_set\_header Host $host; 
+ proxy\_set\_header X-Forwarded-For $proxy\_add\_x\_forwarded\_for; 
+ proxy\_http\_version 1.1; 
+ proxy\_set\_header Upgrade $http\_upgrade; 
+ proxy\_set\_header Connection "upgrade"; 
+ rewrite /wss/(.\*) /$1 break; 
+ proxy\_redirect off; 
+ }</content>
+  </entry>
+  <entry>
+    <title>哪吒监控面板搭建</title>
+    <url>/2021/07/22/哪吒监控面板搭建/</url>
+    <content>[云服务器](/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/)
+
+# 哪吒监控面板搭建
+
+John Doe2021-07-222022-11-07</content>
+  </entry>
+  <entry>
+    <title>基于TG搭建无限容量网盘</title>
+    <url>/2024/08/28/基于TG搭建无限容量网盘/</url>
+    <content>Telegram里面用户是可以无限上传文件的，但是我们在国内无法直接访问telegram，所以有大佬开发了个项目，可以通过机器人获取telegram里的文件直链，只需要一台vps即可，但是需要注意可能存在封号的风险！
+
+&gt; [EverythingSuckz/TG-FileStreamBot：一个电报机器人，它将提供电报文件的即时流链接，而无需等到下载完成。 (github.com)](https://github.com/EverythingSuckz/TG-FileStreamBot)
+&gt; 
+&gt; 感谢大佬的无私奉献！
+
+我这里docker进行搭建，docker安装可以参考这里：\*\*[docker安装教程](https://phxin.top/index.php/archives/778/)\*\*
+
+在搭建过程中需要获取TG的API，具体过程参考这里的：[**TG的API获取教程**](https://phxin.top/index.php/archives/779/)
+
+### 新建群组
+
+点击左上角的三横线，新建群组
+
+![image-20231106094437676](/i/2023/11/06/fm9lyl-2.png)
+
+### 获取bot和id
+
+在搭建过程中还需要你新建群组和bot以及获取你的TG的id
+
+在Tg里搜索`@botfather`，发送`/newbot`
+
+![image-20231105175405956](/i/2023/11/05/t0cish-2.png)
+
+在Tg里搜索`@getidsbo`，再将bot添加到频道中，它会回复一个负数给你，那个就是你频道的id，id格式为-100xxxxxxxxxx
+
+![Snipaste_11-06_9-48](/i/2023/11/06/fokt12-2.png)
+
+### 部署容器
+
+首先选取合适的位置，克隆存储库
+
+1 
+
+git clone https://github.com/EverythingSuckz/TG-FileStreamBot 
+
+进入文件目录
+
+1 
+
+cd TG-FileStreamBot 
+
+然后构建 Docker 镜像
+
+1 
+
+docker build . -t stream-bot 
+
+新建`.env`文件，具体的配置文件在后面有写
+
+1 
+
+vi .env 
+
+使用变量创建文件。并启动容器：`.env`
+
+1 
+2 
+3 
+4 
+
+docker run -d --restart unless-stopped --name fsb \\ 
+\-v /PATH/TO/.env:/app/.env \\ 
+\-p 8000:8000 \\ 
+stream-bot 
+
+&gt; 这里的/PATH/TO路径修改为你自己的路径，端口可以修改但是必须左右一致
+
+如果需要在机器人启动后更改文件中的变量，只需重启容器，即可更新机器人设置：`.env`
+
+1 
+
+docker restart fsb 
+
+### .env文件
+
+我这里提供两种`.env`文件，一种是最后文件地址格式是`ip:端口`，另外一种是`域名`
+
+&gt; `ip:端口`
+
+1 
+2 
+3 
+4 
+5 
+6 
+
+API\_ID= #这里写你的app id 
+API\_HASH= #这里写你的app hash 
+BOT\_TOKEN= #这里写你的机器人密钥 
+BIN\_CHANNEL= #这里写你的频道id 
+PORT= #这里写你想要使用的端口号 
+FQDN= #这里填你的域名 
+
+![image-20231106095245937](/i/2023/11/06/fr2sfd-2.png)
+
+&gt; `域名`
+
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+
+API\_ID= #这里写你的app id 
+API\_HASH= #这里写你的app hash 
+BOT\_TOKEN= #这里写你的机器人密钥 
+BIN\_CHANNEL= #这里写你的频道id 
+PORT= #这里写你想要使用的端口号 
+FQDN= #这里填你的域名 
+HAS\_SSL= true #这里是ssl选项 
+NO\_PORT= true #如果设置为 True，则不会显示该端口。 
+
+![image-20231106095321665](/i/2023/11/06/frj4pc-2.png)
+
+#### 强制变量
+
+在运行机器人之前，需要设置以下必需变量：
+
+- `API_ID`：这是您的 Telegram 帐户的 API ID，可以从 my.telegram.org 获取。
+- `API_HASH`：这是您的 Telegram 帐户的 API 哈希值，也可以从 my.telegram.org 获得。
+- `BOT_TOKEN`：这是 Telegram Media Streamer Bot 的机器人令牌，可以从 [@BotFather](https://telegram.dog/BotFather) 获得。
+- `BIN_CHANNEL`：这是日志通道的通道 ID，机器人将在其中转发媒体消息并存储这些文件，以使生成的直接链接正常工作。要获取频道 ID，请创建一个新的电报频道（公共或私有），在频道中发布内容，将消息转发给[@missrose\_bot](https://telegram.dog/MissRose_bot)并使用 /id 命令**回复转发的消息**。复制转发的频道 ID 并将其粘贴到 this 字段中。
+
+#### 可选变量
+
+除了必填变量外，还可以设置以下可选变量：
+
+- `ALLOWED_USERS`：机器人仅回复的用户的用户 Telegram ID。
+
+&gt; 注意:将`ALLOWED_USERS`留空，任何人都可以使用你的机器人实例。 您还可以通过添加以逗号 （，） 分隔的 ID 来添加多个用户
+
+- `HASH_LENGTH`：这是生成的 URL 的自定义哈希长度。哈希长度必须大于 5 且小于 64。
+- `SLEEP_THRESHOLD`：这将为机器人实例中全局发生的泛滥等待异常设置睡眠阈值。引发泛滥等待异常低于此阈值的请求将在休眠所需时间后再次自动调用。将引发需要更长等待时间的洪水等待异常。默认值为 60 秒。最好将此字段留空。
+- `WORKERS`：这将设置用于处理传入更新的最大并发工作线程数。默认值为 3。
+- `PORT`：这将设置 Web 应用将侦听的端口。默认值为 8080。
+- `WEB_SERVER_BIND_ADDRESS`：这将设置您的服务器绑定地址。默认值为 0.0.0.0。
+- `NO_PORT`：这可以是 True 或 False。如果设置为 True，则不会显示该端口。
+
+&gt; 注意:要使用`NO_PORT`设置，您必须将 HTTP 协议指向 80 或指向 HTTPS 协议的 443 才能使生成的链接正常工作。
+
+- `FQDN`：完全限定域名（如果存在）。默认为`WEB_SERVER_BIND_ADDRESS`
+- `HAS_SSL`：这可以是 True 或 False。如果设置为 True，则生成的链接将采用 HTTPS 格式。
+- `KEEP_ALIVE`：如果要使服务器每秒 ping 一次以避免休眠。在 PaaS 免费层中很有帮助。默认为`PING_INTERVAL``False`
+- `PING_INTERVAL`：您希望每次 ping 服务器以避免休眠的时间（以毫秒为单位）（如果您使用的是某些 PaaS）。默认值为 或 20 分钟。`1200`
+- `USE_SESSION_FILE`：将会话文件用于客户端，而不是将 pyrogram sqlite 数据库存储在内存中
+
+### 写在最后
+
+可以向你的bot发送`/start`，检测是否成功搭建，如果返回`Send me a file to get an instant stream link`，即搭建成功。
+
+![image-20231106095129586](/i/2023/11/06/fqe1tm-2.png)</content>
+  </entry>
+  <entry>
+    <title>宝塔搭建typecho博客教程</title>
+    <url>/2024/08/28/宝塔搭建typecho博客教程/</url>
+    <content>## 准备工作
+
+&gt; 一个vps
+
+vps通过连接工具连接上，为后续工作做准备
+
+&gt; 一个域名
+
+将域名解析到freenom备用
+
+## 安装宝塔面板
+
+由于国内版的宝塔面板存在许多问题，这里选择国际版宝塔面板aapanel(宝塔海外版)。 
+连接上vps后安装宝塔面板，按照版本选择对应代码
+
+&gt; centos
+
+```
+yum install -y wget &amp;&amp; wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh &amp;&amp; bash install.sh forum
+```
+
+&gt; Ubuntu/Deepin
+
+```
+wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; sudo bash install.sh forum
+```
+
+&gt; Debian
+
+```
+wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; bash install.sh forum
+```
+
+![Snipaste_2023-01-27_09-04-23.png](/i/2023/02/20/hafq4m.png)
+
+## 开始博客搭建
+
+&gt; 进入宝塔面板
+
+安装必要的组件和依赖，按照宝塔面板推荐的安装即可，等待安装完毕</content>
   </entry>
   <entry>
     <title>R探长</title>
@@ -508,68 +967,253 @@ region=us-sanjose-1
 key\_file= # TODO</content>
   </entry>
   <entry>
-    <title>ESXI安装群晖</title>
-    <url>/2024/08/28/ESXI安装群晖/</url>
-    <content>ESXI版本：7.03f 
-群晖版本：3615xs
+    <title>宝塔搭建typecho教程</title>
+    <url>/2024/08/28/宝塔搭建typecho教程/</url>
+    <content># 前言
 
-## **创建虚拟机**
+主要是记录一下宝塔搭建typecho博客的简单教程，方便自己重新部署博客和博客的迁移。宝塔搭建相对于来说很简单，只需要会输入简单的命令就可以搭建属于自己的小博客。
 
-&gt; 选择创建类型
+&gt; 准备工作
 
-创建新虚拟机
+- 准备一台服务器，可以是云服务器也可以是本地的linux机器
+- 一个域名并且解析到cloudflare
+- 下载[typecho源码](https://typecho.org/)
+- 准备一个好看的主题，我这里用的是github大佬开发的[Joe主题](https://github.com/qinhua/halo-theme-joe2.0)
 
-&gt; 选择名称与客户端
+&gt; 效果展示
 
-操作系统系列选择：linux 
-系统版本选择：其他5x或更高版本linux64位 
-![请输入图片描述](https://easy.xinin.top/i/2023/02/20/jwahxh.png)
+![Snipaste_2023-05-14_21-31-51](/i/2023/05/14/z9i8x4-2.png)
 
-&gt; 选择储存
+#安装宝塔
 
-选择想要安装的存储
+选择合适系统的版本安装，我这里的宝塔是宝塔国际版。好处是不需要强制验证手机号，你也可以选择安装国内版本的宝塔。
 
-&gt; 自定义设置
+&gt; aapanel国际版安装命令
 
-**cpu与内存按需分配** 
-我这里选择4核心4G内存 
-**删除多余选项** 
-0.删除硬盘1 
-1.删除SCSI控制器 
-2.删除USB控制器（这个按需） 
-3.删除CD/DVD驱动器 
-4.删除硬盘1 
-![请输入图片描述](https://easy.xinin.top/i/2023/02/20/jwfobw.png) 
-**点击下一页—&gt;点击完成**
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
 
-## **设置虚拟机**
+Centos : 
+yum install -y wget &amp;&amp; wget -O install.sh http://www.aapanel.com/script/install\_6.0\_en.sh &amp;&amp; bash install.sh 
+ 
+Ubuntu/Deepin : 
+wget -O install.sh http://www.aapanel.com/script/install-ubuntu\_6.0\_en.sh &amp;&amp; sudo bash install.sh 
+ 
+Debian : 
+wget -O install.sh http://www.aapanel.com/script/install-ubuntu\_6.0\_en.sh &amp;&amp; Bash install.sh 
+ 
+Fedora : 
+curl -sSO http://www.aapanel.com/script/new\_install\_en.sh &amp;&amp; bash new\_install\_en.sh 
 
-&gt; 虚拟机选项找到新建的虚拟机
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+11 
+12 
+13 
+14 
 
-&gt; 点击编辑
+Centos安装脚本 
+yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install\_6.0.sh &amp;&amp; sh install.sh 
+ 
+ 
+Ubuntu/Deepin安装脚本 
+wget -O install.sh http://download.bt.cn/install/install-ubuntu\_6.0.sh &amp;&amp; sudo bash install.sh 
+ 
+ 
+Debian安装脚本 
+wget -O install.sh http://download.bt.cn/install/install-ubuntu\_6.0.sh &amp;&amp; bash install.sh 
+ 
+ 
+Fedora安装脚本 
+wget -O install.sh http://download.bt.cn/install/install\_6.0.sh &amp;&amp; bash install.sh 
 
-&gt; 点击现有硬盘–&gt;点击上载—&gt;选择vmdk文件（nas系统的引导盘）
+安装完毕会出现你的宝塔面板登陆地址，如下图所示。复制到浏览器打开，输入账号密码，登陆宝塔面板即可。
 
-&gt; 选中上传的vmdk文件
+![Snipaste_2023-05-14_21-03-24](/i/2023/05/14/ysvmg6-2.png)
 
-![请输入图片描述](https://easy.xinin.top/i/2023/02/20/jwip9t.png)
+# 安装基础组件
 
-&gt; 点击现有硬盘–&gt;选择你直通的硬盘（这块硬盘也就是你nas上的存储硬盘）
+选择宝塔推荐的安装组件即可，一共五个套件。等待安装完毕，准备部署网站。
 
-![请输入图片描述](https://easy.xinin.top/i/2023/02/20/jwul4b.png)
+#创建网页
 
-&gt; 网卡适配器–&gt;适配器类型，选择E1000e
+&gt; 点击_Website_，再点击_Add site_
 
-&gt; 点击虚拟机选项—&gt;引导选项，取消是否为虚拟机启用uefi
+![Snipaste_2023-05-14_21-11-23](/i/2023/05/14/yx0h0k-2.png)
 
-&gt; 点击保存</content>
+&gt; 输入你解析的域名，其余按照图示选择即可，点击_Submit_
+
+![Snipaste_2023-05-14_21-13-50](/i/2023/05/14/yysynh-2.png)
+
+# 申请SSL证书
+
+&gt; 在Site name列中点击你创建的域名，接着点击SSL选项
+
+![Snipaste_2023-05-14_21-17-21](/i/2023/05/14/z0m56m-2.png)
+
+&gt; 申请到域名后，点击右上角_Force HTTPS_，配置SSL成功
+
+# 上传typecho源码
+
+&gt; 点击左侧_Website_，接着点击_Document Root_对应文件夹，选择_Upload_上传typecho源码并且解压
+
+![Snipaste_2023-05-14_21-21-15](/i/2023/05/14/z3ecmb-2.png)
+
+# 安装typecho
+
+&gt; 浏览器输入你的域名，开始安装typecho
+
+&gt; 无需做任何修改，只需要输入数据库名和密码即可
+
+![Snipaste_2023-05-14_21-24-58](/i/2023/05/14/z575pi-2.png)
+
+&gt; 设置自己喜欢的用户名密码，即可完成typecho安装
+
+# 安装主题
+
+&gt; 找到文件夹/www/wwwroot/你的域名/usr/themes，选择_Upload_上传Joe源码并且解压
+
+![Snipaste_2023-05-14_21-26-50](/i/2023/05/14/z6kr6h-2.png)
+
+&gt; 进入typecho后台选择外观，选择刚上传的主题即可
+
+![Snipaste_2023-05-14_21-29-42](/i/2023/05/14/z7ubgd-2.png)</content>
   </entry>
   <entry>
-    <title>Typech博客搭建教程</title>
-    <url>/2024/08/28/Typech博客搭建教程/</url>
-    <content>博客搭建的教程一般分为两种： 
-1.直接使用命令行进行搭建 
-2.使用宝塔面板的图形化界面搭建</content>
+    <title>宝塔面板安装教程</title>
+    <url>/2020/09/14/宝塔面板安装教程/</url>
+    <content>[云服务器](/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/)
+
+# 宝塔面板安装教程
+
+John Doe2020-09-142022-11-07</content>
+  </entry>
+  <entry>
+    <title>网站cname接入CloudFlare的超级详细教程</title>
+    <url>/2024/08/28/网站cname接入CloudFlare的超级详细教程/</url>
+    <content>### **写在前面**
+
+从 2021 年 11 月开始，CloudFlare 已禁用 Partner 使用的 zone\_setAPI 以避免滥用（因为此 API 访问不需要验证域名所有权），通过 Partner 实现 CNAME 访问的方式几乎结束，只有 Plesk 空间离开了。 Cloudflare 插件订阅的 ServerShield 工作正常。几个月过去了，官方并没有给出未来合作伙伴如何接入新域名的任何解释。
+
+### **准备工作**
+
+1. 一个cloudflare账号
+ 
+2. 一个腾讯账号
+ 
+3. 一台部署网站的vps
+ 
+4. 两个域名，一个用于接入CF加速，一个是你想要加速的网站
+ 
+ &gt; 接入CF加速的网站命名为`cf.com`
+ 
+ &gt; 你想要加速的网站命名为`tx.com`
+ 
+
+### **将`cf.com`接入Cloudflare**
+
+1. 点击网站页面的添加站点图标
+
+![image-20231128205334030](/i/2023/11/28/xyj8ok-2.png)
+
+2. 填写域名，在选择计划中选取免费套餐，点击继续
+
+![image-20231128205923023](/i/2023/11/28/y214sn-2.png)
+
+3. 添加cdn解析
+
+这里添加或者先接入cf解析都行，二级域名随便设置，我这里演示用的`cdn.cf.com`
+
+![image-20231128210253304](/i/2023/11/28/yrt021-2.png)
+
+4. 将Cloudflare 名称服务器填入`cf.com`的名称服务器（nameserver）处，每一家不尽相同，这里不演示了
+
+### **开通CloudFlare for SaaS**
+
+建议注册个PayPal，用邮箱就行，不会产生扣费。我已经亲测了。
+
+1. 打开网站配置页面，并且找到 SSL/TLS 下的自定义主机名。启用 CloudFlare for SaaS。
+
+![image-20231128210719681](/i/2023/11/28/yukyr4-2.png)
+
+![点击启用CloudFlare for SaaS](/i/2023/11/28/yv4ew8-2.png)
+
+### **设置回退源及自定义主机域**
+
+1. 设置回退源
+
+![image-20231128211153114](/i/2023/11/28/yx5ofn-2.png)
+
+2. 添加自定义主机名
+ 
+ 点击添加定义主机名，在自定义主机名处填入你要加速的网站，我这里应该是`tx.com`
+ 
+ ![image-20231128211649934](/i/2023/11/28/z0409a-2.png)
+ 
+3. ![image-20231128211847751](/i/2023/11/28/z1aoys-2.png)
+ 
+4. 验证自定义主机名
+ 
+ 根据你上面获取的txt名称和txt值填写，应该有两条
+ 
+
+![Snipaste_11-28_21-21](/i/2023/11/28/z3elza-2.png)</content>
+  </entry>
+  <entry>
+    <title>阿里云轻量应用服务器DD系统</title>
+    <url>/2024/08/28/阿里云轻量应用服务器DD系统/</url>
+    <content>@ **注意重装有风险，可能导致无法开机，谨慎操作！**
+
+### 一键安装Linux系统脚本
+
+使用脚本前最好先安装如下软件
+
+1 
+2 
+3 
+4 
+5 
+
+\# CentOS 与 RedHat 
+yum install -y xz openssl gawk file wget 
+ 
+\# Debian 与 Ubuntu 
+apt-get install -y xz-utils openssl gawk file 
+
+我这里演示的是DD成debain的代码，更多系统点击[Linux 使用脚本一键 DD](https://www.ydyno.com/archives/1245.html)
+
+1 
+2 
+
+wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh' &amp;&amp; chmod a+x InstallNET.sh 
+bash InstallNET.sh -d 9 -v 64 -p 123456 -a --mirror 'https://mirrors.cloud.tencent.com/debian/' 
+
+\-d 后面是系统版本号
+
+\-v 后面写 64 位 32 位
+
+\-a （不清楚这个干啥的但是每个脚本都带）
+
+–mirror 后面是镜像源地址
+
+\-p 后面写自定义密码</content>
   </entry>
   <entry>
     <title>VPS库存监控安装</title>
@@ -753,649 +1397,5 @@ method=send&amp;sckey=\[XXX\]&amp;content=\[CONTENT\]\`
 可以输入VPS主机的套餐的详细信息
 
 也可以直接到Mysql数据库中直接添加、删除、复制等操作</content>
-  </entry>
-  <entry>
-    <title>ESXI用ssh修改ip</title>
-    <url>/2024/08/28/ESXI用ssh修改ip/</url>
-    <content>&gt; 开启ssh
-
-进入ESXI的WEB管理界面，进入主机&gt;操作&gt;服务菜单，单击启用安全SHELL(SSH) 
-![请输入图片描述](https://easy.xinin.top/i/2023/02/20/jxioht.png)
-
-&gt; 通过ssh连接主机
-
-&gt; 输入命令
-
-```
-dcui
-```</content>
-  </entry>
-  <entry>
-    <title>hello-world</title>
-    <url>/2024/08/28/hello-world/</url>
-    <content># Hello World
-
-John Doe2024-08-282024-08-28
-
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
-
-## Quick Start
-
-### Create a new post
-
-1 
-
-$ hexo new "My New Post" 
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-1 
-
-$ hexo server 
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-1 
-
-$ hexo generate 
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-1 
-
-$ hexo deploy 
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)</content>
-  </entry>
-  <entry>
-    <title>vps群晖备份教程</title>
-    <url>/2024/08/28/vps群晖备份教程/</url>
-    <content>## 准备工作
-
-vps一台 
-黑群晖一台
-
-## 群晖操作
-
-&gt; 安装套件
-
-群晖套件中心搜索Active Backup for Business 
-![图1](https://easy.xinin.top/i/2023/02/20/in9tyj.png)
-
-&gt; 激活套件
-
-我们到【控制面板】 – 【信息中心】 找到【产品序列号】并记下来 
-![图2](https://easy.xinin.top/i/2023/02/20/inbpcu.png) 
-浏览器输入如下地址，显示如下信息即可进行下一步：（IP地址替换为NAS的地址，登陆用户名和登陆密码就是你登陆群晖的时候所使用的） 
-**群晖默认https端口为5001而不是443**
-
-```
-https://IP地址:5001/webapi/auth.cgi?api=SYNO.API.Auth&amp;method=Login&amp;version=1&amp;account=登陆用户名&amp;passwd=登陆密码
-```
-
-浏览器输入如下地址，显示如下信息即可进行下一步：（IP地址替换为NAS的地址，序列号就是刚才信息中心的产品序列号）
-
-```
-https://IP地址:5001/webapi/entry.cgi?api=SYNO.ActiveBackup.Activation&amp;method=set&amp;version=1&amp;activated=true&amp;serial_number="序列号"
-```
-
-成功会在网址进入后显示ture 
-![图3](https://easy.xinin.top/i/2023/02/20/inlj0l.png)
-
-## 群晖套件使用
-
-进入套件，选择文件服务器 
-![图4](https://easy.xinin.top/i/2023/02/20/inmtuj.png) 
-接着添加服务器，选择rsync服务器 
-![图5](https://easy.xinin.top/i/2023/02/20/inonkr.png) 
-接着输入你的vps连接信息，选择你备份的文件和备份周期 
-![图6](https://easy.xinin.top/i/2023/02/20/inq4j9.png) 
-按照自己的需要选中合适的备份方式，我这里选中增量备份 
-选中自己想要备份的vps文件路径 
-![Snipaste_2023-01-27_13-33-22.png](https://xiaoxin.ml/usr/uploads/2023/01/3781147106.png) 
-设置备份任务基本信息，按需设置 
-![Snipaste_2023-01-27_13-42-24.png](https://xiaoxin.ml/usr/uploads/2023/01/1089057400.png)</content>
-  </entry>
-  <entry>
-    <title>修改vps的ssh端口</title>
-    <url>/2024/08/28/修改vps的ssh端口/</url>
-    <content>1. 运行以下命令，打开/etc/ssh/sshd\_config文件。
- 
- 1 
- 
- sudo vim /etc/ssh/sshd\_config 
- 
-2. 按i进入编辑模式，将注释放开，修改为自己需要的端口号。
- 
- ![](https://easy.xinin.top/i/2023/11/25/febd8n-2.png)
- 
-3. 按Esc退出编辑，然后输入`:wq`后按Enter键，保存并退出文件。
- 
-4. 运行以下命令，重启SSH服务。
- 
- 1 
- 
- sudo service sshd restart 
- 
- 重启后，即可重新使用`root`用户及密码远程连接服务器。如果您没有设置或者忘记服务器的密</content>
-  </entry>
-  <entry>
-    <title>TG的API获取教程</title>
-    <url>/2024/08/28/TG的API获取教程/</url>
-    <content>浏览器打开[https://my.telegram.org/，输入账号注册时的手机号码，登陆我们的telegram账号](https://my.telegram.org/%EF%BC%8C%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E6%97%B6%E7%9A%84%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%8C%E7%99%BB%E9%99%86%E6%88%91%E4%BB%AC%E7%9A%84telegram%E8%B4%A6%E5%8F%B7)
-
-![Snipaste_11-06_9-28](https://easy.xinin.top/i/2023/11/06/fcq57t-2.png)
-
-点击next之后，我们的已经登陆的tg账号会收到验证码，输入验证码进行登陆
-
-![Snipaste_11-06_9-28_0](https://easy.xinin.top/i/2023/11/06/fdam8y-2.png)
-
-点击申请API
-
-![Snipaste_11-06_9-31](https://easy.xinin.top/i/2023/11/06/fefoft-2.png)
-
-填写**App title 和** **Short name**
-
-&gt; 这里需要多更换几次，多试几次
-
-最后会获得**api\_id**和 **api\_hash**
-
-![Snipaste_11-05_12-23](https://easy.xinin.top/i/2023/11/06/ffnu8t-2.png)</content>
-  </entry>
-  <entry>
-    <title>宝塔nginx反代支持websocket</title>
-    <url>/2024/08/28/宝塔nginx反代支持websocket/</url>
-    <content>[宝塔 nginx 反向代理追加websocket支持-腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1923683)
-
-1 
-2 
-3 
-4 
-5 
-6 
-7 
-8 
-9 
-10 
-11 
-
-location / { 
- proxy\_pass http://127.0.0.1:8182; 
- proxy\_set\_header X-Real-IP $remote\_addr; 
- proxy\_set\_header Host $host; 
- proxy\_set\_header X-Forwarded-For $proxy\_add\_x\_forwarded\_for; 
- proxy\_http\_version 1.1; 
- proxy\_set\_header Upgrade $http\_upgrade; 
- proxy\_set\_header Connection "upgrade"; 
- rewrite /wss/(.\*) /$1 break; 
- proxy\_redirect off; 
- }</content>
-  </entry>
-  <entry>
-    <title>基于TG搭建无限容量网盘</title>
-    <url>/2024/08/28/基于TG搭建无限容量网盘/</url>
-    <content>Telegram里面用户是可以无限上传文件的，但是我们在国内无法直接访问telegram，所以有大佬开发了个项目，可以通过机器人获取telegram里的文件直链，只需要一台vps即可，但是需要注意可能存在封号的风险！
-
-&gt; [EverythingSuckz/TG-FileStreamBot：一个电报机器人，它将提供电报文件的即时流链接，而无需等到下载完成。 (github.com)](https://github.com/EverythingSuckz/TG-FileStreamBot)
-&gt; 
-&gt; 感谢大佬的无私奉献！
-
-我这里docker进行搭建，docker安装可以参考这里：\*\*[docker安装教程](https://xinin.top/index.php/archives/778/)\*\*
-
-在搭建过程中需要获取TG的API，具体过程参考这里的：[**TG的API获取教程**](https://xinin.top/index.php/archives/779/)
-
-### 新建群组
-
-点击左上角的三横线，新建群组
-
-![image-20231106094437676](https://easy.xinin.top/i/2023/11/06/fm9lyl-2.png)
-
-### 获取bot和id
-
-在搭建过程中还需要你新建群组和bot以及获取你的TG的id
-
-在Tg里搜索`@botfather`，发送`/newbot`
-
-![image-20231105175405956](https://easy.xinin.top/i/2023/11/05/t0cish-2.png)
-
-在Tg里搜索`@getidsbo`，再将bot添加到频道中，它会回复一个负数给你，那个就是你频道的id，id格式为-100xxxxxxxxxx
-
-![Snipaste_11-06_9-48](https://easy.xinin.top/i/2023/11/06/fokt12-2.png)
-
-### 部署容器
-
-首先选取合适的位置，克隆存储库
-
-1 
-
-git clone https://github.com/EverythingSuckz/TG-FileStreamBot 
-
-进入文件目录
-
-1 
-
-cd TG-FileStreamBot 
-
-然后构建 Docker 镜像
-
-1 
-
-docker build . -t stream-bot 
-
-新建`.env`文件，具体的配置文件在后面有写
-
-1 
-
-vi .env 
-
-使用变量创建文件。并启动容器：`.env`
-
-1 
-2 
-3 
-4 
-
-docker run -d --restart unless-stopped --name fsb \\ 
-\-v /PATH/TO/.env:/app/.env \\ 
-\-p 8000:8000 \\ 
-stream-bot 
-
-&gt; 这里的/PATH/TO路径修改为你自己的路径，端口可以修改但是必须左右一致
-
-如果需要在机器人启动后更改文件中的变量，只需重启容器，即可更新机器人设置：`.env`
-
-1 
-
-docker restart fsb 
-
-### .env文件
-
-我这里提供两种`.env`文件，一种是最后文件地址格式是`ip:端口`，另外一种是`域名`
-
-&gt; `ip:端口`
-
-1 
-2 
-3 
-4 
-5 
-6 
-
-API\_ID= #这里写你的app id 
-API\_HASH= #这里写你的app hash 
-BOT\_TOKEN= #这里写你的机器人密钥 
-BIN\_CHANNEL= #这里写你的频道id 
-PORT= #这里写你想要使用的端口号 
-FQDN= #这里填你的域名 
-
-![image-20231106095245937](https://easy.xinin.top/i/2023/11/06/fr2sfd-2.png)
-
-&gt; `域名`
-
-1 
-2 
-3 
-4 
-5 
-6 
-7 
-8 
-
-API\_ID= #这里写你的app id 
-API\_HASH= #这里写你的app hash 
-BOT\_TOKEN= #这里写你的机器人密钥 
-BIN\_CHANNEL= #这里写你的频道id 
-PORT= #这里写你想要使用的端口号 
-FQDN= #这里填你的域名 
-HAS\_SSL= true #这里是ssl选项 
-NO\_PORT= true #如果设置为 True，则不会显示该端口。 
-
-![image-20231106095321665](https://easy.xinin.top/i/2023/11/06/frj4pc-2.png)
-
-#### 强制变量
-
-在运行机器人之前，需要设置以下必需变量：
-
-- `API_ID`：这是您的 Telegram 帐户的 API ID，可以从 my.telegram.org 获取。
-- `API_HASH`：这是您的 Telegram 帐户的 API 哈希值，也可以从 my.telegram.org 获得。
-- `BOT_TOKEN`：这是 Telegram Media Streamer Bot 的机器人令牌，可以从 [@BotFather](https://telegram.dog/BotFather) 获得。
-- `BIN_CHANNEL`：这是日志通道的通道 ID，机器人将在其中转发媒体消息并存储这些文件，以使生成的直接链接正常工作。要获取频道 ID，请创建一个新的电报频道（公共或私有），在频道中发布内容，将消息转发给[@missrose\_bot](https://telegram.dog/MissRose_bot)并使用 /id 命令**回复转发的消息**。复制转发的频道 ID 并将其粘贴到 this 字段中。
-
-#### 可选变量
-
-除了必填变量外，还可以设置以下可选变量：
-
-- `ALLOWED_USERS`：机器人仅回复的用户的用户 Telegram ID。
-
-&gt; 注意:将`ALLOWED_USERS`留空，任何人都可以使用你的机器人实例。 您还可以通过添加以逗号 （，） 分隔的 ID 来添加多个用户
-
-- `HASH_LENGTH`：这是生成的 URL 的自定义哈希长度。哈希长度必须大于 5 且小于 64。
-- `SLEEP_THRESHOLD`：这将为机器人实例中全局发生的泛滥等待异常设置睡眠阈值。引发泛滥等待异常低于此阈值的请求将在休眠所需时间后再次自动调用。将引发需要更长等待时间的洪水等待异常。默认值为 60 秒。最好将此字段留空。
-- `WORKERS`：这将设置用于处理传入更新的最大并发工作线程数。默认值为 3。
-- `PORT`：这将设置 Web 应用将侦听的端口。默认值为 8080。
-- `WEB_SERVER_BIND_ADDRESS`：这将设置您的服务器绑定地址。默认值为 0.0.0.0。
-- `NO_PORT`：这可以是 True 或 False。如果设置为 True，则不会显示该端口。
-
-&gt; 注意:要使用`NO_PORT`设置，您必须将 HTTP 协议指向 80 或指向 HTTPS 协议的 443 才能使生成的链接正常工作。
-
-- `FQDN`：完全限定域名（如果存在）。默认为`WEB_SERVER_BIND_ADDRESS`
-- `HAS_SSL`：这可以是 True 或 False。如果设置为 True，则生成的链接将采用 HTTPS 格式。
-- `KEEP_ALIVE`：如果要使服务器每秒 ping 一次以避免休眠。在 PaaS 免费层中很有帮助。默认为`PING_INTERVAL``False`
-- `PING_INTERVAL`：您希望每次 ping 服务器以避免休眠的时间（以毫秒为单位）（如果您使用的是某些 PaaS）。默认值为 或 20 分钟。`1200`
-- `USE_SESSION_FILE`：将会话文件用于客户端，而不是将 pyrogram sqlite 数据库存储在内存中
-
-### 写在最后
-
-可以向你的bot发送`/start`，检测是否成功搭建，如果返回`Send me a file to get an instant stream link`，即搭建成功。
-
-![image-20231106095129586](https://easy.xinin.top/i/2023/11/06/fqe1tm-2.png)</content>
-  </entry>
-  <entry>
-    <title>哪吒监控面板搭建</title>
-    <url>/2021/07/22/哪吒监控面板搭建/</url>
-    <content>[云服务器](/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/)
-
-# 哪吒监控面板搭建
-
-John Doe2021-07-222022-11-07</content>
-  </entry>
-  <entry>
-    <title>宝塔面板安装教程</title>
-    <url>/2020/09/14/宝塔面板安装教程/</url>
-    <content>[云服务器](/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/)
-
-# 宝塔面板安装教程
-
-John Doe2020-09-142022-11-07</content>
-  </entry>
-  <entry>
-    <title>宝塔搭建typecho教程</title>
-    <url>/2024/08/28/宝塔搭建typecho教程/</url>
-    <content># 前言
-
-主要是记录一下宝塔搭建typecho博客的简单教程，方便自己重新部署博客和博客的迁移。宝塔搭建相对于来说很简单，只需要会输入简单的命令就可以搭建属于自己的小博客。
-
-&gt; 准备工作
-
-- 准备一台服务器，可以是云服务器也可以是本地的linux机器
-- 一个域名并且解析到cloudflare
-- 下载[typecho源码](https://typecho.org/)
-- 准备一个好看的主题，我这里用的是github大佬开发的[Joe主题](https://github.com/qinhua/halo-theme-joe2.0)
-
-&gt; 效果展示
-
-![Snipaste_2023-05-14_21-31-51](https://easy.xinin.top/i/2023/05/14/z9i8x4-2.png)
-
-#安装宝塔
-
-选择合适系统的版本安装，我这里的宝塔是宝塔国际版。好处是不需要强制验证手机号，你也可以选择安装国内版本的宝塔。
-
-&gt; aapanel国际版安装命令
-
-1 
-2 
-3 
-4 
-5 
-6 
-7 
-8 
-9 
-10 
-11 
-
-Centos : 
-yum install -y wget &amp;&amp; wget -O install.sh http://www.aapanel.com/script/install\_6.0\_en.sh &amp;&amp; bash install.sh 
- 
-Ubuntu/Deepin : 
-wget -O install.sh http://www.aapanel.com/script/install-ubuntu\_6.0\_en.sh &amp;&amp; sudo bash install.sh 
- 
-Debian : 
-wget -O install.sh http://www.aapanel.com/script/install-ubuntu\_6.0\_en.sh &amp;&amp; Bash install.sh 
- 
-Fedora : 
-curl -sSO http://www.aapanel.com/script/new\_install\_en.sh &amp;&amp; bash new\_install\_en.sh 
-
-1 
-2 
-3 
-4 
-5 
-6 
-7 
-8 
-9 
-10 
-11 
-12 
-13 
-14 
-
-Centos安装脚本 
-yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install\_6.0.sh &amp;&amp; sh install.sh 
- 
- 
-Ubuntu/Deepin安装脚本 
-wget -O install.sh http://download.bt.cn/install/install-ubuntu\_6.0.sh &amp;&amp; sudo bash install.sh 
- 
- 
-Debian安装脚本 
-wget -O install.sh http://download.bt.cn/install/install-ubuntu\_6.0.sh &amp;&amp; bash install.sh 
- 
- 
-Fedora安装脚本 
-wget -O install.sh http://download.bt.cn/install/install\_6.0.sh &amp;&amp; bash install.sh 
-
-安装完毕会出现你的宝塔面板登陆地址，如下图所示。复制到浏览器打开，输入账号密码，登陆宝塔面板即可。
-
-![Snipaste_2023-05-14_21-03-24](https://easy.xinin.top/i/2023/05/14/ysvmg6-2.png)
-
-# 安装基础组件
-
-选择宝塔推荐的安装组件即可，一共五个套件。等待安装完毕，准备部署网站。
-
-#创建网页
-
-&gt; 点击_Website_，再点击_Add site_
-
-![Snipaste_2023-05-14_21-11-23](https://easy.xinin.top/i/2023/05/14/yx0h0k-2.png)
-
-&gt; 输入你解析的域名，其余按照图示选择即可，点击_Submit_
-
-![Snipaste_2023-05-14_21-13-50](https://easy.xinin.top/i/2023/05/14/yysynh-2.png)
-
-# 申请SSL证书
-
-&gt; 在Site name列中点击你创建的域名，接着点击SSL选项
-
-![Snipaste_2023-05-14_21-17-21](https://easy.xinin.top/i/2023/05/14/z0m56m-2.png)
-
-&gt; 申请到域名后，点击右上角_Force HTTPS_，配置SSL成功
-
-# 上传typecho源码
-
-&gt; 点击左侧_Website_，接着点击_Document Root_对应文件夹，选择_Upload_上传typecho源码并且解压
-
-![Snipaste_2023-05-14_21-21-15](https://easy.xinin.top/i/2023/05/14/z3ecmb-2.png)
-
-# 安装typecho
-
-&gt; 浏览器输入你的域名，开始安装typecho
-
-&gt; 无需做任何修改，只需要输入数据库名和密码即可
-
-![Snipaste_2023-05-14_21-24-58](https://easy.xinin.top/i/2023/05/14/z575pi-2.png)
-
-&gt; 设置自己喜欢的用户名密码，即可完成typecho安装
-
-# 安装主题
-
-&gt; 找到文件夹/www/wwwroot/你的域名/usr/themes，选择_Upload_上传Joe源码并且解压
-
-![Snipaste_2023-05-14_21-26-50](https://easy.xinin.top/i/2023/05/14/z6kr6h-2.png)
-
-&gt; 进入typecho后台选择外观，选择刚上传的主题即可
-
-![Snipaste_2023-05-14_21-29-42](https://easy.xinin.top/i/2023/05/14/z7ubgd-2.png)</content>
-  </entry>
-  <entry>
-    <title>宝塔搭建typecho博客教程</title>
-    <url>/2024/08/28/宝塔搭建typecho博客教程/</url>
-    <content>## 准备工作
-
-&gt; 一个vps
-
-vps通过连接工具连接上，为后续工作做准备
-
-&gt; 一个域名
-
-将域名解析到freenom备用
-
-## 安装宝塔面板
-
-由于国内版的宝塔面板存在许多问题，这里选择国际版宝塔面板aapanel(宝塔海外版)。 
-连接上vps后安装宝塔面板，按照版本选择对应代码
-
-&gt; centos
-
-```
-yum install -y wget &amp;&amp; wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh &amp;&amp; bash install.sh forum
-```
-
-&gt; Ubuntu/Deepin
-
-```
-wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; sudo bash install.sh forum
-```
-
-&gt; Debian
-
-```
-wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;&amp; bash install.sh forum
-```
-
-![Snipaste_2023-01-27_09-04-23.png](https://easy.xinin.top/i/2023/02/20/hafq4m.png)
-
-## 开始博客搭建
-
-&gt; 进入宝塔面板
-
-安装必要的组件和依赖，按照宝塔面板推荐的安装即可，等待安装完毕</content>
-  </entry>
-  <entry>
-    <title>网站cname接入CloudFlare的超级详细教程</title>
-    <url>/2024/08/28/网站cname接入CloudFlare的超级详细教程/</url>
-    <content>### **写在前面**
-
-从 2021 年 11 月开始，CloudFlare 已禁用 Partner 使用的 zone\_setAPI 以避免滥用（因为此 API 访问不需要验证域名所有权），通过 Partner 实现 CNAME 访问的方式几乎结束，只有 Plesk 空间离开了。 Cloudflare 插件订阅的 ServerShield 工作正常。几个月过去了，官方并没有给出未来合作伙伴如何接入新域名的任何解释。
-
-### **准备工作**
-
-1. 一个cloudflare账号
- 
-2. 一个腾讯账号
- 
-3. 一台部署网站的vps
- 
-4. 两个域名，一个用于接入CF加速，一个是你想要加速的网站
- 
- &gt; 接入CF加速的网站命名为`cf.com`
- 
- &gt; 你想要加速的网站命名为`tx.com`
- 
-
-### **将`cf.com`接入Cloudflare**
-
-1. 点击网站页面的添加站点图标
-
-![image-20231128205334030](https://easy.xinin.top/i/2023/11/28/xyj8ok-2.png)
-
-2. 填写域名，在选择计划中选取免费套餐，点击继续
-
-![image-20231128205923023](https://easy.xinin.top/i/2023/11/28/y214sn-2.png)
-
-3. 添加cdn解析
-
-这里添加或者先接入cf解析都行，二级域名随便设置，我这里演示用的`cdn.cf.com`
-
-![image-20231128210253304](https://easy.xinin.top/i/2023/11/28/yrt021-2.png)
-
-4. 将Cloudflare 名称服务器填入`cf.com`的名称服务器（nameserver）处，每一家不尽相同，这里不演示了
-
-### **开通CloudFlare for SaaS**
-
-建议注册个PayPal，用邮箱就行，不会产生扣费。我已经亲测了。
-
-1. 打开网站配置页面，并且找到 SSL/TLS 下的自定义主机名。启用 CloudFlare for SaaS。
-
-![image-20231128210719681](https://easy.xinin.top/i/2023/11/28/yukyr4-2.png)
-
-![点击启用CloudFlare for SaaS](https://easy.xinin.top/i/2023/11/28/yv4ew8-2.png)
-
-### **设置回退源及自定义主机域**
-
-1. 设置回退源
-
-![image-20231128211153114](https://easy.xinin.top/i/2023/11/28/yx5ofn-2.png)
-
-2. 添加自定义主机名
- 
- 点击添加定义主机名，在自定义主机名处填入你要加速的网站，我这里应该是`tx.com`
- 
- ![image-20231128211649934](https://easy.xinin.top/i/2023/11/28/z0409a-2.png)
- 
-3. ![image-20231128211847751](https://easy.xinin.top/i/2023/11/28/z1aoys-2.png)
- 
-4. 验证自定义主机名
- 
- 根据你上面获取的txt名称和txt值填写，应该有两条
- 
-
-![Snipaste_11-28_21-21](https://easy.xinin.top/i/2023/11/28/z3elza-2.png)</content>
-  </entry>
-  <entry>
-    <title>阿里云轻量应用服务器DD系统</title>
-    <url>/2024/08/28/阿里云轻量应用服务器DD系统/</url>
-    <content>@ **注意重装有风险，可能导致无法开机，谨慎操作！**
-
-### 一键安装Linux系统脚本
-
-使用脚本前最好先安装如下软件
-
-1 
-2 
-3 
-4 
-5 
-
-\# CentOS 与 RedHat 
-yum install -y xz openssl gawk file wget 
- 
-\# Debian 与 Ubuntu 
-apt-get install -y xz-utils openssl gawk file 
-
-我这里演示的是DD成debain的代码，更多系统点击[Linux 使用脚本一键 DD](https://www.ydyno.com/archives/1245.html)
-
-1 
-2 
-
-wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh' &amp;&amp; chmod a+x InstallNET.sh 
-bash InstallNET.sh -d 9 -v 64 -p 123456 -a --mirror 'https://mirrors.cloud.tencent.com/debian/' 
-
-\-d 后面是系统版本号
-
-\-v 后面写 64 位 32 位
-
-\-a （不清楚这个干啥的但是每个脚本都带）
-
-–mirror 后面是镜像源地址
-
-\-p 后面写自定义密码</content>
   </entry>
 </feed>

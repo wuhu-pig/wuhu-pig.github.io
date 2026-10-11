@@ -8775,11 +8775,11 @@ div#banners .bannerText {
   --efu-background: #18171d;
 }
 [data-theme=light] {
-  --efu-theme: #0080c4;
-  --efu-theme-op: rgba(0,128,196,0.137);
-  --efu-theme-op-deep: rgba(0,128,196,0.867);
+  --efu-theme: #0069a8;
+  --efu-theme-op: rgba(0,105,168,0.137);
+  --efu-theme-op-deep: rgba(0,105,168,0.867);
   --efu-theme-op-light: rgba(66,89,239,0.051);
-  --efu-theme-none: rgba(0,128,196,0);
+  --efu-theme-none: rgba(0,105,168,0);
   --efu-nav-hover-text: #fff;
   --efu-blue: #425aef;
   --efu-red: #f04a63;
