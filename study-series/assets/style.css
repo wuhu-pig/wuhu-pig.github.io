@@ -47,3 +47,16 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #7aa2
 .top{background:#162a47}.btn{background:#2565ae}.filter button.active{background:#2565ae}
 .panel,.week-card{border-radius:16px}
 @media(prefers-color-scheme:dark){:root{--bg:#0e1725;--ink:#e6edfa;--muted:#b0bfd0;--line:#334158;--card:#1a2537;--blue:#8cbeff;--teal:#5ed4cb}}
+
+/* Career 28-week direction hubs */
+.three-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:17px}
+.path-card{display:flex;flex-direction:column;gap:9px;background:var(--card);padding:24px;border:1px solid var(--line);border-radius:16px;min-height:315px;box-shadow:0 10px 26px rgba(35,66,102,.06)}
+.path-card__label{font-size:.73rem;letter-spacing:.11em;color:var(--teal);font-weight:800}.path-card h2{margin:0;font-size:1.35rem}.path-card__time{font-size:1.1rem;font-weight:800;color:var(--blue)}.path-card p{margin:0 0 4px;flex:0 0 auto;font-size:.9rem;line-height:1.8;color:var(--muted)}
+.path-card .btn{margin-top:auto;text-align:center}.path-card__week{display:block;text-align:center;margin-top:2px;font-size:.88rem}
+.portal-intro{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.portal-intro h2{margin:3px 0}.mini-link{font-weight:700}.quick-weeks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.quick-weeks a{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:15px;text-align:center;font-weight:750}
+.plan-table{width:100%;border-collapse:collapse;margin:12px 0}.plan-table th,.plan-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);font-size:.91rem}.plan-table th{color:var(--muted)}.week-status{background:#e7f2f3;color:#0d6c67;border:0}
+.chunk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0 20px}.chunk{border-radius:9px;background:var(--soft);padding:10px 12px;border:1px solid var(--line);font-weight:650;font-size:.9rem}.lesson pre{white-space:pre;overflow-x:auto;border-radius:12px;background:var(--soft);padding:17px}
+@media(max-width:870px){.three-paths{grid-template-columns:1fr}.quick-weeks{grid-template-columns:1fr}.chunk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.path-card{min-height:auto}}
+@media(max-width:530px){.plan-table{display:block;overflow-x:auto}.chunk-grid{grid-template-columns:1fr 1fr}}
+@media(prefers-color-scheme:dark){.week-status{background:#173937;color:#8be0da}}
