@@ -1,30 +1,29 @@
-# 初次发布与质量核验报告
+# 双轨学习专题 · 发布与源码同步核验报告（2026-10-12）
 
-## 仓库关系
+## 仓库与分支
 
-- 已确认公开静态站点仓库：`wuhu-pig/wuhu-pig.github.io`，默认分支 `main`。
-- 已确认博客前端主题：Solitude 4.0.0（通过已生成首页和 about 页面中的主题标识）。
-- `wuhu-pig/hexo` 为 Hexo 框架 fork，并非博客源码仓库，不应往其中上传文章。
-- 用户提到的 `Hexo-blog` 源码仓库不在当前 GitHub 连接返回的可访问库列表中。
-- 因此发布方法：向已有 Pages 仓库添加独立 `study-series/` 页面，在首页增加非破坏性导航入口和展示卡片。
+| 内容 | 仓库 | 分支 |
+|---|---|---|
+| Hexo 博客源码 | `wuhu-pig/hexo_backup`（私有） | `hexo-source` |
+| GitHub Pages 网站 | `wuhu-pig/wuhu-pig.github.io` | `main` |
+| Hexo 框架 fork（非博客源码） | `wuhu-pig/hexo` | `master` |
 
-## 已提交的内容
+源码工程包含 `_config.yml`、`_config.solitude.yml`、`package.json`、`source/_posts`、`scripts/`、`themes/solitude` 子模块，采用 Solitude 4.0.0 / Doraemon Sky。
 
-- 系列首页 1 个
-- 两条课程总览页 2 个
-- 24 个周课程静态网页（技术 12、英语 12）
-- 24 份 Hexo 兼容 Markdown 源稿
-- 统一 CSS、课程索引 JSON、README 和维护文档
+## 已确认结果
 
-## 已执行的检查
+- 线上专题共 61 个已提交文件，包含 24 个周课程 HTML 和 24 份 Markdown 原稿。
+- 源码 `source/study-series/` 下也有 61 个文件；已通过 GitHub 的 Git blob SHA 验证：**61/61 完全一致**。
+- 新增 / 保留导航配置、首页专题注入、独立美化 CSS。
+- 源码侧 `tools/publish.js` 已增加缺失 24 周课程及 Markdown 文件时拒绝发布的检查，另有 `tools/check-study-series.js`。
+- 线上发布仓库最新一次美化提交 `7f60ee7d2a1bb88f4c80bb33a781150df9a7ba8a` 的 GitHub Pages 构建状态：`completed / success`。
+- 对应记录：https://github.com/wuhu-pig/wuhu-pig.github.io/actions/runs/38253887190
+- 原有博客文章与 Solitude git submodule 未被本次课程同步覆盖。
 
-- 所有 24 周课程在一个提交中创建，格式化路径为 `week-01` 到 `week-12`。
-- 第 1 周/第 12 周文章和系列入口通过 GitHub 内容 API 验证存在。
-- 首页导航和课程入口已增加，原有首页及旧文章未删除。
-- 首次推送 commit：`979bc032da692789be3935dfb9068d325a68351c`。
-- 首次 GitHub Pages 构建结果：`completed / success`，运行地址：https://github.com/wuhu-pig/wuhu-pig.github.io/actions/runs/38151714681
-- 站点公开网页的浏览器端视觉检查未通过当前外部读取工具完成：该工具连站点原首页也无法打开，因此不声称已核验其真实显示效果。
+## 尚未验证和限制
 
-## 后续必须落实的源仓迁移
+- GitHub 内容与提交检查不是本地的完整 `npx hexo generate` 测试，也不是浏览器端的移动设备视觉回归。
+- 专题是独立的静态 HTML，编辑 Markdown **不会自动更新 HTML**；维护者需手动同步，或以后增加转换构建流程。
+- 源码分支不等于自动完成网站部署；发布依赖本地 `tools/publish.js` 或以后配置的受控 CI。
 
-直接修改生成站点并非最理想的长期维护方案。找回独立的 Hexo 源码仓后，应将 Markdown 文章和系列目录编入真正 Hexo 项目的 `source/`，在 Solitude 主题配置中添加菜单，并按现有部署流水线发布。否则下一次 `hexo deploy` 可能覆盖本次静态更新。
+不得声称已自动完成任何实际学习任务或未经验证的硬件实验。
