@@ -40,3 +40,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #7aa2
 @media(max-width:600px){.hero{padding:48px 0 44px}.top .wrap{align-items:flex-start}.top nav{gap:8px 15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.week-card,.filter button,.day{transition:none}.week-card:hover{transform:none}}
 @media(prefers-color-scheme:dark){.week-card:hover{border-color:#5e7bad}.panel,.week-card{box-shadow:none}}
+
+/* Modern Engineering Notes — synchronized with Hexo source */
+:root{--blue:#2565ae;--teal:#078985;--bg:#f6f8fb;--ink:#202d3b;--muted:#576a7f;--line:#e3e9f1;--card:#fff}
+.hero{background:linear-gradient(130deg,#162a47,#2a4a72 57%,#12777c)}
+.top{background:#162a47}.btn{background:#2565ae}.filter button.active{background:#2565ae}
+.panel,.week-card{border-radius:16px}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1725;--ink:#e6edfa;--muted:#b0bfd0;--line:#334158;--card:#1a2537;--blue:#8cbeff;--teal:#5ed4cb}}
