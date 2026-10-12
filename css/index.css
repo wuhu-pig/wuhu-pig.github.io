@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "third_party/snackbar.min.css";
+@import "study-upgrade.css";
 @media screen and (min-width: 768px) {
 @-moz-keyframes showCover {
     from {
