@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5分钟学习模式 · 28周低能耗学习 | Xin 的博客</title>
+<meta name="description" content="工作疲劳时也能使用的微任务：专业、AI、英语，按精力选择休息、5分钟、15分钟或25分钟。">
+<link rel="canonical" href="https://wuhu-pig.github.io/study-series/micro/">
+<link rel="stylesheet" href="/study-series/assets/style.css">
+<style>
+.micro-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.micro-controls label{display:block;font-size:.94rem;color:#385170;font-weight:650}
+.micro-controls select{display:block;margin-top:7px;padding:11px;background:white;color:#19304e;border:1px solid #c8d5e8;border-radius:10px;max-width:100%;min-width:150px}
+.micro-step{padding:13px 16px;margin:12px 0;border:1px solid #d8e4ef;background:#f8fbff;border-radius:12px}
+.micro-step strong{display:block;color:#213c67}.micro-step p{margin:7px 0 0}
+.micro-log{display:block;width:100%;min-height:86px;border:1px solid #c8d5e8;border-radius:10px;padding:12px;font:inherit;box-sizing:border-box}
+.micro-muted{font-size:.89rem;color:#54677e}.micro-actions{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:9px}.micro-actions button{padding:9px 13px;border:1px solid #b9cce0;border-radius:9px;background:#f8fbff;color:#294771;cursor:pointer}
+@media(max-width:600px){.micro-controls{display:block}.micro-controls label{margin:12px 0}}
+</style></head><body>
+<header class="top"><div class="wrap"><a href="/">✦ Xin 的博客</a><nav><a href="/study-series/">学习总览</a><a href="/study-series/motor/">专业技术</a><a href="/study-series/ai/">AI 提效</a><a href="/study-series/english/">职业英语</a></nav></div></header>
+<section class="hero"><div class="wrap"><span class="eyebrow">ENERGY-FIRST LEARNING</span><h1>今晚只学 5 分钟，也可以</h1><p>按真实精力选择任务，不以打卡时长评判自己。先自己尝试，再让 AI 辅助，最后亲手核对一个结果。</p><span class="pill">28个里程碑 · 不是28周硬截止</span><span class="pill">工作日低门槛 · 周末可选延长</span></div></section>
+<main class="wrap shell"><section class="panel">
+<h2>现在选一个方向和精力状态</h2><div class="micro-controls">
+<label>只关注这个专题<select id="track"><option value="motor">专业技术 · 电机控制</option><option value="ai">AI 工程提效</option><option value="english">职业英语</option></select></label>
+<label>当前课程<select id="week"></select></label>
+<label>今晚能投入<select id="mode"><option value="0">0分钟 · 休息</option><option value="5" selected>5分钟 · 只做一步</option><option value="15">15分钟 · 三小步</option><option value="25">25分钟 · 周末实践</option></select></label>
+</div><p class="micro-muted">默认5分钟，不自动判定完成；这是你自己选择的学习时长，不是固定提醒或计时器。完成记录仅保存在当前浏览器。</p>
+<div id="lesson" aria-live="polite"><p>正在读取当前课程清单……</p></div>
+</section>
+<section class="panel"><h2>一行证据：今天亲手做了什么</h2>
+<p>请记录<strong>你自己的判断或操作</strong>，不要复制AI写好的总结。例如：“我原以为-1会变为0，复核发现转为65535；还没运行编译测试”。只做了阅读，就写“仅阅读，未验证”。</p>
+<textarea class="micro-log" id="note" placeholder="日期 / 自己尝试了什么 / 用什么证据核对 / 下次从哪里继续"></textarea>
+<div class="micro-actions"><button id="save" type="button">保存在本浏览器</button><button id="copy" type="button">复制记录</button><span class="micro-muted" id="savehint" role="status">尚未保存</span></div>
+<p class="micro-muted">浏览器本地存储不跨设备同步；清除浏览器数据后可能丢失，请把重要成果另存为Markdown。公司代码和客户资料不要发送到未授权AI。</p>
+</section>
+<section class="panel"><h2>为什么这样设计</h2>
+<p><strong>停课不等于失败。</strong>连续高压、睡眠不足或烦躁时选择0分钟；健身日无需补课。正常工作日只要求一个5分钟的“亲手动作”，周末有精力再做25分钟实验。</p>
+<p><strong>AI 是教练，不是代跑。</strong>先做自己的预期判断 → 让AI提问、解释或生成安全样例 → 自己检查一处证据或一条测试。AI自动输出不算自己掌握了。</p>
+<p><strong>改为里程碑制。</strong>旧每周6小时45分钟是充裕状态的上限，不是必须完成的配额；课程可停留两周以上，没学完不要跳到下一周。</p>
+<div class="quick-weeks"><a href="/study-series/motor/">专业完整课程 →</a><a href="/study-series/ai/">AI 完整课程 →</a><a href="/study-series/english/">英语完整课程 →</a></div></section></main>
+<footer class="footer"><a href="/study-series/">返回学习中心</a> · 真实完成度大于计划日期</footer>
+<script>
+(function(){
+'use strict';
+var trackEl=document.getElementById('track'),weekEl=document.getElementById('week'),modeEl=document.getElementById('mode'),lessonEl=document.getElementById('lesson'),noteEl=document.getElementById('note'),hintEl=document.getElementById('savehint');
+var data=null;var cache={};
+var args=new URLSearchParams(location.search);
+var startTrack=args.get('track'),startWeek=Number(args.get('week'));
+if(['motor','ai','english'].includes(startTrack))trackEl.value=startTrack;
+function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]});}
+function key(){return 'study-micro-v1-'+trackEl.value+'-W'+String(weekEl.value).padStart(2,'0');}
+function setSteps(list){return list.map(function(s,i){return '<div class="micro-step"><strong>'+esc(s[0])+'</strong><p>'+esc(s[1])+'</p></div>';}).join('');}
+function buildSteps(w,m,t){
+ var tu=w.tuesday||'',th=w.thursday||'',sa=w.saturday||'',f=w.focus||w.knowledge||'';
+ var one,check,weekend;
+ if(t==='motor'){
+  one=w.week===1?'不看资料，自己写出“电流采样→Clarke/Park→电流PI→逆变换→SVPWM”五步，圈出不确定的一环。':'先不看AI解释，针对「'+tu+'」自己画一个箭头或写出一个有单位的事实，允许只有一行。';
+  check='请AI针对「'+f+'」只问你一个问题；自己先回答，再核对官方文档/课内材料，写下一处更正或一个“未知”。';
+  weekend='选做一个离线验证步骤：「'+sa+'」。自己改一个参数/标注一处时序，记录预期、实际和是否真实运行。';
+ }else if(t==='ai'){
+  one=w.week===1?'先自己预测 clamp_duty(-1) 会返回什么，再检查 uint16_t 转换结果；不要先看AI结论。':'AI开工前，先自己写一条验收标准：针对「'+tu+'」，什么输出算对？';
+  check='让AI仅基于合成/授权材料辅助「'+th+'」，你亲自核对一个输入、证据或测试断言；未经运行不要标“通过”。';
+  weekend=w.week===1?'用完全合成的 clamp_duty 代码请AI给出测试建议；自己核对 -1、500、1200 的预期，并保存模型原话与人工判定。':'只挑一条执行：「'+sa+'」。由你本人检查结果、误报或边界；AI不替你宣告验收通过。';
+ }else{
+  var c=w.chunks||[];
+  one=w.week===1?'脱稿说出“I work as an embedded software engineer.”，然后自己换一句“I work on motor control software.”':'从「'+c.slice(0,2).join(' / ')+'」任选一个词块，自己说一条与工作有关的句子，允许不流利。';
+  check='阅读或听读：“'+(w.sample||'')+'”；遮住后换一个自己的工作内容再说一次。AI只纠正一到两处错误。';
+  weekend='模拟「'+(w.scene1||w.title)+'」对话，自己回答3个短问题；能录音就录20–60秒，没有条件用口述也可以。';
+ }
+ if(m===0)return [['今天的任务：恢复精力','不打开课程、不补进度。放下屏幕、洗漱睡觉或做自己愿意的放松活动。']];
+ if(m===5)return [['第1–4分钟 · 亲手试一次',one],['第5分钟 · 留下一个证据','自己写一句“我做了____；仍不确定____”。只完成这个动作就结束，不必开新工具。']];
+ if(m===15)return [['0–5分钟 · 自己尝试',one],['5–12分钟 · AI当教练',check],['12–15分钟 · 自己验收','用一句话记录正确/错误/未知，并指明根据，不用写周报。']];
+ return [['0–5分钟 · 先自己动手',one],['5–15分钟 · 一个真实的练习',weekend],['15–22分钟 · 对照与纠错',check],['22–25分钟 · 保存证据','留下自己修改的1行、一个测试结果或20秒口述；没有验证就记录“未验证”。']];
+}
+function paint(){
+ if(!data)return;
+ var w=data.weeks.find(function(x){return Number(x.week)===Number(weekEl.value)})||data.weeks[0],m=Number(modeEl.value);
+ var title=esc(w.title),accept=esc(w.acceptance),artifact=esc(w.artifact);
+ var url='/study-series/'+trackEl.value+'/week-'+String(w.week).padStart(2,'0')+'/';
+ lessonEl.innerHTML='<h2>W'+String(w.week).padStart(2,'0')+' · '+title+'</h2>'+
+ '<p><strong>原本的完整验收：</strong>'+accept+'；成果建议：'+artifact+'。<br><span class="micro-muted">今晚无需一次做完周成果。</span></p>'+
+ setSteps(buildSteps(w,m,trackEl.value))+
+ '<p class="micro-muted">状态好再<a href="'+url+'">打开本周完整课程 →</a>；本次微任务不等于完成整周验收。</p>';
+ noteEl.value='';try{noteEl.value=localStorage.getItem(key())||'';}catch(e){}
+ hintEl.textContent=noteEl.value?'已从当前浏览器载入':'尚未保存';
+ var p=new URLSearchParams({track:trackEl.value,week:String(w.week)});
+ history.replaceState(null,'',location.pathname+'?'+p.toString());
+}
+async function load(){
+ try{
+ var t=trackEl.value;
+ if(!cache[t]){var r=await fetch('/study-series/data/'+t+'.json',{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);cache[t]=await r.json();}
+ data=cache[t];weekEl.innerHTML=data.weeks.map(function(w){return '<option value="'+Number(w.week)+'">W'+String(w.week).padStart(2,'0')+' · '+esc(w.title)+'</option>'}).join('');
+ var candidate=Number.isInteger(startWeek)&&startWeek>=1&&startWeek<=28?startWeek:1;
+ weekEl.value=String(candidate);startWeek=NaN;paint();
+ }catch(e){lessonEl.innerHTML='<p>课程清单暂时无法加载，请返回<a href="/study-series/">学习中心</a>选择各方向课程。'+esc(e.message)+'</p>';}
+}
+trackEl.addEventListener('change',function(){startWeek=NaN;load()});weekEl.addEventListener('change',paint);modeEl.addEventListener('change',paint);
+document.getElementById('save').addEventListener('click',function(){try{localStorage.setItem(key(),noteEl.value);hintEl.textContent='已存入当前浏览器';}catch(e){hintEl.textContent='保存失败，请复制到本地笔记';}});
+document.getElementById('copy').addEventListener('click',async function(){try{await navigator.clipboard.writeText(noteEl.value);hintEl.textContent='已复制';}catch(e){noteEl.select();hintEl.textContent='请手动复制选中的文本';}});
+load();
+})();
+</script></body></html>
