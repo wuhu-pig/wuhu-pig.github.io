@@ -60,3 +60,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #7aa2
 @media(max-width:870px){.three-paths{grid-template-columns:1fr}.quick-weeks{grid-template-columns:1fr}.chunk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.path-card{min-height:auto}}
 @media(max-width:530px){.plan-table{display:block;overflow-x:auto}.chunk-grid{grid-template-columns:1fr 1fr}}
 @media(prefers-color-scheme:dark){.week-status{background:#173937;color:#8be0da}}
+
+/* Accessibility fixes (2026-10-13): explicit foreground/background pairs. */
+.btn,.path-card .btn{background:#245a9a;color:#fff}
+.btn:visited,.path-card .btn:visited{color:#fff}
+.filter button.active{background:#245a9a;color:#fff}
+@media(prefers-color-scheme:dark){
+  .btn,.path-card .btn{background:#284f86;color:#fff}
+  .btn:visited,.path-card .btn:visited{color:#fff}
+  .filter button.active{background:#284f86;color:#fff}
+  .week-status{background:#173937;color:#a3e7d9}
+}

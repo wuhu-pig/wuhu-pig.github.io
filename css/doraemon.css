@@ -30,3 +30,18 @@ a:focus-visible{outline:3px solid #59d1c8;outline-offset:3px}
 @media(max-width:780px){.lab-feature,.study-feature{grid-template-columns:1fr;min-height:unset}.lab-paths,.study-feature__side{grid-template-columns:1fr 1fr}.ai-grid{grid-template-columns:1fr}.ai-hero{padding:55px 0}}
 @media(max-width:490px){.lab-feature,.study-feature{width:calc(100% - 22px);padding:25px 20px}.lab-paths,.study-feature__side{grid-template-columns:1fr}.ai-top .ai-wrap{padding-top:15px;padding-bottom:15px}.ai-links{gap:13px}.ai-wrap{padding:0 16px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* Standalone AI article typography and consistent automatic dark palette. */
+.ai-article-hero{padding-top:52px;padding-bottom:56px}
+.ai-article-hero h1{font-size:clamp(2rem,4.5vw,3rem);max-width:850px}
+.ai-article{max-width:890px;margin:auto;background:var(--lab-card);border:1px solid var(--lab-border);border-radius:16px;padding:clamp(22px,4vw,44px);line-height:1.95;box-shadow:var(--lab-elevation);color:var(--lab-ink)}
+.ai-article h2{color:var(--lab-ink);font-size:1.38rem;margin:32px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--lab-border)}
+.ai-article p{color:var(--lab-ink);margin:12px 0}
+.ai-article a{color:var(--lab-blue);text-decoration:underline;text-underline-offset:3px}
+.ai-article-note{color:var(--lab-muted);font-size:.87rem;border-left:3px solid var(--lab-green);padding:7px 12px;background:var(--lab-paper)}
+.ai-article-lede{font-size:1.12rem;font-weight:650}
+.ai-article pre{color:var(--lab-ink);background:var(--lab-paper);border:1px solid var(--lab-border);padding:17px;border-radius:12px;overflow:auto;line-height:1.65;font-size:.9rem}
+.ai-article code{font-family:Consolas,monospace}
+.ai-article-next{margin:28px 0 18px;padding:16px;background:var(--lab-paper);border-radius:12px}
+.ai-article-next div{display:flex;flex-direction:column;gap:5px;margin-top:8px}
+@media(prefers-color-scheme:dark){:root:not([data-theme]){--lab-blue:#9ac8ff;--lab-green:#72dbd1;--lab-ink:#e6edfa;--lab-muted:#b0bfd0;--lab-paper:#0e1725;--lab-card:#1a2537;--lab-border:#334158;--lab-elevation:0 14px 38px rgba(0,0,0,.22)}}
