@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" role="img">
+
+<polyline points="50.00,74.00 260.00,74.00 260.00,204.00 400.00,204.00" fill="none" stroke="#93a1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" opacity="1.0"/>
+<polyline points="50.00,204.00 71.00,204.00 71.00,74.00 260.00,74.00 260.00,204.00 400.00,204.00" fill="none" stroke="#d1493f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<polygon points="50.00,204.00 71.00,204.00 71.00,74.00 50.00,74.00" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="0.3"/>
+<line x1="50.00" y1="204.00" x2="400.00" y2="204.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<line x1="50.00" y1="74.00" x2="50.00" y2="204.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="44.00" y="208.00" font-size="10" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">0</text>
+<text x="44.00" y="78.00" font-size="10" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Vdc</text>
+<text x="225.00" y="224.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">一个开关周期 Ts</text>
+<text x="225.00" y="60.00" font-size="12" fill="#d1493f" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">电流 i &gt; 0：实际少了一块面积</text>
+<text x="225.00" y="250.00" font-size="11" fill="#d1493f" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">阴影面积 = Vdc × Td（每个周期都丢一次）</text>
+<line x1="50.00" y1="268.00" x2="66.75" y2="268.00" stroke="#d1493f" stroke-width="1.1" stroke-linecap="round" opacity="1.0"/>
+<polygon points="71.00,268.00 66.00,265.90 66.00,270.10" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="71.00" y1="268.00" x2="54.25" y2="268.00" stroke="#d1493f" stroke-width="1.1" stroke-linecap="round" opacity="1.0"/>
+<polygon points="50.00,268.00 55.00,270.10 55.00,265.90" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="79.00" y="272.00" font-size="11" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Td</text>
+<polyline points="500.00,74.00 710.00,74.00 710.00,204.00 850.00,204.00" fill="none" stroke="#93a1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" opacity="1.0"/>
+<polyline points="500.00,74.00 731.00,74.00 731.00,204.00 850.00,204.00" fill="none" stroke="#7a5bb2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<polygon points="710.00,204.00 731.00,204.00 731.00,74.00 710.00,74.00" fill="#7a5bb2" stroke="none" stroke-width="1.0" opacity="0.3"/>
+<line x1="500.00" y1="204.00" x2="850.00" y2="204.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<line x1="500.00" y1="74.00" x2="500.00" y2="204.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="494.00" y="208.00" font-size="10" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">0</text>
+<text x="494.00" y="78.00" font-size="10" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Vdc</text>
+<text x="675.00" y="224.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">一个开关周期 Ts</text>
+<text x="675.00" y="60.00" font-size="12" fill="#7a5bb2" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">电流 i &lt; 0：实际多了一块面积</text>
+<text x="675.00" y="250.00" font-size="11" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">阴影面积 = Vdc × Td（每个周期都多一次）</text>
+<line x1="710.00" y1="268.00" x2="726.75" y2="268.00" stroke="#7a5bb2" stroke-width="1.1" stroke-linecap="round" opacity="1.0"/>
+<polygon points="731.00,268.00 726.00,265.90 726.00,270.10" fill="#7a5bb2" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="731.00" y1="268.00" x2="714.25" y2="268.00" stroke="#7a5bb2" stroke-width="1.1" stroke-linecap="round" opacity="1.0"/>
+<polygon points="710.00,268.00 715.00,270.10 715.00,265.90" fill="#7a5bb2" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="739.00" y="272.00" font-size="11" fill="#7a5bb2" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Td</text>
+<rect x="50.00" y="300.00" width="800.00" height="152.00" rx="10" fill="#f7f9fb" stroke="#dbe3ea" stroke-width="1.2" opacity="1.0"/>
+<text x="70.00" y="330.00" font-size="12" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">把“面积”折算成平均电压（面积 ÷ 周期 Ts）：</text>
+<text x="70.00" y="362.00" font-size="13" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Δv = (实际面积 − 理想面积) / Ts = − Vdc · Td / Ts   （当 i &gt; 0）</text>
+<text x="70.00" y="392.00" font-size="13" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Δv = + Vdc · Td / Ts   （当 i &lt; 0）</text>
+<text x="70.00" y="424.00" font-size="13.5" fill="#d1493f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">统一写成：Δv = − Vc · sgn(i)，  Vc = Vdc · Td / Ts</text>
+<text x="520.00" y="424.00" font-size="12.5" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">= 300 V × 2 μs / 100 μs = 6 V</text>
+<text x="70.00" y="446.00" font-size="11.5" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">结论：死区等效于在桥臂输出端串了一个“幅值为 Vc、方向永远与电流相反的方波电压源”。</text>
+</svg>

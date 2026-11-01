@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" width="940" height="520" role="img">
+
+<polyline points="110.00,86.00 470.00,86.00 470.00,52.00 830.00,52.00" fill="none" stroke="#2f6db5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="96.00" y="73.00" font-size="11.5" fill="#2f6db5" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">电流 i</text>
+<text x="290.00" y="67.00" font-size="10.5" fill="#2f6db5" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">i &gt; 0（正半周）</text>
+<text x="650.00" y="67.00" font-size="10.5" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">i &lt; 0（负半周）</text>
+<text x="838.00" y="73.00" font-size="9.5" fill="#93a1ad" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">示意</text>
+<text x="110.00" y="108.00" font-size="12" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">① 未补偿：指令脉宽就是“想要的”60 μs，但死区会改变实际输出</text>
+<line x1="110.00" y1="144.00" x2="830.00" y2="144.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<rect x="110.00" y="118.00" width="216.00" height="26.00" rx="0" fill="#dfe6ed" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<rect x="470.00" y="118.00" width="216.00" height="26.00" rx="0" fill="#dfe6ed" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="110.00,118.00 326.00,118.00 326.00,144.00 470.00,144.00 470.00,118.00 686.00,118.00 686.00,144.00 830.00,144.00" fill="none" stroke="#6a7a88" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="96.00" y="135.00" font-size="10.5" fill="#6a7a88" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">指令脉冲</text>
+<line x1="110.00" y1="172.00" x2="830.00" y2="172.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<rect x="138.80" y="152.00" width="187.20" height="20.00" rx="0" fill="#d8f0e3" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<rect x="498.80" y="152.00" width="187.20" height="20.00" rx="0" fill="#d8f0e3" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="110.00,172.00 138.80,172.00 138.80,152.00 326.00,152.00 326.00,172.00 470.00,172.00 470.00,172.00 498.80,172.00 498.80,152.00 686.00,152.00 686.00,172.00 830.00,172.00" fill="none" stroke="#2c8f63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="96.00" y="166.00" font-size="10.5" fill="#2c8f63" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">上管门极</text>
+<line x1="110.00" y1="228.00" x2="830.00" y2="228.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<rect x="138.80" y="180.00" width="187.20" height="48.00" rx="0" fill="#f6c9c3" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<rect x="470.00" y="180.00" width="244.80" height="48.00" rx="0" fill="#f6c9c3" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="110.00,228.00 138.80,228.00 138.80,180.00 326.00,180.00 326.00,228.00 470.00,228.00 470.00,180.00 714.80,180.00 714.80,228.00 830.00,228.00" fill="none" stroke="#d1493f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="96.00" y="208.00" font-size="10.5" fill="#d1493f" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">实际输出</text>
+<line x1="110.00" y1="236.00" x2="134.55" y2="236.00" stroke="#d1493f" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="138.80,236.00 133.80,233.90 133.80,238.10" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="138.80" y1="236.00" x2="114.25" y2="236.00" stroke="#d1493f" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="110.00,236.00 115.00,238.10 115.00,233.90" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="146.80" y="240.00" font-size="10" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Td</text>
+<text x="110.00" y="256.00" font-size="11" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">结果：i&gt;0 时实际高电平 = 60 − 8 = 52 μs（平均电压偏小）；i&lt;0 时 = 60 + 8 = 68 μs（平均电压偏大）。</text>
+<text x="110.00" y="288.00" font-size="12" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">② 补偿后：先按电流方向把指令脉宽改掉 ±Td，死区插入后实际脉宽刚好 60 μs</text>
+<line x1="110.00" y1="324.00" x2="830.00" y2="324.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<rect x="110.00" y="298.00" width="244.80" height="26.00" rx="0" fill="#dfe6ed" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<rect x="470.00" y="298.00" width="187.20" height="26.00" rx="0" fill="#dfe6ed" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="110.00,298.00 354.80,298.00 354.80,324.00 470.00,324.00 470.00,298.00 657.20,298.00 657.20,324.00 830.00,324.00" fill="none" stroke="#6a7a88" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="96.00" y="315.00" font-size="10.5" fill="#6a7a88" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">指令脉冲</text>
+<line x1="110.00" y1="352.00" x2="830.00" y2="352.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<rect x="138.80" y="332.00" width="216.00" height="20.00" rx="0" fill="#d8f0e3" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<rect x="498.80" y="332.00" width="158.40" height="20.00" rx="0" fill="#d8f0e3" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="110.00,352.00 138.80,352.00 138.80,332.00 354.80,332.00 354.80,352.00 470.00,352.00 470.00,352.00 498.80,352.00 498.80,332.00 657.20,332.00 657.20,352.00 830.00,352.00" fill="none" stroke="#2c8f63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="96.00" y="346.00" font-size="10.5" fill="#2c8f63" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">上管门极</text>
+<line x1="110.00" y1="408.00" x2="830.00" y2="408.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<rect x="138.80" y="360.00" width="216.00" height="48.00" rx="0" fill="#cdeadb" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<rect x="470.00" y="360.00" width="216.00" height="48.00" rx="0" fill="#cdeadb" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="110.00,408.00 138.80,408.00 138.80,360.00 354.80,360.00 354.80,408.00 470.00,408.00 470.00,360.00 686.00,360.00 686.00,408.00 830.00,408.00" fill="none" stroke="#2c8f63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="96.00" y="388.00" font-size="10.5" fill="#2c8f63" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">实际输出</text>
+<line x1="138.80" y1="416.00" x2="350.55" y2="416.00" stroke="#2c8f63" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="354.80,416.00 349.80,413.90 349.80,418.10" fill="#2c8f63" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="354.80" y1="416.00" x2="143.05" y2="416.00" stroke="#2c8f63" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="138.80,416.00 143.80,418.10 143.80,413.90" fill="#2c8f63" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="246.80" y="412.00" font-size="10" fill="#2c8f63" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">实际高电平 = 60 μs（补回 Td）</text>
+<line x1="470.00" y1="416.00" x2="681.75" y2="416.00" stroke="#2c8f63" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="686.00,416.00 681.00,413.90 681.00,418.10" fill="#2c8f63" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="686.00" y1="416.00" x2="474.25" y2="416.00" stroke="#2c8f63" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="470.00,416.00 475.00,418.10 475.00,413.90" fill="#2c8f63" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="578.00" y="412.00" font-size="10" fill="#2c8f63" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">实际高电平 = 60 μs</text>
+<line x1="110.00" y1="408.00" x2="110.00" y2="413.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="110.00" y="428.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">0</text>
+<line x1="290.00" y1="408.00" x2="290.00" y2="413.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="290.00" y="428.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">50</text>
+<line x1="470.00" y1="408.00" x2="470.00" y2="413.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="470.00" y="428.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">100</text>
+<line x1="650.00" y1="408.00" x2="650.00" y2="413.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="650.00" y="428.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">150</text>
+<line x1="830.00" y1="408.00" x2="830.00" y2="413.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="830.00" y="428.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">200</text>
+<text x="470.00" y="448.00" font-size="11" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">时间 t / μs（两个开关周期：左边电流为正，右边电流为负）</text>
+<text x="110.00" y="480.00" font-size="11" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">注意：死区并没有被取消（门极信号里仍然有 Td 的空白），补偿只是把“指令”提前算好，让死区插入之后的实际脉宽正好等于期望值。</text>
+<text x="110.00" y="502.00" font-size="10" fill="#93a1ad" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">（为便于观察，本图把 Td 放大成 8 μs 绘制，实际为 2 μs。）</text>
+</svg>

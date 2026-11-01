@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img">
+
+<rect x="108.00" y="52.00" width="16.20" height="428.00" rx="0" fill="#5a6b7c" stroke="none" stroke-width="1.0" opacity="0.13"/>
+<rect x="594.00" y="52.00" width="16.20" height="428.00" rx="0" fill="#5a6b7c" stroke="none" stroke-width="1.0" opacity="0.13"/>
+<text x="116.10" y="46.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">死区①</text>
+<text x="602.10" y="46.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">死区③</text>
+<text x="94.00" y="84.00" font-size="12" fill="#2c8f63" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1 驱动</text>
+<text x="94.00" y="99.00" font-size="10" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">（上管）</text>
+<polyline points="108.00,106.00 124.20,106.00 124.20,64.00 594.00,64.00 594.00,106.00 918.00,106.00" fill="none" stroke="#2c8f63" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<text x="94.00" y="148.00" font-size="12" fill="#2f6db5" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2 驱动</text>
+<text x="94.00" y="163.00" font-size="10" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">（下管）</text>
+<polyline points="108.00,170.00 610.20,170.00 610.20,128.00 918.00,128.00 918.00,170.00 918.00,170.00" fill="none" stroke="#2f6db5" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<line x1="124.20" y1="96.00" x2="589.33" y2="96.00" stroke="#93a1ad" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="594.00,96.00 588.50,93.69 588.50,98.31" fill="#93a1ad" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="594.00" y1="96.00" x2="128.88" y2="96.00" stroke="#93a1ad" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="124.20,96.00 129.70,98.31 129.70,93.69" fill="#93a1ad" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="359.10" y="92.00" font-size="10.5" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">上管有效导通 Ton = 60 μs</text>
+<line x1="108.00" y1="188.00" x2="119.53" y2="188.00" stroke="#d1493f" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="124.20,188.00 118.70,185.69 118.70,190.31" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="124.20" y1="188.00" x2="112.67" y2="188.00" stroke="#d1493f" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="108.00,188.00 113.50,190.31 113.50,185.69" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="131.20" y="192.00" font-size="11" fill="#d1493f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Td</text>
+<polygon points="108.00,324.00 108.00,324.00 124.20,324.00 124.20,228.00 594.00,228.00 594.00,324.00 918.00,324.00 918.00,324.00" fill="#f6c9c3" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="108.00,324.00 124.20,324.00 124.20,228.00 594.00,228.00 594.00,324.00 918.00,324.00" fill="none" stroke="#d1493f" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<polyline points="108.00,228.00 594.00,228.00 594.00,324.00 918.00,324.00" fill="none" stroke="#93a1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" opacity="1.0"/>
+<line x1="108.00" y1="324.00" x2="918.00" y2="324.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<line x1="108.00" y1="228.00" x2="108.00" y2="324.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<line x1="103.00" y1="324.00" x2="108.00" y2="324.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="99.00" y="328.00" font-size="10.5" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">0 V</text>
+<line x1="103.00" y1="228.00" x2="108.00" y2="228.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="99.00" y="232.00" font-size="10.5" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Vdc</text>
+<text x="108.00" y="222.00" font-size="12" fill="#d1493f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">桥臂电压 v_aO   电流 i &gt; 0（流出桥臂）</text>
+<polygon points="108.00,468.00 108.00,372.00 610.20,372.00 610.20,468.00 918.00,468.00 918.00,468.00" fill="#d9d0ee" stroke="none" stroke-width="1.0" opacity="0.55"/>
+<polyline points="108.00,372.00 610.20,372.00 610.20,468.00 918.00,468.00" fill="none" stroke="#7a5bb2" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
+<polyline points="108.00,372.00 594.00,372.00 594.00,468.00 918.00,468.00" fill="none" stroke="#93a1ad" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" opacity="1.0"/>
+<line x1="108.00" y1="468.00" x2="918.00" y2="468.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<line x1="108.00" y1="372.00" x2="108.00" y2="468.00" stroke="#b9c4cf" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<line x1="103.00" y1="468.00" x2="108.00" y2="468.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="99.00" y="472.00" font-size="10.5" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">0 V</text>
+<line x1="103.00" y1="372.00" x2="108.00" y2="372.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="99.00" y="376.00" font-size="10.5" fill="#6a7a88" text-anchor="end" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">Vdc</text>
+<text x="108.00" y="366.00" font-size="12" fill="#7a5bb2" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">桥臂电压 v_aO   电流 i &lt; 0（流入桥臂）</text>
+<text x="140.40" y="246.00" font-size="10.8" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">② 上管导通：v = Vdc</text>
+<text x="140.40" y="268.00" font-size="10.8" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">① 死区：电流为正，D2 把输出钳在 0（有害）</text>
+<line x1="180.90" y1="261.00" x2="122.46" y2="237.88" stroke="#d1493f" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="117.72,236.00 122.37,240.55 124.23,235.86" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="140.40" y="390.00" font-size="10.8" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">④ 下管导通：v = 0（与理想一致）</text>
+<text x="351.00" y="412.00" font-size="10.8" fill="#7a5bb2" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">③ 死区：电流为负，D1 把输出钳在 Vdc（有害）</text>
+<line x1="604.20" y1="404.00" x2="602.50" y2="382.08" stroke="#7a5bb2" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<polygon points="602.10,377.00 600.05,383.18 605.08,382.79" fill="#7a5bb2" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="914.00" y="254.00" font-size="11" fill="#d1493f" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">平均电压 = Vdc·(d − Td/Ts)</text>
+<text x="914.00" y="394.00" font-size="11" fill="#7a5bb2" text-anchor="end" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">平均电压 = Vdc·(d + Td/Ts)</text>
+<line x1="108.00" y1="468.00" x2="108.00" y2="473.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="108.00" y="488.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">0</text>
+<line x1="270.00" y1="468.00" x2="270.00" y2="473.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="270.00" y="488.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">20</text>
+<line x1="432.00" y1="468.00" x2="432.00" y2="473.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="432.00" y="488.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">40</text>
+<line x1="594.00" y1="468.00" x2="594.00" y2="473.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="594.00" y="488.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">60</text>
+<line x1="756.00" y1="468.00" x2="756.00" y2="473.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="756.00" y="488.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">80</text>
+<line x1="918.00" y1="468.00" x2="918.00" y2="473.00" stroke="#6a7a88" stroke-width="1.0" stroke-linecap="round" opacity="1.0"/>
+<text x="918.00" y="488.00" font-size="10.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">100</text>
+<text x="513.00" y="510.00" font-size="11.5" fill="#6a7a88" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">时间 t / μs （一个开关周期 Ts = 100 μs）</text>
+<line x1="576.00" y1="202.00" x2="598.00" y2="202.00" stroke="#d1493f" stroke-width="2.4" stroke-linecap="round" opacity="1.0"/>
+<text x="604.00" y="206.00" font-size="10.8" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">实际输出（含死区）</text>
+<line x1="576.00" y1="220.00" x2="598.00" y2="220.00" stroke="#93a1ad" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="6 5" opacity="1.0"/>
+<text x="604.00" y="224.00" font-size="10.8" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">理想输出（无死区）</text>
+<text x="576.00" y="182.00" font-size="10.5" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">d = 上管占空比 = Ton/Ts = 0.6</text>
+</svg>

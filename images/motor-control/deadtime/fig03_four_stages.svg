@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 690" width="1160" height="690" role="img">
+
+<text x="232.00" y="62.00" font-size="12.5" fill="#23333f" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">① 死区（上管即将开通）</text>
+<line x1="340.00" y1="40.00" x2="340.00" y2="620.00" stroke="#e0e6ec" stroke-width="1.0" stroke-linecap="round" stroke-dasharray="4 5" opacity="1.0"/>
+<text x="486.00" y="62.00" font-size="12.5" fill="#23333f" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">② 上管导通</text>
+<line x1="594.00" y1="40.00" x2="594.00" y2="620.00" stroke="#e0e6ec" stroke-width="1.0" stroke-linecap="round" stroke-dasharray="4 5" opacity="1.0"/>
+<text x="740.00" y="62.00" font-size="12.5" fill="#23333f" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">③ 死区（下管即将开通）</text>
+<line x1="848.00" y1="40.00" x2="848.00" y2="620.00" stroke="#e0e6ec" stroke-width="1.0" stroke-linecap="round" stroke-dasharray="4 5" opacity="1.0"/>
+<text x="994.00" y="62.00" font-size="12.5" fill="#23333f" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">④ 下管导通</text>
+<line x1="142.92" y1="136.08" x2="292.68" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="142.92" y1="282.72" x2="292.68" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="144.48" y="129.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="144.48" y="276.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="186.60" y1="136.08" x2="186.60" y2="156.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="179.58,170.40 193.62,170.40 186.60,159.45" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="179.58" y1="159.45" x2="193.62" y2="159.45" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="195.96" y="165.06" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="186.60" y1="168.84" x2="186.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="210.96" x2="186.60" y2="240.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="179.58,254.64 193.62,254.64 186.60,243.69" fill="#d1493f" stroke="#d1493f" stroke-width="1.17" opacity="1.0"/>
+<line x1="179.58" y1="243.69" x2="193.62" y2="243.69" stroke="#d1493f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="195.96" y="249.30" font-size="8.01" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="186.60" y1="253.08" x2="186.60" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="231.84" y1="136.08" x2="231.84" y2="167.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="217.80" y="167.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="231.84" y="182.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="231.84" y1="190.68" x2="231.84" y2="245.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="217.80" y="245.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="231.84" y="260.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="231.84" y1="268.68" x2="231.84" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="136.08" x2="231.84" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="282.72" x2="231.84" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="210.96" x2="231.84" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="231.84" cy="210.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="231.84" y1="210.96" x2="264.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="264.60" y="196.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="277.86" y="209.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="277.86" y="220.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="291.12" y1="210.96" x2="306.72" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="306.72" y1="210.96" x2="306.72" y2="237.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="298.14" y1="237.48" x2="315.30" y2="237.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="300.87" y1="240.91" x2="312.57" y2="240.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="303.21" y1="244.34" x2="310.23" y2="244.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="306.72" y="260.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="155.40,282.72 186.60,282.72 186.60,246.84 186.60,210.96 263.04,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="186.60,210.96 257.42,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="263.04,210.96 256.02,207.80 256.02,214.12" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="135.12" y="301.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2 续流导通</text>
+<text x="135.12" y="310.02" font-size="9.324000000000002" fill="#d1493f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = 0 V</text>
+<rect x="244.00" y="112.00" width="80.00" height="20.00" rx="5" fill="#fdecea" stroke="#d1493f" stroke-width="1.0" opacity="1.0"/>
+<text x="284.00" y="126.00" font-size="10.5" fill="#d1493f" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">有害死区</text>
+<line x1="396.92" y1="136.08" x2="546.68" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="396.92" y1="282.72" x2="546.68" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="398.48" y="129.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="398.48" y="276.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="440.60" y1="136.08" x2="440.60" y2="156.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="433.58,170.40 447.62,170.40 440.60,159.45" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="433.58" y1="159.45" x2="447.62" y2="159.45" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="449.96" y="165.06" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="440.60" y1="168.84" x2="440.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="210.96" x2="440.60" y2="240.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="433.58,254.64 447.62,254.64 440.60,243.69" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="433.58" y1="243.69" x2="447.62" y2="243.69" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="449.96" y="249.30" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="440.60" y1="253.08" x2="440.60" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="485.84" y1="136.08" x2="485.84" y2="167.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="471.80" y="167.28" width="28.08" height="23.40" rx="2.34" fill="#dff2e6" stroke="#2c8f63" stroke-width="1.17" opacity="1.0"/>
+<text x="485.84" y="182.10" font-size="9.48" fill="#2c8f63" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="485.84" y1="190.68" x2="485.84" y2="245.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="471.80" y="245.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="485.84" y="260.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="485.84" y1="268.68" x2="485.84" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="136.08" x2="485.84" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="282.72" x2="485.84" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="210.96" x2="485.84" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="485.84" cy="210.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="485.84" y1="210.96" x2="518.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="518.60" y="196.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="531.86" y="209.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="531.86" y="220.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="545.12" y1="210.96" x2="560.72" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="560.72" y1="210.96" x2="560.72" y2="237.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="552.14" y1="237.48" x2="569.30" y2="237.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="554.87" y1="240.91" x2="566.57" y2="240.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="557.21" y1="244.34" x2="564.23" y2="244.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="560.72" y="260.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="406.28,136.08 485.84,136.08 485.84,178.98 485.84,210.96 517.04,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="485.84,210.96 511.42,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="517.04,210.96 510.02,207.80 510.02,214.12" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<rect x="471.80" y="167.28" width="28.08" height="23.40" rx="2.34" fill="#dff2e6" stroke="#2c8f63" stroke-width="1.17" opacity="1.0"/>
+<text x="485.84" y="182.10" font-size="9.48" fill="#2c8f63" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<text x="389.12" y="301.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1 导通</text>
+<text x="389.12" y="310.02" font-size="9.324000000000002" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = Vdc</text>
+<line x1="650.92" y1="136.08" x2="800.68" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="650.92" y1="282.72" x2="800.68" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="652.48" y="129.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="652.48" y="276.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="694.60" y1="136.08" x2="694.60" y2="156.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="687.58,170.40 701.62,170.40 694.60,159.45" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="687.58" y1="159.45" x2="701.62" y2="159.45" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="703.96" y="165.06" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="694.60" y1="168.84" x2="694.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="210.96" x2="694.60" y2="240.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="687.58,254.64 701.62,254.64 694.60,243.69" fill="#d1493f" stroke="#d1493f" stroke-width="1.17" opacity="1.0"/>
+<line x1="687.58" y1="243.69" x2="701.62" y2="243.69" stroke="#d1493f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="703.96" y="249.30" font-size="8.01" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="694.60" y1="253.08" x2="694.60" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="739.84" y1="136.08" x2="739.84" y2="167.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="725.80" y="167.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="739.84" y="182.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="739.84" y1="190.68" x2="739.84" y2="245.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="725.80" y="245.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="739.84" y="260.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="739.84" y1="268.68" x2="739.84" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="136.08" x2="739.84" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="282.72" x2="739.84" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="210.96" x2="739.84" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="739.84" cy="210.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="739.84" y1="210.96" x2="772.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="772.60" y="196.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="785.86" y="209.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="785.86" y="220.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="799.12" y1="210.96" x2="814.72" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="814.72" y1="210.96" x2="814.72" y2="237.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="806.14" y1="237.48" x2="823.30" y2="237.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="808.87" y1="240.91" x2="820.57" y2="240.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="811.21" y1="244.34" x2="818.23" y2="244.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="814.72" y="260.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="663.40,282.72 694.60,282.72 694.60,246.84 694.60,210.96 771.04,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="694.60,210.96 765.42,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="771.04,210.96 764.02,207.80 764.02,214.12" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="643.12" y="301.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2 续流导通</text>
+<text x="643.12" y="310.02" font-size="9.324000000000002" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = 0 V</text>
+<line x1="904.92" y1="136.08" x2="1054.68" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="904.92" y1="282.72" x2="1054.68" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="906.48" y="129.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="906.48" y="276.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="948.60" y1="136.08" x2="948.60" y2="156.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="941.58,170.40 955.62,170.40 948.60,159.45" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="941.58" y1="159.45" x2="955.62" y2="159.45" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="957.96" y="165.06" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="948.60" y1="168.84" x2="948.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="210.96" x2="948.60" y2="240.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="941.58,254.64 955.62,254.64 948.60,243.69" fill="#d1493f" stroke="#d1493f" stroke-width="1.17" opacity="1.0"/>
+<line x1="941.58" y1="243.69" x2="955.62" y2="243.69" stroke="#d1493f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="957.96" y="249.30" font-size="8.01" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="948.60" y1="253.08" x2="948.60" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="993.84" y1="136.08" x2="993.84" y2="167.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="979.80" y="167.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="993.84" y="182.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="993.84" y1="190.68" x2="993.84" y2="245.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="979.80" y="245.28" width="28.08" height="23.40" rx="2.34" fill="#dff2e6" stroke="#2c8f63" stroke-width="1.17" opacity="1.0"/>
+<text x="993.84" y="260.10" font-size="9.48" fill="#2c8f63" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="993.84" y1="268.68" x2="993.84" y2="282.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="136.08" x2="993.84" y2="136.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="282.72" x2="993.84" y2="282.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="210.96" x2="993.84" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="993.84" cy="210.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="993.84" y1="210.96" x2="1026.60" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="1026.60" y="196.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="1039.86" y="209.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="1039.86" y="220.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="1053.12" y1="210.96" x2="1068.72" y2="210.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="1068.72" y1="210.96" x2="1068.72" y2="237.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="1060.14" y1="237.48" x2="1077.30" y2="237.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="1062.87" y1="240.91" x2="1074.57" y2="240.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="1065.21" y1="244.34" x2="1072.23" y2="244.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="1068.72" y="260.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="917.40,282.72 948.60,282.72 948.60,246.84 948.60,210.96 1025.04,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="948.60,210.96 1019.42,210.96" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="1025.04,210.96 1018.02,207.80 1018.02,214.12" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="897.12" y="301.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2 导通</text>
+<text x="897.12" y="310.02" font-size="9.324000000000002" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = 0 V</text>
+<line x1="142.92" y1="432.08" x2="292.68" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="142.92" y1="578.72" x2="292.68" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="144.48" y="425.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="144.48" y="572.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="186.60" y1="432.08" x2="186.60" y2="452.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="179.58,466.40 193.62,466.40 186.60,455.45" fill="#d1493f" stroke="#d1493f" stroke-width="1.17" opacity="1.0"/>
+<line x1="179.58" y1="455.45" x2="193.62" y2="455.45" stroke="#d1493f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="195.96" y="461.06" font-size="8.01" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="186.60" y1="464.84" x2="186.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="506.96" x2="186.60" y2="536.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="179.58,550.64 193.62,550.64 186.60,539.69" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="179.58" y1="539.69" x2="193.62" y2="539.69" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="195.96" y="545.30" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="186.60" y1="549.08" x2="186.60" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="231.84" y1="432.08" x2="231.84" y2="463.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="217.80" y="463.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="231.84" y="478.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="231.84" y1="486.68" x2="231.84" y2="541.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="217.80" y="541.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="231.84" y="556.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="231.84" y1="564.68" x2="231.84" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="432.08" x2="231.84" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="578.72" x2="231.84" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="186.60" y1="506.96" x2="231.84" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="231.84" cy="506.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="231.84" y1="506.96" x2="264.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="264.60" y="492.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="277.86" y="505.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="277.86" y="516.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="291.12" y1="506.96" x2="306.72" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="306.72" y1="506.96" x2="306.72" y2="533.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="298.14" y1="533.48" x2="315.30" y2="533.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="300.87" y1="536.91" x2="312.57" y2="536.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="303.21" y1="540.34" x2="310.23" y2="540.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="306.72" y="556.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="263.04,506.96 231.84,506.96 186.60,506.96 186.60,458.60 186.60,432.08 158.52,432.08" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="186.60,432.08 164.14,432.08" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="158.52,432.08 165.54,435.24 165.54,428.92" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="135.12" y="597.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1 续流导通</text>
+<text x="135.12" y="606.02" font-size="9.324000000000002" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = Vdc</text>
+<line x1="396.92" y1="432.08" x2="546.68" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="396.92" y1="578.72" x2="546.68" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="398.48" y="425.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="398.48" y="572.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="440.60" y1="432.08" x2="440.60" y2="452.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="433.58,466.40 447.62,466.40 440.60,455.45" fill="#d1493f" stroke="#d1493f" stroke-width="1.17" opacity="1.0"/>
+<line x1="433.58" y1="455.45" x2="447.62" y2="455.45" stroke="#d1493f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="449.96" y="461.06" font-size="8.01" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="440.60" y1="464.84" x2="440.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="506.96" x2="440.60" y2="536.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="433.58,550.64 447.62,550.64 440.60,539.69" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="433.58" y1="539.69" x2="447.62" y2="539.69" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="449.96" y="545.30" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="440.60" y1="549.08" x2="440.60" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="485.84" y1="432.08" x2="485.84" y2="463.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="471.80" y="463.28" width="28.08" height="23.40" rx="2.34" fill="#dff2e6" stroke="#2c8f63" stroke-width="1.17" opacity="1.0"/>
+<text x="485.84" y="478.10" font-size="9.48" fill="#2c8f63" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="485.84" y1="486.68" x2="485.84" y2="541.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="471.80" y="541.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="485.84" y="556.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="485.84" y1="564.68" x2="485.84" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="432.08" x2="485.84" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="578.72" x2="485.84" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="440.60" y1="506.96" x2="485.84" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="485.84" cy="506.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="485.84" y1="506.96" x2="518.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="518.60" y="492.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="531.86" y="505.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="531.86" y="516.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="545.12" y1="506.96" x2="560.72" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="560.72" y1="506.96" x2="560.72" y2="533.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="552.14" y1="533.48" x2="569.30" y2="533.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="554.87" y1="536.91" x2="566.57" y2="536.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="557.21" y1="540.34" x2="564.23" y2="540.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="560.72" y="556.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="517.04,506.96 485.84,506.96 440.60,506.96 440.60,458.60 440.60,432.08 412.52,432.08" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="440.60,432.08 418.14,432.08" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="412.52,432.08 419.54,435.24 419.54,428.92" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="389.12" y="597.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">电流经 D1 回 +Vdc</text>
+<text x="389.12" y="606.02" font-size="9.324000000000002" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = Vdc</text>
+<line x1="650.92" y1="432.08" x2="800.68" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="650.92" y1="578.72" x2="800.68" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="652.48" y="425.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="652.48" y="572.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="694.60" y1="432.08" x2="694.60" y2="452.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="687.58,466.40 701.62,466.40 694.60,455.45" fill="#d1493f" stroke="#d1493f" stroke-width="1.17" opacity="1.0"/>
+<line x1="687.58" y1="455.45" x2="701.62" y2="455.45" stroke="#d1493f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="703.96" y="461.06" font-size="8.01" fill="#d1493f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="694.60" y1="464.84" x2="694.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="506.96" x2="694.60" y2="536.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="687.58,550.64 701.62,550.64 694.60,539.69" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="687.58" y1="539.69" x2="701.62" y2="539.69" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="703.96" y="545.30" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="694.60" y1="549.08" x2="694.60" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="739.84" y1="432.08" x2="739.84" y2="463.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="725.80" y="463.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="739.84" y="478.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="739.84" y1="486.68" x2="739.84" y2="541.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="725.80" y="541.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="739.84" y="556.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="739.84" y1="564.68" x2="739.84" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="432.08" x2="739.84" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="578.72" x2="739.84" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="694.60" y1="506.96" x2="739.84" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="739.84" cy="506.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="739.84" y1="506.96" x2="772.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="772.60" y="492.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="785.86" y="505.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="785.86" y="516.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="799.12" y1="506.96" x2="814.72" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="814.72" y1="506.96" x2="814.72" y2="533.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="806.14" y1="533.48" x2="823.30" y2="533.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="808.87" y1="536.91" x2="820.57" y2="536.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="811.21" y1="540.34" x2="818.23" y2="540.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="814.72" y="556.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="771.04,506.96 739.84,506.96 694.60,506.96 694.60,458.60 694.60,432.08 666.52,432.08" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="694.60,432.08 672.14,432.08" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="666.52,432.08 673.54,435.24 673.54,428.92" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<text x="643.12" y="597.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1 续流导通</text>
+<text x="643.12" y="606.02" font-size="9.324000000000002" fill="#7a5bb2" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = Vdc</text>
+<rect x="752.00" y="408.00" width="80.00" height="20.00" rx="5" fill="#fdecea" stroke="#d1493f" stroke-width="1.0" opacity="1.0"/>
+<text x="792.00" y="422.00" font-size="10.5" fill="#d1493f" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">有害死区</text>
+<line x1="904.92" y1="432.08" x2="1054.68" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="904.92" y1="578.72" x2="1054.68" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<text x="906.48" y="425.06" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">+Vdc</text>
+<text x="906.48" y="572.48" font-size="9.09" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">−Vdc</text>
+<line x1="948.60" y1="432.08" x2="948.60" y2="452.36" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="941.58,466.40 955.62,466.40 948.60,455.45" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="941.58" y1="455.45" x2="955.62" y2="455.45" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="957.96" y="461.06" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D1</text>
+<line x1="948.60" y1="464.84" x2="948.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="506.96" x2="948.60" y2="536.60" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<polygon points="941.58,550.64 955.62,550.64 948.60,539.69" fill="#ffffff" stroke="#23333f" stroke-width="1.17" opacity="1.0"/>
+<line x1="941.58" y1="539.69" x2="955.62" y2="539.69" stroke="#23333f" stroke-width="1.7160000000000002" stroke-linecap="round" opacity="1.0"/>
+<text x="957.96" y="545.30" font-size="8.01" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">D2</text>
+<line x1="948.60" y1="549.08" x2="948.60" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="993.84" y1="432.08" x2="993.84" y2="463.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="979.80" y="463.28" width="28.08" height="23.40" rx="2.34" fill="#eef1f4" stroke="#b3bdc7" stroke-width="1.17" opacity="1.0"/>
+<text x="993.84" y="478.10" font-size="9.48" fill="#6a7a88" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S1</text>
+<line x1="993.84" y1="486.68" x2="993.84" y2="541.28" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="979.80" y="541.28" width="28.08" height="23.40" rx="2.34" fill="#dff2e6" stroke="#2c8f63" stroke-width="1.17" opacity="1.0"/>
+<text x="993.84" y="556.10" font-size="9.48" fill="#2c8f63" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<line x1="993.84" y1="564.68" x2="993.84" y2="578.72" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="432.08" x2="993.84" y2="432.08" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="578.72" x2="993.84" y2="578.72" stroke="#8d9aa6" stroke-width="1.77" stroke-linecap="round" opacity="1.0"/>
+<line x1="948.60" y1="506.96" x2="993.84" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<circle cx="993.84" cy="506.96" r="2.34" fill="#23333f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<line x1="993.84" y1="506.96" x2="1026.60" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<rect x="1026.60" y="492.92" width="26.52" height="28.08" rx="2.34" fill="#f3f1fb" stroke="#7a5bb2" stroke-width="1.0919999999999999" opacity="1.0"/>
+<text x="1039.86" y="505.40" font-size="8.544" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">负载</text>
+<text x="1039.86" y="516.32" font-size="7.920000000000001" fill="#7a5bb2" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">R-L</text>
+<line x1="1053.12" y1="506.96" x2="1068.72" y2="506.96" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="1068.72" y1="506.96" x2="1068.72" y2="533.48" stroke="#23333f" stroke-width="1.17" stroke-linecap="round" opacity="1.0"/>
+<line x1="1060.14" y1="533.48" x2="1077.30" y2="533.48" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="1062.87" y1="536.91" x2="1074.57" y2="536.91" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<line x1="1065.21" y1="540.34" x2="1072.23" y2="540.34" stroke="#93a1ad" stroke-width="0.9359999999999999" stroke-linecap="round" opacity="1.0"/>
+<text x="1068.72" y="556.88" font-size="7.920000000000001" fill="#93a1ad" text-anchor="middle" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">O（直流中点）</text>
+<polyline points="1025.04,506.96 993.84,506.96 993.84,552.98 993.84,578.72 920.52,578.72" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polyline points="993.84,578.72 926.14,578.72" fill="none" stroke="#d1493f" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+<polygon points="920.52,578.72 927.54,581.88 927.54,575.56" fill="#d1493f" stroke="none" stroke-width="1.0" opacity="1.0"/>
+<rect x="979.80" y="541.28" width="28.08" height="23.40" rx="2.34" fill="#dff2e6" stroke="#2c8f63" stroke-width="1.17" opacity="1.0"/>
+<text x="993.84" y="556.10" font-size="9.48" fill="#2c8f63" text-anchor="middle" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2</text>
+<text x="897.12" y="597.44" font-size="8.232000000000001" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">S2 导通</text>
+<text x="897.12" y="606.02" font-size="9.324000000000002" fill="#23333f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">v_aO = 0 V</text>
+<text x="24.00" y="204.00" font-size="17" fill="#d1493f" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">i &gt; 0</text>
+<text x="24.00" y="226.00" font-size="10.5" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">电流流出桥臂</text>
+<text x="24.00" y="500.00" font-size="17" fill="#7a5bb2" text-anchor="start" font-weight="bold" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">i &lt; 0</text>
+<text x="24.00" y="522.00" font-size="10.5" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">电流流入桥臂</text>
+<text x="24.00" y="650.00" font-size="11.5" fill="#23333f" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">同一个桥臂、同一个开关周期里的四个阶段：只有被标成“有害死区”的那一个阶段，输出电压才和指令不符；其余阶段要么本来就该输出这个电平，要么由二极管续流顶住。</text>
+<text x="24.00" y="672.00" font-size="11.5" fill="#6a7a88" text-anchor="start" font-weight="normal" opacity="1.0" style="font-family:'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif">四个阶段轮流出现：① 和 ③ 是“两管全关”的死区，② 是上管导通，④ 是下管导通。</text>
+</svg>
