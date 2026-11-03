@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="canonical" href="https://wuhu-pig.github.io/2026/11/03/%E4%B8%89%E7%9B%B8%E7%94%B5%E6%9C%BAABC%E7%94%B5%E5%8E%8B%E6%96%B9%E7%A8%8B%E8%AF%A6%E8%A7%A3/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三相电机 ABC 电压方程详解：从磁链、电感到反电动势">
+<meta property="og:description" content="三相电机ABC相电压数学模型，从磁通、磁链、电感、反电动势推导到三相逐项电压与交互式时域波形。">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="三相电机ABC相电压方程详解。修复机械转速与电角频率的图形对应，新增三相相电压逐项分解、互感、电压测量和交互式时间域波形，配有图解与自测。" />
+<title>ABC 三相相电压方程详解｜已校正转速与频率演示 · V2</title>
+<style>
+:root{--paper:#faf9f6;--surface:#fff;--ink:#1c2731;--muted:#5c6c78;--line:#e1e5e5;--primary:#155c70;--pale:#eaf4f4;--amber:#bd6d25;--blue:#337bbd;--green:#23916c;--red:#bb4b57;--shadow:0 8px 30px rgba(22,43,52,.055);--code:#edf3f4}
+[data-theme=dark]{--paper:#101a21;--surface:#18262e;--ink:#eaf0f1;--muted:#a6b9bd;--line:#32434c;--primary:#9ad8dc;--pale:#1b363d;--amber:#f1b775;--blue:#7abaff;--green:#75d6b3;--red:#ff9aa6;--shadow:0 8px 30px rgba(0,0,0,.18);--code:#20353e}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.85 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}a{color:var(--primary)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:3px}::selection{background:#aad6d5;color:#17282e}
+.layout{max-width:1460px;margin:auto;display:grid;grid-template-columns:246px minmax(0,960px);gap:50px;padding:0 46px 100px}.side{position:sticky;top:22px;align-self:start;max-height:calc(100vh - 44px);overflow:auto;padding:30px 0}.side .brand{font-size:13px;letter-spacing:.1em;font-weight:800;color:var(--primary);margin-bottom:16px}.side a{display:block;text-decoration:none;color:var(--muted);font-size:13px;padding:6px 10px;border-left:2px solid transparent;line-height:1.55}.side a:hover,.side a.active{color:var(--primary);background:var(--pale);border-color:var(--primary)}.side .tips{margin-top:28px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:16px}.main{min-width:0}.hero{padding:72px 0 44px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:.2em;font-weight:800;text-transform:uppercase;color:var(--primary)}h1{font-size:clamp(31px,4vw,53px);line-height:1.27;letter-spacing:-.035em;margin:14px 0 20px;font-weight:800}.lead{font-size:18px;color:var(--muted);max-width:780px}.meta{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 24px}.pill{border:1px solid var(--line);border-radius:30px;padding:4px 12px;font-size:12px;color:var(--muted)}.actionbar{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:9px;padding:7px 13px;font-size:13px}.btn:hover{border-color:var(--primary)}section{margin:62px 0;scroll-margin-top:24px}section h2{font-size:29px;letter-spacing:-.025em;line-height:1.35;margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line)}section h2 .num{font:800 13px/1 system-ui;color:var(--primary);letter-spacing:.08em;display:block;margin-bottom:11px}h3{font-size:20px;margin:32px 0 11px;line-height:1.4}h4{font-size:16px;margin:20px 0 6px}p{margin:13px 0}strong{font-weight:750}ul,ol{padding-left:23px}li{padding-left:3px;margin:7px 0}small,.small{font-size:13px;color:var(--muted)}.introbox{margin:28px 0;background:var(--pale);border-radius:16px;padding:27px 31px}.introbox .q{font-weight:800;font-size:19px;margin:0 0 12px}.concept{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:20px 0}.concept article{background:var(--surface);border:1px solid var(--line);padding:16px;border-radius:12px}.concept .symbol{font-size:28px;font-family:Georgia,serif;color:var(--primary);font-style:italic}.concept h4{margin:5px 0 4px}.concept p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}.key{background:var(--surface);border-left:4px solid var(--primary);padding:16px 22px;margin:22px 0;border-radius:0 9px 9px 0;box-shadow:var(--shadow)}.key.warn{border-color:var(--amber)}.figure{background:var(--surface);border:1px solid var(--line);border-radius:15px;margin:25px 0;overflow:hidden}.figure svg{display:block;width:100%;height:auto;max-height:380px;padding:14px}.figcap{border-top:1px solid var(--line);padding:10px 16px;color:var(--muted);font-size:12px;line-height:1.7}.figure svg text{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}.figure .ink{fill:var(--ink)}.figure .subink{fill:var(--muted)}.figure .stroke{stroke:var(--ink)}.formula{font-family:Cambria,"Times New Roman",serif;font-size:clamp(18px,2.6vw,26px);text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:17px 12px;margin:23px 0;overflow-x:auto;white-space:nowrap;line-height:1.9}.formula.major{background:var(--pale);border-color:var(--primary);font-weight:600}.formula sub,.formula sup{font-size:.6em}.frac{display:inline-flex;vertical-align:middle;align-items:center;flex-direction:column;font-size:.86em;line-height:1.3;margin:0 4px}.frac>span:first-child{border-bottom:1.4px solid currentColor;padding:0 6px 3px}.frac>span:last-child{padding-top:3px}.eqrow{display:flex;gap:14px;flex-wrap:wrap}.eqrow>.formula{flex:1}.eqtext{font:16px/1.9 system-ui;vertical-align:middle}.colorR{color:var(--amber)}.colorL{color:var(--blue)}.colorE{color:var(--green)}.tablewrap{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:12px}table{width:100%;border-collapse:collapse;font-size:14px;background:var(--surface)}th,td{padding:12px 15px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}tr:last-child td{border:0}th{background:var(--pale);font-weight:750}td:first-child{white-space:nowrap}.mathblock{padding:15px 18px;background:var(--code);border-radius:9px;font-size:16px;line-height:1.8;overflow-x:auto;font-family:Cambria,"Times New Roman",serif;white-space:pre}.interactive{border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow);border-radius:18px;margin:26px 0;padding:22px}.interactive .tag{color:var(--primary);font-size:12px;font-weight:800;letter-spacing:.14em}.interactive h3{margin:7px 0 8px}.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:19px 0 12px}.control label{display:flex;justify-content:space-between;font-size:13px;gap:8px}.control label output{color:var(--primary);font-weight:750;font-variant-numeric:tabular-nums}.control input{width:100%;accent-color:var(--primary);cursor:pointer}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:var(--pale);padding:13px 14px;border-radius:9px}.stat .v{font:700 20px/1.5 Cambria,serif}.stat .k{font-size:12px;color:var(--muted)}.chart{height:auto;display:block;width:100%;margin:15px auto}.chart text{font-size:11px;fill:var(--muted)}.chart line{stroke:var(--line);stroke-width:1}.chart .grid{stroke-dasharray:4 5}.graphlegend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:4px 0 0}.legenddot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.steps{counter-reset:step;list-style:none;padding:0}.steps li{position:relative;padding:10px 8px 10px 44px;border-left:2px solid var(--line);margin:0 0 0 13px}.steps li:before{counter-increment:step;content:counter(step);position:absolute;left:-14px;top:9px;background:var(--primary);color:var(--paper);border-radius:50%;width:26px;height:26px;text-align:center;font:700 13px/26px system-ui}.quiz details{background:var(--surface);border:1px solid var(--line);margin:10px 0;border-radius:9px;padding:13px 17px}.quiz summary{font-weight:650;cursor:pointer}.quiz details p{font-size:14px;margin-bottom:2px;color:var(--muted)}.memory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.memory>div{padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px}.memory b{display:block;color:var(--primary);margin-bottom:3px}.memory span{font-size:13px;color:var(--muted)}.foot{border-top:1px solid var(--line);padding:30px 0 55px;font-size:13px;color:var(--muted)}.foot a{overflow-wrap:anywhere}.muted{color:var(--muted)}.deflist{display:grid;grid-template-columns:150px 1fr;gap:8px 14px;margin:22px 0}.deflist dt{font-weight:750;color:var(--primary)}.deflist dd{margin:0 0 11px}code{background:var(--code);padding:2px 5px;border-radius:4px;font-size:.92em} .source-list li{font-size:14px;margin-bottom:9px}.emphasis{font-size:18px;font-weight:750;color:var(--primary)}
+@media(max-width:1030px){.layout{display:block;max-width:820px;padding:0 20px 60px}.side{display:none}.hero{padding-top:44px}.concept{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){body{font-size:15px}.concept,.controls,.stats,.memory{grid-template-columns:1fr}.hero{padding-top:30px}h1{font-size:32px}.lead{font-size:16px}section{margin:42px 0}section h2{font-size:25px}.interactive{padding:15px}.introbox{padding:17px}.formula{font-size:19px}.deflist{grid-template-columns:1fr}.deflist dd{margin-top:-8px}}
+@media print{body{background:white;color:black;font-size:13px}.layout{display:block;padding:0}.side,.actionbar,.controls{display:none!important}.main{width:100%}.hero{padding:10px 0 20px}.figure,.interactive,.introbox,.formula,.key{box-shadow:none!important;break-inside:avoid}.chart{max-height:230px}section{margin:30px 0}h1{font-size:32px}h2{font-size:23px}a{color:#155c70}details{break-inside:avoid}details>p{display:block}}
+
+/* V2 专项增强 */
+.hero-note{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 21px;margin:20px 0}
+.equation-stack{display:grid;gap:9px}
+.equation-stack>div{padding:11px 15px;background:var(--surface);border-radius:9px;border-left:5px solid var(--amber);font-family:Cambria,"Times New Roman",serif;font-size:clamp(17px,2.5vw,25px);overflow-x:auto;white-space:nowrap}
+.equation-stack>div:nth-child(2){border-color:var(--blue)}.equation-stack>div:nth-child(3){border-color:var(--green)}
+.a-term{color:var(--amber)}.b-term{color:var(--blue)}.c-term{color:var(--green)}
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.split>div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--primary)}
+.tabset{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}.tabset button{background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 14px;font-size:13px}
+.tabset button[aria-pressed=true]{background:var(--primary);color:var(--paper);border-color:var(--primary)}
+.twostat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.twostat .stat .v{font-size:18px}
+.note-table td,.note-table th{font-variant-numeric:tabular-nums;font-size:13px}.note-table td:first-child{font-weight:700}
+.warnbox{border-left:4px solid var(--amber);padding:13px 17px;background:var(--pale);border-radius:0 10px 10px 0;margin:15px 0}
+@media(max-width:660px){.split,.twostat{grid-template-columns:1fr 1fr}.equation-stack>div{font-size:18px}.stats .stat .v{font-size:17px}}
+@media(max-width:430px){.twostat{grid-template-columns:1fr 1fr}}
+
+.chart-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:600px){.chart-scroll .chart{min-width:670px}.note-table{min-width:640px}}
+@media print{.chart-scroll{overflow:visible}.chart-scroll .chart{min-width:0}}
+.blog-crumb{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem;margin:0 0 1.2rem;color:var(--muted);font-size:.9rem}.blog-crumb a{color:var(--primary);text-decoration:none}.blog-crumb a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="side" aria-label="文章目录">
+  <div class="brand">MOTOR CONTROL NOTEBOOK</div>
+<a href="/categories/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6/%E9%87%8D%E7%82%B9%E9%9A%BE%E7%82%B9/" title="返回电机控制专题">← 返回博客 · 电机控制</a>
+  <a href="#abc-first">⭐ 先看：ABC 方程总览</a>
+  <a href="#overview">00 · 总体路线：6 个概念</a>
+  <a href="#magnetism">01 · 电流为什么产生磁场</a>
+  <a href="#flux">02 · 磁通与磁链到底是什么</a>
+  <a href="#inductance">03 · 电感从何而来</a>
+  <a href="#emf">04 · 反电动势从何而来</a>
+  <a href="#voltage">05 · 从物理推导单相方程</a>
+  <a href="#threephase">06 · 三相 ABC 的完整模型</a>
+  <a href="#abc-analysis">★ 核心：ABC 相电压逐项解析</a>
+  <a href="#lab">07 · 交互实验：电流与反电动势</a>
+  <a href="#engineering">08 · 在嵌入式控制中怎么用</a>
+  <a href="#pitfalls">09 · 常见误区与测量注意</a>
+  <a href="#review">10 · 一页复习 & 自测</a>
+  <a href="#sources">延伸阅读与参考资料</a>
+  <div class="tips">V2 修订：修正电角度频率演示，新增ABC相电压分解实验与相电压/桥臂电压推导。SVG 图、脚本均内置，可离线运行。</div>
+</aside>
+<main class="main"><nav class="blog-crumb"><a href="/">Xin 的博客</a><span> / </span><a href="/categories/%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6/%E9%87%8D%E7%82%B9%E9%9A%BE%E7%82%B9/">电机控制 · 重点难点</a><span> / ABC 电压方程</span></nav>
+<header class="hero">
+  <div class="eyebrow">Motor fundamentals · 原理篇 / ABC-01</div>
+  <h1>三相电机 ABC <br>相电压方程详解</h1>
+  <p class="lead">先明确 ABC 三相相电压方程，再从磁链、电感、反电动势的物理来源推导，最后用<strong>真实时间轴</strong>观察转速改变频率，以及三相每个电压分量如何叠加。</p>
+  <div class="meta"><span class="pill">PMSM / BLDC 基础</span><span class="pill">图解 + 推导 + 互动演示</span><span class="pill">建议阅读 45–65 分钟</span><span class="pill">V2 · 2026-11-02 校对修订</span></div>
+  <div class="actionbar"><button class="btn" id="themeButton" type="button">◐ 切换明暗主题</button><button class="btn" type="button" onclick="window.print()">▤ 打印 / 保存 PDF</button><button class="btn" type="button" onclick="document.getElementById('review').scrollIntoView({behavior:'smooth'})">◎ 跳到复习卡</button></div>
+  <div class="introbox">
+    <div class="q">贯穿全文的主线：同一个磁链导数，解释电感项和反电动势项</div>
+    <svg viewBox="0 0 810 160" role="img" aria-label="电流产生磁场、磁通、磁链；磁链变化产生感应电压" style="display:block;width:100%;height:auto">
+      <defs><marker id="arrow0" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7" fill="none" stroke="currentColor" stroke-width="1"/></marker></defs>
+      <g fill="none" stroke="currentColor" opacity=".42" stroke-width="1.4" marker-end="url(#arrow0)"><path d="M126 61 H153"/><path d="M283 61 H310"/><path d="M440 61 H467"/><path d="M597 61 H624"/></g>
+      <g font-size="16" text-anchor="middle" font-weight="700">
+        <rect x="3" y="31" width="123" height="60" rx="11" fill="#e3a04b" fill-opacity=".20" stroke="#bb823e"/><text x="64" y="68" fill="var(--ink)">电流 i</text>
+        <rect x="153" y="31" width="130" height="60" rx="11" fill="#448dbc" fill-opacity=".14" stroke="#448dbc"/><text x="218" y="68" fill="var(--ink)">磁场 B</text>
+        <rect x="310" y="31" width="130" height="60" rx="11" fill="#448dbc" fill-opacity=".14" stroke="#448dbc"/><text x="375" y="68" fill="var(--ink)">磁通 Φ</text>
+        <rect x="467" y="31" width="130" height="60" rx="11" fill="#299c80" fill-opacity=".12" stroke="#299c80"/><text x="532" y="68" fill="var(--ink)">磁链 ψ</text>
+        <rect x="624" y="31" width="181" height="60" rx="11" fill="#299c80" fill-opacity=".12" stroke="#299c80"/><text x="714" y="68" fill="var(--ink)">感应电压</text>
+      </g>
+      <g fill="var(--muted)" font-size="12" text-anchor="middle"><text x="64" y="112">安培环路定律</text><text x="217" y="112">通过指定面积</text><text x="375" y="112">按面积积分</text><text x="532" y="112">考虑绕组匝数</text><text x="714" y="112">由变化率决定</text><text x="710" y="137" font-weight="700" fill="var(--primary)">u_ind = dψ/dt</text></g>
+    </svg>
+    <p class="small">这里用“磁链变化 → 感应电压”的被动电压参考方向；法拉第定律中的负号会在第 04 节解释。</p>
+  </div>
+</header>
+
+<section id="abc-first">
+  <h2><span class="num">先看本篇重点 / ABC 相电压</span>三相电压方程到底是在描述什么？</h2>
+  <p><strong>先规定参考方向：</strong>三相星形接法；<code>iA、iB、iC</code> 均从各自端子流向中性点 N；<code>uAN = vA − vN</code>、<code>uBN = vB − vN</code>、<code>uCN = vC − vN</code>。这样每一相都可写出一条电压平衡式。</p>
+  <div class="equation-stack" aria-label="三相 ABC 简化相电压方程">
+    <div>u<sub>AN</sub> = <span class="colorR">R·i<sub>A</sub></span> + <span class="colorL">L<sub>eq</sub>·di<sub>A</sub>/dt</span> + <span class="colorE">e<sub>A</sub></span></div>
+    <div>u<sub>BN</sub> = <span class="colorR">R·i<sub>B</sub></span> + <span class="colorL">L<sub>eq</sub>·di<sub>B</sub>/dt</span> + <span class="colorE">e<sub>B</sub></span></div>
+    <div>u<sub>CN</sub> = <span class="colorR">R·i<sub>C</sub></span> + <span class="colorL">L<sub>eq</sub>·di<sub>C</sub>/dt</span> + <span class="colorE">e<sub>C</sub></span></div>
+  </div>
+  <p class="small">这是<strong>线性、对称、电感不随位置变化、无中性线的简化模型</strong>，不是适用于所有电机的无条件公式。更一般的原式是 <code>uabc = Rabc·iabc + dψabc/dt</code>。</p>
+  <div class="figure"><svg viewBox="0 0 800 255" role="img" aria-label="三相ABC电压由电阻压降、电感压降和反电动势三类电压项合成">
+    <g font-size="15" font-weight="750" text-anchor="middle" fill="var(--ink)">
+      <text x="65" y="51" fill="var(--amber)">A 相</text><text x="65" y="119" fill="var(--blue)">B 相</text><text x="65" y="188" fill="var(--green)">C 相</text>
+      <text x="260" y="18">电阻项 Ri</text><text x="460" y="18">电感项 L·di/dt</text><text x="650" y="18">永磁反电动势 e</text>
+    </g>
+    <g fill="none" stroke-width="2.5">
+      <path d="M88 48 H151 M362 48 H383 M553 48 H575 M725 48 H764" stroke="var(--amber)"/>
+      <path d="M88 116 H151 M362 116 H383 M553 116 H575 M725 116 H764" stroke="var(--blue)"/>
+      <path d="M88 184 H151 M362 184 H383 M553 184 H575 M725 184 H764" stroke="var(--green)"/>
+    </g>
+    <g stroke-width="2.2" fill="var(--pale)">
+      <g stroke="var(--amber)"><rect x="153" y="31" width="209" height="34" rx="8"/><rect x="384" y="31" width="170" height="34" rx="8"/><rect x="577" y="31" width="148" height="34" rx="8"/></g>
+      <g stroke="var(--blue)"><rect x="153" y="99" width="209" height="34" rx="8"/><rect x="384" y="99" width="170" height="34" rx="8"/><rect x="577" y="99" width="148" height="34" rx="8"/></g>
+      <g stroke="var(--green)"><rect x="153" y="167" width="209" height="34" rx="8"/><rect x="384" y="167" width="170" height="34" rx="8"/><rect x="577" y="167" width="148" height="34" rx="8"/></g>
+    </g>
+    <g fill="var(--ink)" text-anchor="middle" font-size="14" font-weight="600"><text x="256" y="53">R·iA</text><text x="470" y="53">Leq·diA/dt</text><text x="649" y="53">eA</text><text x="256" y="121">R·iB</text><text x="470" y="121">Leq·diB/dt</text><text x="649" y="121">eB</text><text x="256" y="189">R·iC</text><text x="470" y="189">Leq·diC/dt</text><text x="649" y="189">eC</text></g>
+    <text x="400" y="238" text-anchor="middle" font-size="13" fill="var(--muted)">每一横行分别相加，得到本相对中性点的电压 uAN / uBN / uCN</text>
+  </svg><div class="figcap">图 0：ABC 三条方程是<strong>三个端口的电压平衡</strong>，而不是“电机三相电压永远是正弦波”的断言。实际相电压还取决于电流波形、转速、控制策略与逆变器。</div></div>
+  <div class="split">
+    <div><div class="kicker">式子的物理含义</div><p><b>R·i：</b>铜绕组耗能形成压降。<br><b>L·di/dt：</b>相电流改变磁链所需的电压。<br><b>e：</b>转子永磁磁链随时间改变带来的感应电压。</p></div>
+    <div><div class="kicker">两个关键约束</div><p>对于无中性线三相 Y 接：<br><b>iA + iB + iC = 0</b><br>若线性对称、永磁三相磁链平衡：<br><b>eA + eB + eC = 0</b></p></div>
+  </div>
+  <div class="warnbox"><b>本次修订说明：</b>旧版“机械转速”实验使用固定 0°～360° 电角度作横轴，因此波形周期数始终为 1；修订版默认使用<strong>固定 30 ms 时间轴</strong>，转速改变时波形频率与幅值都会改变。角度轴仍保留，但会明确注明：角度轴上看到的永远是一个电周期。</div>
+  <p><a href="#abc-analysis"><b>直接跳转：ABC 三相相电压逐相计算、线电压和示波器测量，以及实时波形分析 →</b></a></p>
+</section>
+<section id="overview">
+<h2><span class="num">00 / 阅读地图</span>先把六个容易混淆的概念分开</h2>
+<div class="concept">
+  <article><div class="symbol">i</div><h4>电流</h4><p>单位 A。电荷定向运动；绕组的电流可以产生磁场。</p></article>
+  <article><div class="symbol">B</div><h4>磁感应强度</h4><p>单位 T。描述空间某位置磁场的方向与强弱。</p></article>
+  <article><div class="symbol">Φ</div><h4>磁通</h4><p>单位 Wb。穿过某个指定面积的磁场“总量”。</p></article>
+  <article><div class="symbol">ψ</div><h4>磁链</h4><p>单位 Wb·匝（匝通常视作无量纲）。考虑每一匝被多少磁通穿过。</p></article>
+  <article><div class="symbol">L</div><h4>电感</h4><p>单位 H。描述电流变化时，磁链随电流变化的程度。</p></article>
+  <article><div class="symbol">e</div><h4>反电动势</h4><p>单位 V。永磁转子运动使定子磁链变化而产生的感应电压。</p></article>
+</div>
+<p>最关键的区分：<strong>磁链 ψ 是某一时刻的状态量；dψ/dt 是该磁链变化在端口电压方程中的感应项（采用被动电压参考方向）。</strong>有磁链不等于一定有感应电压，必须有时间变化。</p>
+</section>
+<section id="magnetism">
+<h2><span class="num">01 / 看得见的物理直觉</span>导线通电，为什么就有磁场？</h2>
+<p>通电导线的周围存在环绕导线的磁场。把导线绕成很多匝，就得到线圈；各匝产生的磁场在空间叠加，线圈内部可以出现相对集中的磁场。再加上铁芯（低磁阻路径），就能让更多磁通经过我们希望的位置。</p>
+<div class="figure">
+<svg viewBox="0 0 780 308" role="img" aria-label="直导线周围环形磁场、通电线圈磁场集中、加入铁芯形成磁路" >
+ <g transform="translate(120 144)">
+  <circle r="75" fill="none" stroke="var(--line)" stroke-width="24" opacity=".7"/><circle r="45" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-dasharray="6 5"/><circle r="69" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <circle r="14" fill="var(--pale)" stroke="var(--amber)" stroke-width="3"/><circle r="5" fill="var(--amber)"/>
+  <path d="M 44 -10 l10 6 -8 9" fill="none" stroke="var(--blue)" stroke-width="3"/>
+  <text x="0" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">① 一根通电导线</text><text x="0" y="137" text-anchor="middle" font-size="12" fill="var(--muted)">磁场环绕导线（俯视）</text>
+ </g>
+ <g transform="translate(385 116)">
+  <path d="M-92 35 Q0 -35 92 35 M-92 50 Q0 -25 92 50 M-92 65 Q0 -12 92 65" fill="none" stroke="var(--blue)" opacity=".6" stroke-width="2"/>
+  <g fill="none" stroke="var(--amber)" stroke-width="5"> <ellipse cx="-48" cy="30" rx="22" ry="57"/><ellipse cx="-24" cy="30" rx="22" ry="57"/><ellipse cx="0" cy="30" rx="22" ry="57"/><ellipse cx="24" cy="30" rx="22" ry="57"/><ellipse cx="48" cy="30" rx="22" ry="57"/></g>
+  <path d="M-74 30 H78" stroke="var(--blue)" stroke-width="2.5" stroke-dasharray="7 5"/><path d="M68 24 l10 6 -10 6" fill="none" stroke="var(--blue)" stroke-width="2.5"/>
+  <text x="0" y="143" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">② 很多匝绕成线圈</text><text x="0" y="165" text-anchor="middle" font-size="12" fill="var(--muted)">各匝磁场叠加</text>
+ </g>
+ <g transform="translate(653 144)">
+  <path d="M-88 -58 H88 V66 H-88 Z" fill="none" stroke="var(--line)" stroke-width="18" stroke-linejoin="round"/><path d="M-54 -58 H54" stroke="var(--blue)" stroke-width="7" stroke-linecap="round"/><path d="M-49 -66 l-12 8 12 8" fill="none" stroke="var(--blue)" stroke-width="3"/>
+  <path d="M-95 3 c35 -18 35 -18 0 -36 M-95 36 c35 -18 35 -18 0 -36" fill="none" stroke="var(--amber)" stroke-width="3"/><path d="M95 3 c-35 -18 -35 -18 0 -36 M95 36 c-35 -18 -35 -18 0 -36" fill="none" stroke="var(--amber)" stroke-width="3"/>
+  <text x="0" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="var(--ink)">③ 再加铁芯与磁路</text><text x="0" y="137" text-anchor="middle" font-size="12" fill="var(--muted)">磁通更易沿低磁阻路径闭合</text>
+ </g>
+</svg>
+<div class="figcap">图 1：电流 → 磁场 → 线圈磁场叠加 → 铁芯磁路。图是帮助建立物理直觉的示意，不是三相电机实际槽型或精确的磁力线分布。</div>
+</div>
+<p>为什么电机绕组要绕很多圈？一个重要原因是：<strong>同样的电流，更多匝数可以提供更大的磁动势</strong>，近似写为 <code>F = N·i</code>，N 是匝数。实际效果还受铁芯、气隙、饱和与漏磁影响。</p>
+<div class="key"><b>记忆锚点：</b>电流不是“凭空制造出电感”，而是通过磁场与绕组磁链建立联系。电感是这层联系的定量描述。</div>
+</section>
+<section id="flux">
+<h2><span class="num">02 / 磁场如何变成数学量</span>磁通 Φ 与磁链 ψ：两者到底差在哪？</h2>
+<h3>2.1 磁通：先选一块面积，问有多少磁场穿过去</h3>
+<p>磁通的定义是：<strong>磁感应强度 B 在某一选定曲面上的通量</strong>。如果磁场均匀、表面是平面，就可以简化成：</p>
+<div class="formula">Φ = B · A · cos(α) <span class="eqtext">，单位 Wb</span></div>
+<p>其中 α 是磁场方向与面积法线的夹角。磁场垂直穿过平面时，磁通绝对值最大；磁场平行于平面时，磁通为零。一般情况应写为面积积分 <code>Φ = ∫ B·dA</code>。</p>
+<div class="figure">
+<svg viewBox="0 0 780 290" role="img" aria-label="磁场穿过线圈平面并形成磁通，磁场方向与面积法线夹角决定磁通">
+  <defs><marker id="arrow1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9" fill="none" stroke="var(--blue)" stroke-width="2"/></marker></defs>
+  <g transform="translate(215 135)">
+    <path d="M-106 -61 L106 -61 L156 56 L-56 56Z" fill="var(--pale)" stroke="var(--primary)" stroke-width="2"/>
+    <ellipse cx="25" cy="0" rx="100" ry="49" fill="none" stroke="var(--amber)" stroke-width="9" transform="rotate(17 25 0)"/>
+    <g stroke="var(--blue)" stroke-width="2.5" fill="none" marker-end="url(#arrow1)"><path d="M-100 76 L-17 -99"/><path d="M-38 76 L45 -99"/><path d="M24 76 L107 -99"/><path d="M86 76 L169 -99"/></g>
+    <path d="M25 0 L25 -105" stroke="var(--green)" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="-100" y="-109" font-size="15" fill="var(--blue)" font-weight="700">磁场 B</text><text x="32" y="-107" font-size="13" fill="var(--green)">面积法线</text><text x="-120" y="116" font-size="15" fill="var(--ink)">线圈包围的面积 A</text>
+  </g>
+  <g transform="translate(510 58)" fill="var(--ink)"><text font-size="18" font-weight="700" x="0" y="0">想象一个“磁场计数框”</text><text font-size="15" x="0" y="45">① 先确定线圈围成的面积</text><text font-size="15" x="0" y="83">② 看 B 以什么角度穿过</text><text font-size="15" x="0" y="121">③ 得到这个面的磁通 Φ</text><text font-size="13" y="171" fill="var(--muted)">磁力线只是可视化工具，</text><text font-size="13" y="191" fill="var(--muted)">不是空间里真正存在的线。</text></g>
+</svg>
+<div class="figcap">图 2：磁通不是“磁场的另一种叫法”；它必须相对于一个选定面积才有意义。</div>
+</div>
+<h3>2.2 磁链：一匝磁通与 N 匝磁通的区别</h3>
+<p>一根绕一圈的导线，如果有磁通 Φ 穿过这一圈，就有一个绕组的磁通关联。现在把导线绕成 N 圈，如果每一匝都链接到同样的磁通，则：</p>
+<div class="formula major">ψ = NΦ</div>
+<p>更普遍地写，是所有匝各自所链接磁通的总和：<code>ψ = Φ₁ + Φ₂ + … + Φₙ</code>。所以 <strong>磁链 ψ 的大小不仅取决于磁场，也取决于绕组如何摆放、多少匝链接到它</strong>。</p>
+<div class="eqrow"><div class="formula">1 匝：ψ = Φ</div><div class="formula">100 匝（理想）：ψ = 100Φ</div></div>
+<p>磁链有两种常见来源，需要严格区分。注意“电流产生的磁链”和“电感”不是一回事：电感是二者间的比例或局部增量关系：</p>
+<ul><li><strong>定子电流产生的磁链</strong>：线圈通电，磁场穿过绕组本身或其它相绕组。</li><li><strong>转子永磁体产生的磁链</strong>：即使定子不通电，只要转子带有永磁体，其磁场仍可能穿过定子绕组。</li></ul>
+<div class="key warn"><strong>特别重要：</strong>定子电流为 0，不代表总磁链为 0。永磁体可以单独提供磁链。反过来，磁链不变化时，也不意味着会产生感应电压。</div>
+</section>
+<section id="inductance">
+<h2><span class="num">03 / 最常觉得抽象的一项</span>电感 L 不是一个“神秘元件”，而是磁链与电流的关系</h2>
+<h3>3.1 从一根线圈推导电感</h3>
+<p>为了容易理解，先假设磁路不饱和、没有永磁体、漏磁忽略。磁路可用一个“磁阻” ℜ 来近似。绕组 N 匝、电流 i 产生磁动势 <code>N·i</code>：</p>
+<div class="formula">Φ ≈ <span class="frac"><span>Ni</span><span>ℜ</span></span>　→　ψ = NΦ ≈ <span class="frac"><span>N²i</span><span>ℜ</span></span></div>
+<p>两边比较得到：</p>
+<div class="formula major">ψ = Li　　，　　L ≈ <span class="frac"><span>N²</span><span>ℜ</span></span></div>
+<p>这就解释了电感的来源：<strong>绕组的匝数、结构、铁芯材料、气隙、磁路几何决定电流能建立多少磁链</strong>。绕组匝数一般越多、磁阻越低，电感越大（在这个简化磁路中）。</p>
+<p>但是在电机里，电感不总是常数：铁芯饱和后，磁链对电流的增量可能变小；IPMSM 的不同转子方向也会有不同的磁阻与电感。对于非线性磁链曲线，控制时更要关注<strong>微分电感</strong> <code>L_inc = dψ/di</code>，而不能只用 <code>ψ/i</code>。</p>
+<h3>3.2 为什么电感会“阻碍电流变化”？</h3>
+<p>电流一变 → 它建立的磁场跟着变 → 磁链跟着变 → 按法拉第定律，线圈两端出现感应电压。这个电压的极性倾向于抵抗导致它的变化（楞次定律）。</p>
+<div class="formula major"><span class="colorL">u<sub>L</sub> = <span class="frac"><span>dψ</span><span>dt</span></span> = L <span class="frac"><span>di</span><span>dt</span></span></span>　<span class="eqtext">（L 为常数，采用被动电压方向）</span></div>
+<p>从这条式子读出三种情况：</p>
+<div class="tablewrap"><table><thead><tr><th>电流状态</th><th>di/dt</th><th>电感两端电压 u<sub>L</sub></th><th>物理含义</th></tr></thead><tbody>
+<tr><td>正在迅速增加</td><td>正、且大</td><td>正、且大</td><td>需要电压来建立磁场、增加磁能</td></tr>
+<tr><td>保持恒定</td><td>0</td><td>0（理想 L）</td><td>磁能仍存在，但不再因电流变化而需电感压降</td></tr>
+<tr><td>正在迅速减小</td><td>负、且大</td><td>负、且大</td><td>磁场释放能量，倾向于维持原电流方向</td></tr>
+</tbody></table></div>
+<p>注意：说“电感阻碍电流变化”是对现象的简写。电感并不总是让电流变小，而是<strong>不允许电流毫无代价地瞬间突变</strong>。例如突然断开电感回路时，为了保持电流连续，它可能产生很高的电压。</p>
+<h3>3.3 电感把能量存在哪里？</h3>
+<p>理想线性电感存储磁场能量：</p>
+<div class="formula">W<sub>mag</sub> = <span class="frac"><span>1</span><span>2</span></span>Li²</div>
+<p>想象推一辆有惯性的手推车：你要花力气让它加速，已经运动的推车也不愿瞬间停下。电感的类似点在于“对变化的抵抗”，但<strong>不是机械惯性本身</strong>；在电感里，储存的是磁场能量。</p>
+<div class="key"><strong>对电机控制特别有用的一点：</strong>电阻 R 使能量以热耗散；理想电感 L 在磁场中存储和释放能量。所以快速电流控制关心 L，而铜耗与温升关心 R。</div>
+</section>
+<section id="emf">
+<h2><span class="num">04 / 第二个关键直觉</span>反电动势 e 是怎么“生”出来的？</h2>
+<h3>4.1 不通电的线圈，为什么转动磁铁也能测出电压？</h3>
+<p>考虑一只固定线圈，旁边放一块永磁体。当磁铁不动时，穿过线圈的永磁体磁链保持不变；当磁铁转动或移动时，穿过线圈的磁链随时间变化。<strong>变化的磁链本身就能产生电压，不要求线圈内先有电流。</strong></p>
+<div class="figure">
+<svg viewBox="0 0 780 306" role="img" aria-label="磁铁静止无旋转感应电压和磁铁转动产生交变感应电压的示意图">
+  <g transform="translate(188 133)">
+   <rect x="-126" y="-94" width="252" height="191" rx="15" fill="var(--pale)" opacity=".5"/>
+   <g fill="none" stroke="var(--amber)" stroke-width="4"><ellipse cx="-6" cy="-56" rx="50" ry="10"/><ellipse cx="-6" cy="-47" rx="50" ry="10"/><ellipse cx="-6" cy="-38" rx="50" ry="10"/></g>
+   <rect x="-24" y="-8" width="48" height="87" rx="6" fill="var(--blue)"/><path d="M-24 -8 H24 V35 H-24Z" fill="var(--red)" opacity=".75"/><text x="0" y="19" font-size="18" text-anchor="middle" fill="white" font-weight="800">N</text><text x="0" y="60" font-size="18" text-anchor="middle" fill="white" font-weight="800">S</text>
+   <text x="0" y="-110" font-size="14" text-anchor="middle" fill="var(--ink)" font-weight="700">固定位置</text><text x="0" y="120" text-anchor="middle" fill="var(--green)" font-size="14">dψ/dt = 0 → e = 0</text>
+  </g>
+  <g transform="translate(579 133)">
+   <rect x="-126" y="-94" width="252" height="191" rx="15" fill="var(--pale)" opacity=".5"/>
+   <g fill="none" stroke="var(--amber)" stroke-width="4"><ellipse cx="-6" cy="-56" rx="50" ry="10"/><ellipse cx="-6" cy="-47" rx="50" ry="10"/><ellipse cx="-6" cy="-38" rx="50" ry="10"/></g>
+   <g transform="rotate(48 0 35)"><rect x="-24" y="-8" width="48" height="87" rx="6" fill="var(--blue)"/><path d="M-24 -8 H24 V35 H-24Z" fill="var(--red)" opacity=".75"/><text x="0" y="19" font-size="18" text-anchor="middle" fill="white" font-weight="800">N</text><text x="0" y="60" font-size="18" text-anchor="middle" fill="white" font-weight="800">S</text></g>
+   <path d="M-67 28 A70 70 0 0 1 68 21" fill="none" stroke="var(--green)" stroke-width="3" stroke-dasharray="6 4"/><path d="M60 13 l9 8 8-10" stroke="var(--green)" stroke-width="3" fill="none"/>
+   <text x="0" y="-110" font-size="14" text-anchor="middle" fill="var(--ink)" font-weight="700">位置持续变化</text><text x="0" y="120" text-anchor="middle" fill="var(--green)" font-size="14">dψ/dt ≠ 0 → 产生 e</text>
+  </g>
+  <text x="385" y="150" font-size="30" text-anchor="middle" fill="var(--primary)">→</text>
+  <text x="387" y="278" font-size="12" text-anchor="middle" fill="var(--muted)">固定线圈 + 永磁体相对运动 → 永磁磁链随时间变化</text>
+</svg>
+<div class="figcap">图 3：磁铁与线圈的相对位置变化会改变磁链。图中用磁铁转动示意；真正三相电机是定子绕组固定、转子磁极转动。</div>
+</div>
+<p>法拉第定律写成感应电动势的回路方向时：</p>
+<div class="formula">ℰ = − <span class="frac"><span>dψ</span><span>dt</span></span></div>
+<p>负号表达<strong>楞次定律</strong>：感应电动势的方向使其效应反抗磁通变化。可是为什么电机电压方程中写 <code>+ dψ/dt</code>？因为一个是沿选定回路正向的<strong>感应电动势</strong>，另一个是在电流流入电压正端的<strong>被动参考方向</strong>下的端口感应电压项。二者参考方向不同；只要方向定义始终一致，物理内容相同。</p>
+<h3>4.2 反电动势为什么通常与速度成正比？</h3>
+<p>对理想正弦 PMSM，设 A 相永磁磁链为：</p>
+<div class="formula">ψ<sub>fA</sub> = ψ<sub>m</sub> cos(θ<sub>e</sub>)</div>
+<p>转子运动使电角度 θ<sub>e</sub> 随时间变化。对时间求导，使用链式法则：</p>
+<div class="formula major">e<sub>A</sub> = <span class="frac"><span>dψ<sub>fA</sub></span><span>dt</span></span> = −ω<sub>e</sub>ψ<sub>m</sub> sin(θ<sub>e</sub>)</div>
+<p>其中 <code>ωₑ = dθₑ/dt</code> 是电角速度，单位 rad/s。因而相反电动势的峰值：</p>
+<div class="formula">E<sub>peak</sub> = |ω<sub>e</sub>| ψ<sub>m</sub></div>
+<p>同一台电机、磁链幅值近似不变时，转速翻倍，反电动势峰值也近似翻倍。需要注意单位：如果电机有 <code>p</code> 对极，<code>ωₑ = p·ωₘ</code>，不是直接把机械 rpm 代入 rad/s 的公式。</p>
+<h3>4.3 为什么叫“反”电动势？</h3>
+<p>在电动运行（motoring）时，转子受电磁转矩驱动，绕组中因转子旋转产生的感应电压，一般表现为抵消施加电压中用于驱动电流的余量，所以称为“反电动势”。这是<strong>电磁能量转换</strong>的表现：电压、电流与机械转矩和转速相关联。</p>
+<p>但不能理解为“反电动势在所有时刻都和电源电压方向相反”。三相交流瞬时量会改变符号；发电、再生制动工况下，它还可以成为向外送出能量的原因之一。</p>
+<div class="key warn"><strong>零速的关键区别：</strong>即使永磁体的磁链 ψ<sub>f</sub> 很大，转子静止且磁场不随时间变化时，<code>dψf/dt = 0</code>，旋转反电动势为 0。因此基于反电动势的常规无感估算在零速附近尤其困难；高频注入等方法另当别论。</div>
+</section>
+<section id="voltage">
+<h2><span class="num">05 / 现在开始推公式</span>三项电压到底怎样出现在同一个方程中？</h2>
+<h3>5.1 先写最通用的一相方程</h3>
+<p>取定子 A 相绕组，电流 <code>iA</code> 从 A 端流入，N 是星形中性点；<code>uAN</code> 是 A 端相对 N 的电压。假设绕组电阻为 R、磁链为 ψA，那么端口电压的基本关系为：</p>
+<div class="formula major">u<sub>AN</sub> = R i<sub>A</sub> + <span class="frac"><span>dψ<sub>A</sub></span><span>dt</span></span></div>
+<p>这是整篇笔记最值得背下来的一行。<strong>它不是靠“把电阻、电感和一个电源串起来”强行拼出来的，而是绕组的电阻压降 + 法拉第感应项。</strong></p>
+<h3>5.2 将磁链拆成电流引起的部分和永磁体引起的部分</h3>
+<p>为先建立直觉，假设电感线性且位置不变，并把相间互感合并为一个合适的等效电感：</p>
+<div class="formula">ψ<sub>A</sub> = L i<sub>A</sub> + ψ<sub>fA</sub></div>
+<p>两边对时间求导：</p>
+<div class="formula"><span class="frac"><span>dψ<sub>A</sub></span><span>dt</span></span> = <span class="colorL">L <span class="frac"><span>di<sub>A</sub></span><span>dt</span></span></span> + <span class="colorE"><span class="frac"><span>dψ<sub>fA</sub></span><span>dt</span></span></span></div>
+<p>定义反电动势 <code>eA = dψfA/dt</code>，代回方程：</p>
+<div class="formula major">u<sub>AN</sub> = <span class="colorR">Ri<sub>A</sub></span> + <span class="colorL">L<span class="frac"><span>di<sub>A</sub></span><span>dt</span></span></span> + <span class="colorE">e<sub>A</sub></span></div>
+<div class="figure"><svg viewBox="0 0 780 218" role="img" aria-label="A相等效电路 电阻R 电感L 永磁体反电动势e串联示意">
+ <g stroke="var(--ink)" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M57 111 H175 M248 111 H305 M408 111 H466 M545 111 H715"/><circle cx="57" cy="111" r="5" fill="var(--ink)"/><circle cx="715" cy="111" r="5" fill="var(--ink)"/>
+  <rect x="175" y="90" width="73" height="42" rx="3" fill="var(--pale)" stroke="var(--amber)"/>
+  <path d="M305 111 c8 -43 18 -43 26 0 c8 -43 18 -43 26 0 c8 -43 18 -43 26 0 c8 -43 18 -43 25 0" stroke="var(--blue)" stroke-width="3"/>
+  <circle cx="505" cy="111" r="39" stroke="var(--green)" stroke-width="2.5"/><path d="M505 131 V91 M497 99 l8 -8 8 8" stroke="var(--green)" stroke-width="2.5"/></g>
+  <g font-size="16" font-weight="700" text-anchor="middle"><text x="210" y="117" fill="var(--amber)">R</text><text x="355" y="77" fill="var(--blue)">L</text><text x="505" y="57" fill="var(--green)">eA</text></g>
+  <path d="M74 63 H164" stroke="var(--primary)" stroke-width="2.2"/><path d="M154 57 l10 6 -10 6" stroke="var(--primary)" fill="none" stroke-width="2.2"/>
+  <g fill="var(--ink)" font-size="14"><text x="60" y="137">A (+)</text><text x="696" y="137">N (−)</text><text x="87" y="51" fill="var(--primary)">iA</text><text x="165" y="176" fill="var(--amber)">电阻压降</text><text x="310" y="176" fill="var(--blue)">电感压降</text><text x="452" y="176" fill="var(--green)">永磁体运动</text><text x="452" y="196" fill="var(--green)">引起的感应项</text></g>
+</svg><div class="figcap">图 4：单相等效电路。R、L、e 是不同物理机制在端口方程中的等效表示；实际电机三相还存在互感与位置相关性。</div></div>
+<h3>5.3 用一个数字例子，看三项各分了多少电压</h3>
+<p>假设某时刻 A 相：<code>uAN = 7.5 V</code>，<code>R = 0.2 Ω</code>，<code>iA = 5 A</code>，<code>L = 0.5 mH</code>，<code>eA = 6 V</code>。那么：</p>
+<div class="formula"><span class="frac"><span>di<sub>A</sub></span><span>dt</span></span> = <span class="frac"><span>7.5 − 0.2×5 − 6</span><span>0.0005</span></span> = 1000 A/s</div>
+<p>物理含义：这<strong>一瞬间</strong>绕组电流以 <code>1 A/ms</code> 的变化率上升，不意味着它会永远保持这个斜率。因为电流、反电动势或输入电压的变化都会改变斜率。</p>
+</section>
+<section id="threephase">
+<h2><span class="num">06 / 扩展到三相</span>ABC 的三个方程，为何还要考虑互感？</h2>
+<h3>6.1 星形连接是什么，电压到底以哪里为参考？</h3>
+<div class="figure"><svg viewBox="0 0 780 272" role="img" aria-label="三相星形连接ABC绕组中性点N和相电压线电压">
+ <g fill="none" stroke-width="3" stroke-linecap="round"><path d="M80 48 H204" stroke="var(--amber)"/><path d="M80 132 H204" stroke="var(--blue)"/><path d="M80 216 H204" stroke="var(--green)"/><path d="M290 48 H348 V140 H432 M290 132 H348 V140 H432 M290 216 H348 V140 H432" stroke="var(--muted)"/>
+ <g stroke="var(--amber)"><path d="M204 48 c7 -28 14 -28 21 0 c7 -28 14 -28 21 0 c7 -28 14 -28 21 0 c7 -28 14 -28 23 0"/></g>
+ <g stroke="var(--blue)"><path d="M204 132 c7 -28 14 -28 21 0 c7 -28 14 -28 21 0 c7 -28 14 -28 21 0 c7 -28 14 -28 23 0"/></g>
+ <g stroke="var(--green)"><path d="M204 216 c7 -28 14 -28 21 0 c7 -28 14 -28 21 0 c7 -28 14 -28 21 0 c7 -28 14 -28 23 0"/></g></g>
+ <g fill="var(--ink)" font-size="17" font-weight="800"><text x="58" y="53">A</text><text x="58" y="137">B</text><text x="58" y="221">C</text><text x="443" y="145">N</text></g><circle cx="432" cy="140" r="6" fill="var(--primary)"/>
+ <g stroke="var(--amber)" stroke-width="2" fill="none"><path d="M105 55 V125"/><path d="M99 64 l6 -9 6 9"/><path d="M99 116 l6 9 6 -9"/></g><g font-size="13" fill="var(--amber)"><text x="112" y="88">uAB</text></g>
+ <g fill="var(--ink)" font-size="14"><text x="525" y="54">相电压：uAN = vA − vN</text><text x="525" y="91">线电压：uAB = vA − vB</text><text x="525" y="128">两者并不相同</text><text x="525" y="173" fill="var(--muted)">大多数电机中性点 N 不引出</text><text x="525" y="198" fill="var(--muted)">与桥臂对母线负极的电压</text><text x="525" y="220" fill="var(--muted)">也不是同一物理量</text></g>
+</svg><div class="figcap">图 5：三相 Y 接。示意图只展示连接关系，不代表实际相绕组在电机内部的几何形状。</div></div>
+<p>如果三相星形连接且中性点不外接电流通路，基尔霍夫电流定律给出：</p>
+<div class="formula major">i<sub>A</sub> + i<sub>B</sub> + i<sub>C</sub> = 0</div>
+<p>这就是为什么实际控制中可以测两相电流后推算第三相电流：<code>iC = −iA − iB</code>。</p>
+<h3>6.2 最完整的三相电压方程先不要急着写成 Li</h3>
+<div class="formula major"><div>u<sub>AN</sub> = Ri<sub>A</sub> + dψ<sub>A</sub>/dt</div><div>u<sub>BN</sub> = Ri<sub>B</sub> + dψ<sub>B</sub>/dt</div><div>u<sub>CN</sub> = Ri<sub>C</sub> + dψ<sub>C</sub>/dt</div></div>
+<p>这里每相磁链不仅由该相电流决定，也受其它两相电流及转子永磁体影响：</p>
+<div class="mathblock">ψA = LAA·iA + LAB·iB + LAC·iC + ψfA(θe)
+ψB = LBA·iA + LBB·iB + LBC·iC + ψfB(θe)
+ψC = LCA·iA + LCB·iB + LCC·iC + ψfC(θe)</div>
+<p><code>LAA</code> 是自感，<code>LAB</code> 是 B 相电流对 A 相磁链的互感，<code>ψfA</code> 是永磁体对 A 相的磁链。三个方程整体写为：</p>
+<div class="mathblock">u_abc = R · i_abc + dψ_abc/dt
+ψ_abc = L(θe, i) · i_abc + ψf(θe)</div>
+<p>其中 <code>L</code> 是 3×3 电感矩阵；在磁饱和时，这样的线性乘积表示本身只是近似，较一般的磁链映射应写成 <code>ψ_abc = ψ_abc(iA, iB, iC, θe)</code>。</p>
+<h3>6.3 在哪些假设下，才能退化为最简单的三相方程？</h3>
+<p>假设三相对称、各相自感相同为 L<sub>s</sub>、任意相间互感均为 M、所有这些电感不随转子角度变化，并且无中性线：</p>
+<div class="mathblock">ψA = Ls·iA + M·iB + M·iC + ψfA
+   = Ls·iA + M·(−iA) + ψfA
+   = (Ls − M)·iA + ψfA</div>
+<p>因此定义等效相电感 <code>Leq = Ls − M</code>，就得到熟悉的简化模型：</p>
+<div class="formula major"><div>u<sub>AN</sub> = Ri<sub>A</sub> + L<sub>eq</sub>·di<sub>A</sub>/dt + e<sub>A</sub></div><div>u<sub>BN</sub> = Ri<sub>B</sub> + L<sub>eq</sub>·di<sub>B</sub>/dt + e<sub>B</sub></div><div>u<sub>CN</sub> = Ri<sub>C</sub> + L<sub>eq</sub>·di<sub>C</sub>/dt + e<sub>C</sub></div></div>
+<p>原来 <strong>ABC 方程中的那个 L，并不必然等于“单根绕组孤立测得的自感”</strong>。互感在对称条件下已被吸收到等效电感里。</p>
+<h3>6.4 三相反电动势为什么相差 120°？</h3>
+<p>对理想正弦气隙磁链、对称三相绕组，三相绕组轴线在空间相隔 120° <em>电角度</em>，因此永磁体磁链与其时间导数也会有 120° 的相位差。仍用第 04 节的 cos 定义：</p>
+<div class="mathblock">ψfA = ψm·cos(θe)
+ψfB = ψm·cos(θe − 2π/3)
+ψfC = ψm·cos(θe + 2π/3)
+
+eA  = −ωe·ψm·sin(θe)
+eB  = −ωe·ψm·sin(θe − 2π/3)
+eC  = −ωe·ψm·sin(θe + 2π/3)</div>
+<p>理想正弦平衡条件下，<code>eA + eB + eC = 0</code>。现实 BLDC 若反电动势为近似梯形，就不能直接把正弦式套用到它的每一时刻。</p>
+<h3>6.5 更进一步：如果电感还随转子位置改变？</h3>
+<p>如果电感矩阵依赖 θ<sub>e</sub>，那么对 <code>L(θe)·i</code> 求导不能只留下 L·di/dt；还会出现：</p>
+<div class="formula">u = Ri + L <span class="frac"><span>di</span><span>dt</span></span> + ω<sub>e</sub> <span class="frac"><span>∂L</span><span>∂θ<sub>e</sub></span></span> i + ω<sub>e</sub> <span class="frac"><span>∂ψ<sub>f</sub></span><span>∂θ<sub>e</sub></span></span></div>
+<p>这是位置相关、线性电感矩阵模型的展开式。凸极 PMSM（常有 L<sub>d</sub> ≠ L<sub>q</sub>）就很需要考虑这一现象。初学时先牢牢记住 <code>u = Ri + dψ/dt</code>，这样以后遇到更复杂的电机模型也不会迷路。</p>
+</section>
+
+<section id="abc-analysis">
+ <h2><span class="num">核心章节 / ABC 相电压深入分析</span>ABC 三相电压如何计算、怎样在实际电机上理解？</h2>
+ <h3>A. 从“相绕组端口”严格推导 ABC 三条方程</h3>
+ <p>用统一符号：<code>iabc = [iA, iB, iC]ᵀ</code>，<code>uabc = [uAN, uBN, uCN]ᵀ</code>。不论反电动势是否正弦，最先成立的绕组电压形式是：</p>
+ <div class="mathblock">uAN = RA·iA + dψA/dt
+uBN = RB·iB + dψB/dt
+uCN = RC·iC + dψC/dt</div>
+ <p>对于三相电阻相同、磁链关于电流线性，且自感和互感不随转子位置变化的理想对称电机：</p>
+ <div class="mathblock">ψA = Ls·iA + M·iB + M·iC + ψfA(θe)
+ψB = M·iA + Ls·iB + M·iC + ψfB(θe)
+ψC = M·iA + M·iB + Ls·iC + ψfC(θe)</div>
+ <p>Y 接且中性点悬空时，由 <code>iA+iB+iC=0</code>，例如 A 相的电流磁链部分变为 <code>Ls·iA + M(iB+iC)=(Ls−M)iA</code>。于是 <code>Leq=Ls−M</code>、<code>eA=dψfA/dt</code>，三相电压方程就得到开头的简化式。</p>
+ <div class="key"><b>为什么一定要写出推导假设？</b>因为 IPMSM 的电感矩阵会随角度变化，饱和时还会随电流变化。此时把电感视为常数直接算 <code>Leq·di/dt</code> 会遗漏位置项、非线性项；应回到更一般的 <b>u = Ri + dψ/dt</b>。</div>
+ <h3>B. 正弦 PMSM 示例：A 相、B 相、C 相电流与反电动势</h3>
+ <p>下面的交互实验<strong>专门采用一个可验证的教学假设</strong>：三相电流与各自永磁体反电动势同相，以展示电动能量转换；这里选用 <code>ψfA = ψm·cosθe</code>，所以 <code>eA = −ωe·ψm·sinθe</code>，同时令 <code>iA = −Ipk·sinθe</code>。B、C 相分别将角度平移 <code>−120°</code>、<code>+120°</code>。</p>
+ <div class="equation-stack">
+   <div>i<sub>A</sub> = −I<sub>pk</sub> sinθ<sub>e</sub></div>
+   <div>i<sub>B</sub> = −I<sub>pk</sub> sin(θ<sub>e</sub> − 120°)</div>
+   <div>i<sub>C</sub> = −I<sub>pk</sub> sin(θ<sub>e</sub> + 120°)</div>
+ </div>
+ <p>因此 A 相 <code>diA/dt = −Ipk·ωe·cosθe</code>，把三项代入：</p>
+ <div class="formula major">u<sub>AN</sub> = −(RI<sub>pk</sub> + ω<sub>e</sub>ψ<sub>m</sub>)sinθ<sub>e</sub> − (L<sub>eq</sub>I<sub>pk</sub>ω<sub>e</sub>)cosθ<sub>e</sub></div>
+ <p>B、C 相只需把 <code>θe</code> 分别替换成 <code>θe−120°</code> 和 <code>θe+120°</code>，即得到 <code>uBN</code> 和 <code>uCN</code>。<strong>这个特殊例子不是所有控制工况通用的电流波形</strong>；更一般情况应保留每相的实际电流及其导数。</p>
+ <div class="interactive" id="abc-lab">
+  <div class="tag">EXPERIMENT 03 · 核心实验 / 三相相电压的逐项叠加</div>
+  <h3>改转速、电流、电阻、电感，观察 uAN / uBN / uCN</h3>
+  <p class="small">固定 30 ms 时间轴，极对数 <b>p = 4</b>，永磁磁链峰值 <b>ψm = 0.012 Wb</b>，理想对称正弦模型，忽略开关纹波。<b>图纵轴会随本组参数自动缩放，比较绝对幅值请看刻度或表格。</b>当前电角度 θ0 对应时间轴 t=0。</p>
+  <div class="controls">
+   <div class="control"><label for="abcRpm">机械转速 <output id="abcRpmOut">2000 rpm</output></label><input type="range" id="abcRpm" min="0" max="5000" step="250" value="2000" /></div>
+   <div class="control"><label for="abcI">电流峰值 Ipk <output id="abcIOut">5.0 A</output></label><input type="range" id="abcI" min="0" max="10" step="0.5" value="5" /></div>
+   <div class="control"><label for="abcR">每相电阻 R <output id="abcROut">0.20 Ω</output></label><input type="range" id="abcR" min="0.05" max="1" step="0.05" value="0.2" /></div>
+   <div class="control"><label for="abcL">等效相电感 Leq <output id="abcLOut">0.50 mH</output></label><input type="range" id="abcL" min="0.1" max="2" step="0.1" value="0.5" /></div>
+   <div class="control"><label for="abcAngle">初始电角度 θ0 <output id="abcAngleOut">45°</output></label><input type="range" id="abcAngle" min="0" max="360" step="5" value="45" /></div>
+  </div>
+  <h4>第一幅：三相相电压（uAN、uBN、uCN）随时间变化</h4>
+  <div class="chart-scroll"><svg id="abcChart" class="chart" viewBox="0 0 780 265" role="img" aria-label="三相相电压uAN uBN uCN随时间变化"></svg></div>
+  <div class="graphlegend"><span><i class="legenddot" style="background:var(--amber)"></i>uAN</span><span><i class="legenddot" style="background:var(--blue)"></i>uBN</span><span><i class="legenddot" style="background:var(--green)"></i>uCN</span></div>
+  <h4>第二幅：A 相电压怎样由 R·iA + L·diA/dt + eA 相加而来</h4>
+  <div class="chart-scroll"><svg id="abcPartsChart" class="chart" viewBox="0 0 780 265" role="img" aria-label="A相电压各组成分量与合成相电压"></svg></div>
+  <div class="graphlegend"><span><i class="legenddot" style="background:var(--amber)"></i>R·iA</span><span><i class="legenddot" style="background:var(--blue)"></i>Leq·diA/dt</span><span><i class="legenddot" style="background:var(--green)"></i>eA</span><span><i class="legenddot" style="background:var(--primary)"></i>合成 uAN（较粗）</span></div>
+  <div class="twostat" style="margin-top:18px">
+   <div class="stat"><div class="k">机械频率 fm</div><div class="v" id="abcFm">33.33 Hz</div></div>
+   <div class="stat"><div class="k">电频率 fe = p·fm</div><div class="v" id="abcFe">133.33 Hz</div></div>
+   <div class="stat"><div class="k">反电动势峰值 Epk</div><div class="v" id="abcEpk">10.05 V</div></div>
+   <div class="stat"><div class="k">时间窗内电周期数</div><div class="v" id="abcCycles">4.00</div></div>
+  </div>
+  <h4>时间 t = 0 的三相逐项计算表（单位 V，电流列为 A）</h4>
+  <div class="tablewrap"><table class="note-table"><thead><tr><th>相别</th><th>相电流 i</th><th>Ri</th><th>L·di/dt</th><th>e</th><th>相电压 u</th></tr></thead><tbody id="abcLiveTable"></tbody></table></div>
+  <p class="small"><b>手机上可在表格内左右滑动查看全部列。</b>逐相检查：<code>uAN=RiA+LdiA/dt+eA</code>，其余相同。平衡条件下 <code>iA+iB+iC=0</code>、<code>uAN+uBN+uCN=0</code>（表内总和的非零末位只可能来自四舍五入）。</p>
+ </div>
+ <h3>C. 相电压、线电压、桥臂电压——三者不能画等号</h3>
+ <p>对于三相 Y 接电机，以逆变器直流母线负极 O 为参考：</p>
+ <div class="mathblock">桥臂电压：uAO = vA − vO
+相电压：  uAN = vA − vN = uAO − uNO
+线电压：  uAB = vA − vB = uAN − uBN = uAO − uBO</div>
+ <p>在<strong>理想对称、无中性线、三相电流总和为零、无零序内部感应电压</strong>的模型下，将三相相电压方程相加可得 <code>uAN+uBN+uCN=0</code>，于是：</p>
+ <div class="formula major">u<sub>NO</sub> = (u<sub>AO</sub> + u<sub>BO</sub> + u<sub>CO</sub>) / 3</div>
+ <p>所以可从三个桥臂电位重构相电压，例如：</p>
+ <div class="formula">u<sub>AN</sub> = [2u<sub>AO</sub> − u<sub>BO</sub> − u<sub>CO</sub>] / 3</div>
+ <div class="figure"><svg viewBox="0 0 780 210" role="img" aria-label="桥臂电压与电机相电压不同，三桥臂输出A B C和浮动中性点N">
+  <g stroke-width="2" fill="none"><path d="M55 51 H263 M55 99 H263 M55 148 H263" stroke="var(--muted)"/>
+   <path d="M280 51 h110 v78 h145 M280 99 h95 v30 h160 M280 148 h110 v-19 h145" stroke="var(--muted)"/>
+   <path d="M50 51 H156" stroke="var(--amber)" stroke-width="4"/><path d="M50 99 H156" stroke="var(--blue)" stroke-width="4"/><path d="M50 148 H156" stroke="var(--green)" stroke-width="4"/>
+  </g><g font-size="15" fill="var(--ink)"><text x="15" y="56">A</text><text x="15" y="104">B</text><text x="15" y="153">C</text><text x="543" y="134">N（电机中性点）</text><text x="572" y="65">uAN = uAO − uNO</text><text x="572" y="88">uAB = uAO − uBO</text><text x="54" y="180" fill="var(--muted)">O：逆变器直流负端（参考点，非 N）</text></g>
+  <circle cx="535" cy="129" r="5" fill="var(--primary)"/>
+ </svg><div class="figcap">图 7：逻辑示意，O 是直流负端，N 是电机星形中性点。图中线条不代表实际安全测试接法；实际测量必须考虑 PWM 高频共模与探头安全。</div></div>
+ <p>这就是为什么“示波器在 A 桥臂测到 12 V”不能直接代入 <code>uAN=12 V</code>。使用高频 PWM 时，还要区分<strong>开关瞬时电压</strong>与电流模型通常使用的<strong>PWM 周期平均/等效电压</strong>。如有零序、非对称、共模寄生电流等，重构式需要重新审视。</p>
+ <h3>D. 工程分析 ABC 电压方程时的四个检查</h3>
+ <ol><li><b>量纲：</b><code>Ri</code> 为 V，<code>L·di/dt</code> 为 H·A/s = V，<code>e=ωψ</code> 为 rad/s·Wb = V。</li>
+ <li><b>方向：</b>三相电压、相电流、磁链正方向必须统一，否则 <code>e</code> 和 <code>L·di/dt</code> 的符号可能看似反了。</li>
+ <li><b>三相平衡：</b><code>iA+iB+iC=0</code> 不代表 <code>uAO+uBO+uCO=0</code>；不要混淆相电压与桥臂电压。</li>
+ <li><b>数学模型边界：</b>非正弦 BLDC、磁饱和、位置相关电感、非理想逆变器都需要更一般的磁链模型或相应修正。</li></ol>
+ <h3>E. 本版模型与图形核查记录</h3>
+ <div class="tablewrap"><table><thead><tr><th>核查点</th><th>处理结果</th></tr></thead><tbody>
+  <tr><td>机械速度与电频率</td><td>fe = p·n/60；时间轴周期数按 fe·0.03 计算，零速为零周期。</td></tr>
+  <tr><td>电角度横轴</td><td>保留为独立模式，明确其表示 0°～360° 的电角度增量，不再误称“转速对频率没有影响”。</td></tr>
+  <tr><td>感应电压符号</td><td>说明法拉第电动势负号与相端口被动电压参考方向的区别。</td></tr>
+  <tr><td>磁链与电感</td><td>区分电流磁链 ψi、永磁磁链 ψf；只在线性等效条件下使用 ψi = Leq·i。</td></tr>
+  <tr><td>三相互感</td><td>给出 Ls、M 和 Leq = Ls−M 的由来及适用前提。</td></tr>
+  <tr><td>ABC 相电压</td><td>增加三个相电压波形、A 相三项分解、三相瞬时数值与求和校验。</td></tr>
+  <tr><td>桥臂电压与线电压</td><td>分开 uAN、uAB、uAO，并注明浮动中性点重构仅适用于指定假设。</td></tr>
+ </tbody></table></div>
+</section>
+<section id="lab">
+<h2><span class="num">07 / 互动实验室</span>拖动参数，亲眼看到方程如何工作</h2>
+<p>下面两组动画式实验全部由本地 JavaScript 生成，不调用服务器。调参数时，注意“物理量变化”与“导数变化”的区别。</p>
+<div class="interactive" id="rl-lab"><div class="tag">EXPERIMENT 01 · RL 阶跃响应</div><h3>电压突加到线圈，电流为什么不会瞬间冲到最大？</h3>
+<p class="small">让电机静止、令永磁体旋转反电动势为 0，暂时视为恒定 R、L 串联。在 t=0 施加直流阶跃 U，初始电流 0：</p>
+<div class="formula">i(t) = <span class="frac"><span>U</span><span>R</span></span> [1 − exp(−tR/L)]</div>
+<div class="controls"><div class="control"><label for="stepU">阶跃电压 U <output id="uText">2.0 V</output></label><input id="stepU" type="range" min="0.5" max="8" step="0.5" value="2" /></div><div class="control"><label for="stepR">电阻 R <output id="rText">0.20 Ω</output></label><input id="stepR" type="range" min="0.1" max="1" step="0.05" value="0.2" /></div><div class="control"><label for="stepL">电感 L <output id="lText">0.50 mH</output></label><input id="stepL" type="range" min="0.1" max="2" step="0.1" value="0.5" /></div></div>
+<div class="chart-scroll"><svg id="rlChart" class="chart" viewBox="0 0 780 255" role="img" aria-label="可调电阻电感与阶跃电压时的电流随时间变化曲线"></svg></div>
+<div class="stats"><div class="stat"><div class="k">时间常数 τ = L/R</div><div class="v" id="tauValue">2.50 ms</div></div><div class="stat"><div class="k">稳态电流 U/R</div><div class="v" id="steadyValue">10.00 A</div></div><div class="stat"><div class="k">t = τ 时电流</div><div class="v" id="tauCurrent">6.32 A</div></div></div>
+<div class="key"><b>观察：</b>增加 L、其它不变，电流上升变慢；增加 R，稳态电流降低且时间常数变小。τ 时电流约到最终值的 63.2%。本模型未考虑母线电流限制、铁芯饱和或 PWM 波形。</div></div>
+<div class="interactive" id="emf-lab"><div class="tag">EXPERIMENT 02 · BACK EMF · V2 修正</div><h3>转速升高时，为什么电角度变化更快、波形更密？</h3>
+<p class="small">理想正弦 PMSM；永磁相磁链幅值 <b>ψm = 0.012 Wb</b>；<code>θe(t)=θ0+ωe·t</code>、<code>ωe=p·2π·n/60</code>。<strong>默认图横轴为固定 30 ms 的真实时间</strong>：提高机械 rpm 后电周期变短、30 ms 内周期数变多。可切换“角度轴”查看为什么旧版看起来不会变快。</p>
+<div class="controls">
+ <div class="control"><label for="rpm">机械转速 <output id="rpmText">2000 rpm</output></label><input id="rpm" type="range" min="0" max="5000" step="250" value="2000" /></div>
+ <div class="control"><label for="polePairs">极对数 p <output id="poleText">4 对</output></label><input id="polePairs" type="range" min="1" max="8" step="1" value="4" /></div>
+ <div class="control"><label for="angle">起始电角度 θ0 <output id="angleText">45°</output></label><input id="angle" type="range" min="0" max="360" step="5" value="45" /></div>
+</div>
+<div class="tabset" role="group" aria-label="反电动势波形横轴切换"><button id="emfTimeMode" type="button" aria-pressed="true">时间轴 · 固定 30 ms（观察频率）</button><button id="emfAngleMode" type="button" aria-pressed="false">电角度轴 · 固定 360°（只看波形形状）</button></div>
+<div class="chart-scroll"><svg id="emfChart" class="chart" viewBox="0 0 780 272" role="img" aria-label="默认30毫秒时间轴，转速越高周期数越多的ABC三相反电动势波形"></svg></div>
+<div class="graphlegend"><span><i class="legenddot" style="background:var(--amber)"></i>eA</span><span><i class="legenddot" style="background:var(--blue)"></i>eB</span><span><i class="legenddot" style="background:var(--green)"></i>eC</span></div>
+<div class="twostat" style="margin-top:16px">
+ <div class="stat"><div class="k">电频率 fe</div><div class="v" id="feValue">133.33 Hz</div></div>
+ <div class="stat"><div class="k">电周期 Te</div><div class="v" id="teValue">7.50 ms</div></div>
+ <div class="stat"><div class="k">电角速度 ωe</div><div class="v" id="weValue">837.76 rad/s</div></div>
+ <div class="stat"><div class="k">反电动势峰值 Epk</div><div class="v" id="epValue">10.05 V</div></div>
+</div>
+<p class="small" id="emfInterpretation">固定时间轴：转速变快时，同一时间窗口出现更多电周期；电压幅值也随转速增大。</p>
+</div>
+</section>
+<section id="engineering">
+<h2><span class="num">08 / 联系真实嵌入式开发</span>这个方程，怎样用到 BLDC / PMSM 控制中？</h2>
+<h3>8.1 电流环：电压决定电流斜率</h3>
+<p>对简化等效单相模型重排：</p>
+<div class="formula major"><span class="frac"><span>di</span><span>dt</span></span> = <span class="frac"><span>u − Ri − e</span><span>L</span></span></div>
+<p>这说明电流变化速度由<strong>剩余电压</strong>决定：施加电压减去电阻压降，再减去相应反电动势。电流环调 PWM，本质是通过逆变器施加电压，让绕组电流按目标轨迹变化。</p>
+<h3>8.2 无感估算：已知电压电流，能否反推 e？</h3>
+<div class="formula">e ≈ u − Ri − L <span class="frac"><span>di</span><span>dt</span></span></div>
+<p>原则上可以。实际项目中，PWM 开关噪声、电压死区、母线电压、采样偏置、参数温漂、逆变器压降、电流微分噪声等都会导致估算误差。FOC 常在 αβ 坐标系中构造状态观测器，而非对 ADC 采样电流直接做裸微分。</p>
+<p>对六步换相 BLDC，还经常利用<strong>未通电相的反电动势过零点</strong>估算换相时机。但“三相全部在 PWM 驱动”的 FOC，不能照搬该方法。<a href="https://developerhelp.microchip.com/xwiki/bin/view/applications/motors/control-algorithms/bldc/position/" target="_blank" rel="noopener">Microchip 无感位置估算说明</a>。</p>
+<h3>8.3 模型离散化：方程怎样进 MCU 的 C 代码？</h3>
+<p>假设采样周期 Ts 足够短，使用前向欧拉近似：</p>
+<div class="formula">i[k+1] ≈ i[k] + <span class="frac"><span>Ts</span><span>L</span></span>(u[k] − R·i[k] − e[k])</div>
+<p>最简单的教学版浮点实现：</p>
+<pre class="mathblock" style="font:13px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace">/* 教学用途：单相简化模型，非可直接投产的控制算法 */
+typedef struct {
+    float resistance_ohm;
+    float inductance_h;
+    float current_a;
+} PhaseModel;
+
+void model_step(PhaseModel *m,
+                float phase_voltage_v,
+                float back_emf_v,
+                float ts_s)
+{
+    const float di_dt = (phase_voltage_v
+                        - m->resistance_ohm * m->current_a
+                        - back_emf_v)
+                        / m->inductance_h;
+    m->current_a += ts_s * di_dt;
+}</pre>
+<p>真实三相实现必须额外处理相间耦合、等效相电压重构、采样同步、PWM 非理想性和参数边界。特别是离散积分的稳定性与采样周期有关，不能让 <code>Ts</code> 任意增大。</p>
+<h3>8.4 FOC 为什么还要 Clarke / Park 变换？</h3>
+<p>因为三相 ABC 的电压、电流是相互耦合的交流量；在合适的正弦 PMSM 模型下，变换为 αβ 静止坐标，再转到 dq 同步旋转坐标，可把平衡的正弦电流变成相对稳定的直流分量，更便于使用 PI 电流环。ABC 模型是基础，dq 模型不是凭空出现的另一套物理定律。</p>
+<div class="figure"><svg viewBox="0 0 780 150" role="img" aria-label="ABC三相模型经过Clarke Park变换变成dq模型再用于FOC电流控制和PWM">
+ <g text-anchor="middle" font-size="16" font-weight="750" fill="var(--ink)"><rect x="12" y="36" width="170" height="70" rx="12" fill="var(--pale)" stroke="var(--primary)"/><text x="97" y="65">ABC 三相模型</text><text x="97" y="87" font-size="12" font-weight="400">真实物理关系</text>
+  <rect x="235" y="36" width="146" height="70" rx="12" fill="var(--pale)" stroke="var(--primary)"/><text x="308" y="64">αβ 静止坐标</text><text x="308" y="85" font-size="12" font-weight="400">Clarke</text>
+  <rect x="435" y="36" width="146" height="70" rx="12" fill="var(--pale)" stroke="var(--primary)"/><text x="508" y="64">dq 旋转坐标</text><text x="508" y="85" font-size="12" font-weight="400">Park</text>
+  <rect x="633" y="36" width="135" height="70" rx="12" fill="var(--pale)" stroke="var(--primary)"/><text x="700" y="64">电流环</text><text x="700" y="85" font-size="12" font-weight="400">FOC / PWM</text></g>
+ <g stroke="var(--primary)" stroke-width="2.2" fill="none"><path d="M183 71 H231 l-10 -7 m10 7 -10 7"/><path d="M381 71 H431 l-10 -7 m10 7 -10 7"/><path d="M581 71 H629 l-10 -7 m10 7 -10 7"/></g>
+</svg><div class="figcap">图 6：FOC 的数学变换路线，省略了速度环、转子位置反馈、逆变器等实际模块。</div></div>
+</section>
+<section id="pitfalls">
+<h2><span class="num">09 / 工程上最容易踩的坑</span>常见误区：为什么算出来和测出来不一致？</h2>
+<div class="tablewrap"><table><thead><tr><th>容易误解的说法</th><th>应该怎么理解</th></tr></thead><tbody>
+<tr><td>“有磁链，就有反电动势”</td><td>错。要有永磁磁链随时间变化才有对应的旋转反电动势。</td></tr>
+<tr><td>“电流是 0，所以磁链是 0”</td><td>错。永磁体提供的磁链仍可能存在。</td></tr>
+<tr><td>“电感电压等于 Li”</td><td>错。固定 L 下为 <code>L·di/dt</code>，Li 对应的是电流建立的磁链。</td></tr>
+<tr><td>“电感 L 总是不变”</td><td>错。磁饱和和转子位置可能改变增量电感，特别是凸极电机。</td></tr>
+<tr><td>“三相没有互感”</td><td>错。简化方程里的 Leq 可能已经包含对称互感的影响。</td></tr>
+<tr><td>“示波器桥臂对地电压就是相电压”</td><td>错。相电压要相对于电机中性点 N 定义；桥臂对直流母线负端是另一个量。</td></tr>
+<tr><td>“电角度横轴看不出速度变化，所以速度没有影响频率”</td><td>错。以电角度为横轴固定 360°，永远是一个电周期；观察变快必须改用固定时间轴。</td></tr>
+<tr><td>“机械转速 rpm 等于电频率 Hz”</td><td>错。fe = p·rpm/60，p 是极对数；ωe = 2πfe。不能混淆极数与极对数。</td></tr>
+<tr><td>“转速翻倍，线圈磁链必然翻倍”</td><td>错。理想永磁体磁链幅值近似不变，翻倍的是角速度与感应电压峰值。</td></tr>
+<tr><td>“所有 BLDC 反电动势都可以按正弦写”</td><td>错。需要看实际电机的反电动势波形与模型假设。</td></tr>
+<tr><td>“线电阻与相电阻、电感读数可以无条件等同”</td><td>错。星形端子间测量包含两相绕组，互感、接线与测量频率也会影响电感读数。</td></tr>
+</tbody></table></div>
+<div class="key warn"><b>台架安全提示：</b>三相逆变器桥臂是高速开关节点，普通台式示波器探头的地夹通常与保护地相连。不要把地夹随意夹到浮动相线或桥臂开关节点上；应使用适当额定等级的差分探头与安全测量方案。</div>
+</section>
+<section id="review">
+<h2><span class="num">10 / 随时打开复习</span>五分钟复习卡 + 9 道自测题</h2>
+<div class="memory"><div><b>磁通 Φ</b><span>磁场穿过一个指定面积的总量；均匀时 Φ = BAcosα。</span></div><div><b>磁链 ψ</b><span>与绕组各匝链接的磁通总和；同磁通、同 N 匝时 ψ = NΦ。</span></div><div><b>电感 L</b><span>仅对电流产生的磁链在线性下 ψi = Li；永磁体还可提供 ψf。非线性时局部增量电感是 dψi/di。</span></div><div><b>反电动势 e</b><span>永磁转子运动带来的磁链变化：e = dψf/dt（端口约定）。</span></div><div><b>最基本的相电压方程</b><span>u = Ri + dψ/dt，优先于任何简化公式。</span></div><div><b>简化三相 ABC 方程</b><span>uAN = RiA + Leq·diA/dt + eA，B/C 同理。相电压参考点是 N。</span></div><div><b>速度到电频率</b><span>fe = p·rpm/60；固定 30 ms 时间轴内周期数 = fe×0.03。</span></div><div><b>桥臂与相电压</b><span>uAN = uAO − uNO；理想无零序平衡时 uNO = (uAO+uBO+uCO)/3。</span></div></div>
+<div class="quiz"><h3>闭卷试一试（点击展开答案）</h3>
+<details><summary>Q1：永磁体不动、定子相电流恒定，绕组中可能有磁链吗？会有感应电压吗？</summary><p>可能有磁链，来自永磁体和定子电流。但若整个磁链不随时间变化，则对应的磁链导数为 0，理想情况下没有这部分感应电压；绕组电阻仍有 Ri 压降。</p></details>
+<details><summary>Q2：为什么 ψ = Li，而 uL = L·di/dt？</summary><p>ψ = Li（线性假设）表示电流建立多少磁链；uL = dψ/dt 表示建立或减小磁链时需要的电压。常数 L 下求导才得到 L·di/dt。</p></details>
+<details><summary>Q3：转速翻倍，理想正弦 PMSM 的 e 峰值和电频率怎样变化？</summary><p>如果永磁磁链 ψm 基本不变，Epeak=|ωe|ψm，电频率 fe=p·n/60；两者都翻倍。固定时间轴的周期数翻倍，固定电角度轴仍只展示一个周期。</p></details>
+<details><summary>Q4：为什么 iA + iB + iC = 0？所有三相系统都成立吗？</summary><p>无中性线的星形接法、忽略寄生泄漏路径时，由中性点的 KCL 得到。若中性线引出并有电流、或存在显著共模寄生电流，不能无条件使用。</p></details>
+<details><summary>Q5：电机三相互感存在，为什么简单公式里只有 L？</summary><p>在三相对称、自感 Ls 和互感 M 常数、三相电流之和为 0 的条件下，可以把互感合并为 Leq = Ls − M。超出这些假设就需要使用电感矩阵或更一般的磁链映射。</p></details>
+<details><summary>Q6：示波器看到 A 相桥臂对直流母线负极是 12V，能直接说 uAN=12V 吗？</summary><p>不能。uAN = vAO − vNO。中性点可能浮动，开关波形和 PWM 平均值也要区分。</p></details>
+<details><summary>Q7：为什么反电动势为零时，不代表无感启动根本不可能？</summary><p>因为“常规基于旋转反电动势的估算失效”不等于全部无位置传感算法失效。对于适合的电机与硬件，还可能用高频注入等利用凸极特性的技术；也有开环启动与切换策略。</p></details>
+<details><summary>Q8：理想平衡时 uAN + uBN + uCN = 0，是否意味着 uAO + uBO + uCO 也恒等于 0？</summary><p>不是。桥臂电压与相电压由中性点电位联系：uAN=uAO−uNO。对称、无零序时 uNO=(uAO+uBO+uCO)/3；PWM 零矢量和共模变化尤其明显。</p></details>
+<details><summary>Q9：电频率 133.33 Hz，30 ms 会画出几周期？</summary><p>fe·Δt=133.33×0.03≈4 个电周期；固定角度轴 0°～360° 永远显示一个周期。</p></details></div>
+<h3>后续学习的最佳顺序</h3>
+<ol class="steps"><li><strong>先彻底弄懂 ψ、L、e 的来源。</strong> 不靠背诵，能画出磁链变化产生电压的因果关系。</li><li><strong>再看 ABC 三相星形与相间互感。</strong> 熟练解释为什么两相电流可以推第三相，以及何时成立。</li><li><strong>学习 Clarke / Park 变换。</strong> 从 abc → αβ → dq，解释为什么控制电流更方便。</li><li><strong>进入反电动势观测、六步换相与 FOC。</strong> 结合 PWM、电流采样、波形调试理解模型误差。</li></ol>
+<p class="emphasis">最终只需要记住：电机最根本的电压方程是 u = Ri + dψ/dt。其它项都是在说明 ψ 从哪来、如何随时间变化。</p>
+</section>
+<section id="sources">
+<h2><span class="num">References / 继续查阅</span>可追溯的厂商技术资料</h2>
+<p>本文公式使用常见电机数学模型，示意图由本笔记原创绘制，主要为帮助初学者建立物理直觉；实际工程应以具体电机参数、测试报告与芯片厂商资料为准。</p>
+<ol class="source-list">
+<li><a href="https://developerhelp.microchip.com/xwiki/bin/view/applications/motors/control-algorithms/bldc/position/" target="_blank" rel="noopener">Microchip Developer Help — How Sensorless BLDC Motor Position Estimation Works</a>。相电压简化模型、反电动势与无感估算的关系。</li>
+<li><a href="https://onlinedocs.microchip.com/oxy/GUID-69278EBA-9F00-4CEE-8103-2998236856BD-en-US-2/GUID-70FB0D9D-8F89-4ABA-AB0D-E2E976C0E70E.html" target="_blank" rel="noopener">Microchip — Stationary Reference Frame Model</a>。αβ 坐标系电感矩阵、位置相关性与观测模型。</li>
+<li><a href="https://www.nxp.com/docs/en/application-note/AN13038.pdf" target="_blank" rel="noopener">NXP AN13038 — 3-phase PMSM Motor Control Kit</a>。FOC、dq 电压模型、FreeMASTER 与调参实用背景，尤其可结合控制代码深入阅读。</li>
+<li><a href="https://onlinedocs.microchip.com/oxy/GUID-AAAF8F97-D139-4A93-A154-AA3C6EE6BB22-en-US-1/GUID-007091E0-0021-4359-A50B-127AF65C0B1C.html" target="_blank" rel="noopener">Microchip — Equation-based Flux Weakening</a>。反电动势随转速增加、母线电压限制与弱磁控制的联系。</li>
+</ol>
+</section>
+<footer class="foot"><div><strong>ABC 三相相电压方程详解｜V2 校对修订版</strong></div><p>适合放在个人博客的独立 HTML 文章。所有样式、示意图和交互脚本均包含在一个文件中；不依赖 CDN、MathJax 或外部 JavaScript。V2 已校正“转速-电角频率”显示方式并加入 ABC 相电压分解。插图为教学示意，不能作为实际电机结构图或安全接线图。</p></footer>
+</main></div>
+<script>
+(function(){'use strict';
+const root=document.documentElement, themeButton=document.getElementById('themeButton');
+themeButton.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';renderAll()});
+const NS='http://www.w3.org/2000/svg';function el(t,a={},parent){const n=document.createElementNS(NS,t);Object.entries(a).forEach(([k,v])=>n.setAttribute(k,v));if(parent)parent.appendChild(n);return n}
+function tx(svg,text,x,y,extra={}){const n=el('text',{x,y,...extra},svg);n.textContent=text;return n}
+function line(svg,x1,y1,x2,y2,extra={}){return el('line',{x1,y1,x2,y2,...extra},svg)}
+function path(svg,d,stroke,w=3,extra={}){return el('path',{d,fill:'none',stroke,'stroke-width':w,...extra},svg)}
+function fmt(n,d=2){return n.toFixed(d)}
+function renderRL(){const U=+document.getElementById('stepU').value,R=+document.getElementById('stepR').value,L=+document.getElementById('stepL').value/1000;
+ document.getElementById('uText').textContent=fmt(U,1)+' V';document.getElementById('rText').textContent=fmt(R,2)+' Ω';document.getElementById('lText').textContent=fmt(L*1000,2)+' mH';
+ const tau=L/R,steady=U/R;document.getElementById('tauValue').textContent=fmt(tau*1000)+' ms';document.getElementById('steadyValue').textContent=fmt(steady)+' A';document.getElementById('tauCurrent').textContent=fmt(steady*(1-Math.exp(-1)))+' A';
+ const svg=document.getElementById('rlChart');svg.replaceChildren();const x0=57,y0=22,w=693,h=186,end=Math.max(12,6*tau*1000);const X=t=>x0+w*t/end,Y=i=>y0+h*(1-i/(steady*1.1));
+ for(let k=0;k<=4;k++){let py=y0+k*h/4;line(svg,x0,py,x0+w,py,{class:'grid'});tx(svg,fmt(steady*1.1*(1-k/4),1)+'A',5,py+4)}
+ for(let k=0;k<=5;k++){let px=x0+k*w/5;line(svg,px,y0,px,y0+h,{class:'grid'});tx(svg,fmt(end*k/5,1),px-11,y0+h+20)}tx(svg,'时间 / ms',662,251);
+ let d='';for(let i=0;i<=240;i++){let t=end*i/240,cur=steady*(1-Math.exp(-(t/1000)/tau));d+=(i?' L':'M')+X(t).toFixed(2)+' '+Y(cur).toFixed(2)}path(svg,d,'var(--primary)',3);
+ let tauMs=tau*1000;if(tauMs<=end){let px=X(tauMs),py=Y(steady*(1-Math.exp(-1)));line(svg,px,y0+h,px,py,{'stroke':'var(--amber)','stroke-width':2,'stroke-dasharray':'4 4'});el('circle',{cx:px,cy:py,r:5,fill:'var(--amber)'},svg);tx(svg,'t = τ',px+7,py-8,{fill:'var(--amber)'})}
+ }
+const TAU=2*Math.PI,windowMs=30;
+let emfView='time';
+function genChartGrid(svg,{range,formatY='V',timeAxis=true,angleStart=0}){
+ const x0=58,y0=20,w=688,h=197,mid=y0+h/2,scale=h/2-13;
+ const X=f=>x0+w*f, Y=v=>mid-(v/range)*scale;
+ [-1,-.5,0,.5,1].forEach(k=>{let yy=Y(k*range);line(svg,x0,yy,x0+w,yy,{class:'grid'});tx(svg,(k*range).toFixed(range>=10?1:2)+formatY,3,yy+4)});
+ for(let k=0;k<=6;k++){const xx=X(k/6);line(svg,xx,y0,xx,y0+h,{class:'grid'});tx(svg,timeAxis?(windowMs*k/6).toFixed(0)+'ms':(k*60)+'°',xx-13,y0+h+20)}
+ tx(svg,timeAxis?'固定时间窗 / 30 ms':'电角度增量 Δθe / 0°～360°',timeAxis?604:605,260);
+ return {X,Y};
+}
+function trace(svg,fn,X,Y,color,width=2.8){let d='';for(let k=0;k<=720;k++){const f=k/720;d+=(k?'L':'M')+X(f).toFixed(2)+' '+Y(fn(f)).toFixed(2)+' '}path(svg,d,color,width)}
+function renderEMF(){
+ const rpm=+document.getElementById('rpm').value,angle=+document.getElementById('angle').value,p=+document.getElementById('polePairs').value;
+ const psi=.012,fe=p*rpm/60,we=TAU*fe,ep=Math.abs(we)*psi,th=angle*Math.PI/180;
+ document.getElementById('rpmText').textContent=rpm+' rpm';document.getElementById('angleText').textContent=angle+'°';document.getElementById('poleText').textContent=p+' 对';
+ document.getElementById('feValue').textContent=fmt(fe)+' Hz';document.getElementById('teValue').textContent=fe>0?fmt(1000/fe)+' ms':'∞（零速）';
+ document.getElementById('weValue').textContent=fmt(we)+' rad/s';document.getElementById('epValue').textContent=fmt(ep)+' V';
+ document.getElementById('emfTimeMode').setAttribute('aria-pressed',String(emfView==='time'));
+ document.getElementById('emfAngleMode').setAttribute('aria-pressed',String(emfView==='angle'));
+ document.getElementById('emfInterpretation').textContent=emfView==='time'
+  ?'时间轴固定 30 ms：'+fmt(fe*windowMs/1000)+' 个电周期；转速/极对数升高 → 周期数增加，磁链峰值固定时反电动势峰值也增加。'
+  :'角度轴固定 0°～360°：无论转速多高，总是一个电周期；频率必须结合电角度走完一圈所需的时间计算。';
+ const svg=document.getElementById('emfChart');svg.replaceChildren();
+ // 电压纵轴参考当前极对数下最高5000rpm的幅值，因此转速变化时视觉幅值真的变化
+ const ref=Math.max(1,p*TAU*5000/60*psi*1.12);
+ const {X,Y}=genChartGrid(svg,{range:ref,timeAxis:emfView==='time'});
+ const offsets=[0,-TAU/3,TAU/3],colors=['var(--amber)','var(--blue)','var(--green)'];
+ offsets.forEach((offset,j)=>trace(svg,f=>{let theta=emfView==='time'?th+we*windowMs/1000*f:th+TAU*f;return -ep*Math.sin(theta+offset)},X,Y,colors[j]));
+ svg.dataset.frequencyHz=String(fe);svg.dataset.cyclesVisible=String(emfView==='time'?fe*windowMs/1000:1);svg.dataset.peakVoltage=String(ep);
+}
+function renderABC(){
+ const n=+document.getElementById('abcRpm').value,I=+document.getElementById('abcI').value,R=+document.getElementById('abcR').value,L=+document.getElementById('abcL').value/1000,theta0=+document.getElementById('abcAngle').value*Math.PI/180;
+ const p=4,psi=.012,fm=n/60,fe=p*fm,we=TAU*fe,E=we*psi;
+ for(const [id,val] of [['abcRpmOut',n+' rpm'],['abcIOut',fmt(I,1)+' A'],['abcROut',fmt(R)+' Ω'],['abcLOut',fmt(L*1000)+' mH'],['abcAngleOut',fmt(theta0*180/Math.PI,0)+'°']])document.getElementById(id).textContent=val;
+ document.getElementById('abcFm').textContent=fmt(fm)+' Hz';document.getElementById('abcFe').textContent=fmt(fe)+' Hz';document.getElementById('abcEpk').textContent=fmt(E)+' V';document.getElementById('abcCycles').textContent=fmt(fe*windowMs/1000);
+ const phases=[0,-TAU/3,TAU/3];
+ const calc=(t,offset)=>{const theta=theta0+we*t+offset,i=-I*Math.sin(theta),r=R*i,l=-L*I*we*Math.cos(theta),e=-E*Math.sin(theta);return {i,r,l,e,u:r+l+e}};
+ const peak=Math.hypot(R*I+E,L*I*we);
+ const range=Math.max(0.5,peak*1.18);
+ const svg=document.getElementById('abcChart');svg.replaceChildren();
+ const ax=genChartGrid(svg,{range,timeAxis:true});
+ phases.forEach((offset,j)=>trace(svg,f=>calc(f*windowMs/1000,offset).u,ax.X,ax.Y,['var(--amber)','var(--blue)','var(--green)'][j],2.8));
+ const ps=document.getElementById('abcPartsChart');ps.replaceChildren();const a=genChartGrid(ps,{range,timeAxis:true});
+ for(const [k,color,width] of [['r','var(--amber)',2.5],['l','var(--blue)',2.5],['e','var(--green)',2.5],['u','var(--primary)',4]])trace(ps,f=>calc(f*windowMs/1000,0)[k],a.X,a.Y,color,width);
+ const rows=phases.map((off,j)=>({name:['A','B','C'][j],...calc(0,off)}));
+ const sums=['i','r','l','e','u'].map(k=>rows.reduce((acc,row)=>acc+row[k],0));
+ const fmtval=v=>Math.abs(v)<.00005?'0.000':(v>=0?'+':'')+v.toFixed(3);
+ const tbody=document.getElementById('abcLiveTable');tbody.replaceChildren();
+ rows.concat([{name:'合计',i:sums[0],r:sums[1],l:sums[2],e:sums[3],u:sums[4]}]).forEach((row,j)=>{
+  const tr=document.createElement('tr');for(const value of [row.name,fmtval(row.i),fmtval(row.r),fmtval(row.l),fmtval(row.e),fmtval(row.u)]){let td=document.createElement('td');td.textContent=value;tr.appendChild(td)}if(j===3)tr.style.fontWeight='800';tbody.appendChild(tr)
+ });
+ svg.dataset.frequencyHz=String(fe);svg.dataset.cyclesVisible=String(fe*windowMs/1000);svg.dataset.peakVoltage=String(peak);
+ ps.dataset.sampleA=JSON.stringify(rows[0]);ps.dataset.sumU=String(sums[4]);
+}
+function renderAll(){renderRL();renderEMF();renderABC()}
+['stepU','stepR','stepL'].forEach(id=>document.getElementById(id).addEventListener('input',renderRL));
+['rpm','angle','polePairs'].forEach(id=>document.getElementById(id).addEventListener('input',renderEMF));
+['abcRpm','abcI','abcR','abcL','abcAngle'].forEach(id=>document.getElementById(id).addEventListener('input',renderABC));
+document.getElementById('emfTimeMode').addEventListener('click',()=>{emfView='time';renderEMF()});
+document.getElementById('emfAngleMode').addEventListener('click',()=>{emfView='angle';renderEMF()});
+renderAll();
+if('IntersectionObserver'in window){const navs=[...document.querySelectorAll('.side a[href^="#"]')];const watcher=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id))}})},{rootMargin:'-10% 0px -75% 0px'});document.querySelectorAll('main section[id]').forEach(s=>watcher.observe(s))}
+})();
+</script>
+</body>
+</html>
